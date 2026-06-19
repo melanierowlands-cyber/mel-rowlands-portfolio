@@ -10,16 +10,15 @@ export const huddle: Project = {
   blurb:
     "A shared expense app that helps students manage household costs, split bills and avoid awkward money conversations.",
   prototypeUrl: undefined,
-  cardImage: "/images/home/huddle-case-study-image.png",
   card: {
     bg: "#adcdc0",
     textColor: "#4b4744",
     stripe: "#f59c54",
-    images: [
-      { src: "/images/home/huddle-scene.png", alt: "Hand holding a phone running Huddle", style: { left: 466, top: 0, width: 531, height: 399 } },
-      { src: "/images/home/huddle-mockup.png", alt: "Huddle app screens", style: { left: 856, top: 3, width: 465, height: 407 } },
-      { src: "/images/home/huddle-logo.png", alt: "Huddle logo", style: { left: 1186, top: 300, width: 110, height: 74, objectFit: "contain" } },
-    ],
+    photoLeft: "/images/home/huddle-hands.png",
+    photoRight: "/images/home/huddle-expenses.png",
+    photoRightFit: "top",
+    logo: "/images/home/huddle-wordmark.png",
+    logoWidth: 92,
   },
   logoLetter: "h",
   logoLabel: "THE HUDDLE APP",

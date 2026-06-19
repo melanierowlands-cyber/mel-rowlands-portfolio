@@ -10,16 +10,14 @@ export const ingenio: Project = {
   blurb:
     "A digital learning platform that helps young artists build creative and technology skills through structured online courses.",
   prototypeUrl: undefined,
-  cardImage: "/images/home/ingenio-case-study-image.png",
   card: {
     bg: "#f3a361",
     textColor: "#ffffff",
     stripe: "#4282d0",
-    images: [
-      { src: "/images/home/ingenio-course.png", alt: "iNGENiO course screens", style: { left: 732, top: 0, width: 796, height: 398 } },
-      { src: "/images/home/ingenio-photo.png", alt: "Young artist learning", style: { left: 471, top: 0, width: 392, height: 398, objectPosition: "top" } },
-      { src: "/images/home/ingenio-logo.png", alt: "iNGENiO logo", style: { left: 1110, top: 320, width: 170, height: 56, objectFit: "contain" } },
-    ],
+    photoLeft: "/images/home/ingenio-girl.png",
+    photoRight: "/images/home/ingenio-hand.png",
+    logo: "/images/home/ingenio-wordmark.png",
+    logoWidth: 118,
   },
   logoLetter: "i",
   logoLabel: "INGENIO EDUCATION",

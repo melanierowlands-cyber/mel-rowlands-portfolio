@@ -136,10 +136,17 @@ export type Project = {
   tags: string;
   blurb: string;
   prototypeUrl?: string;
-  /* Home "Selected Work" banner — single pre-composed image */
-  cardImage: string;
-  /* Legacy collage data (no longer rendered) */
-  card: { bg: string; textColor: string; stripe: string; images: CardImage[] };
+  /* Home "Selected Work" banner — built live from these parts */
+  card: {
+    bg: string; // left panel colour
+    textColor: string; // panel text colour
+    stripe: string; // vertical divider between the two photos
+    photoLeft: string;
+    photoRight: string;
+    photoRightFit?: "cover" | "top"; // object-position for the right photo
+    logo: string; // white/transparent mark overlaid bottom-right of the right photo
+    logoWidth: number; // displayed width in px (card coordinate space)
+  };
   /* Case-study hero */
   logoLetter: string;
   logoLabel: string;

@@ -10,16 +10,14 @@ export const wildlife: Project = {
   blurb:
     "A wildlife management platform that helps reserve teams coordinate operations, monitor assets and respond faster in the field.",
   prototypeUrl: undefined,
-  cardImage: "/images/home/wildlifeops-case-study-image.png",
   card: {
     bg: "#837c74",
     textColor: "#ffffff",
     stripe: "#cc9438",
-    images: [
-      { src: "/images/home/wildlife-elephant.png", alt: "Elephant on the reserve", style: { left: 460, top: 0, width: 380, height: 398 } },
-      { src: "/images/home/wildlife-dashboard.png", alt: "Mziki reserve dashboard", style: { left: 668, top: 28, width: 543, height: 353, transform: "rotate(-5.19deg)", borderRadius: 8, boxShadow: "0px 4px 4px rgba(0,0,0,0.25)" } },
-      { src: "/images/home/wildlife-logo.png", alt: "Mziki logo", style: { left: 1192, top: 290, width: 96, height: 92, objectFit: "contain" } },
-    ],
+    photoLeft: "/images/home/wildlife-card-elephant.png",
+    photoRight: "/images/home/wildlife-card-dashboard.png",
+    logo: "/images/home/wildlife-paw.png",
+    logoWidth: 64,
   },
   logoLetter: "w",
   logoLabel: "WILDLIFE OPS DASHBOARD",
