@@ -1,169 +1,132 @@
-Project & Context
+# Project & Context
 
-Mel Rowlands — Product Design Portfolio (Figma file DHXrCjbgmnmQUGoG89JdYU). A minimalist, editorial portfolio targeting a senior product design role. All three case studies are now built; the About page is fully written across all breakpoints. Goal of the portfolio: impress recruiters and land a role.
+Mel Rowlands — Product Design Portfolio. This file is the **session handoff**: read it first to resume work. The portfolio is now a **coded Next.js site** built from the Figma designs, pushed to GitHub and deployed on Vercel.
 
-Last updated: 2026-06-18
+**Last updated:** 2026-06-19
 
-────────────────────────────────────────
-STATUS AT A GLANCE
-────────────────────────────────────────
+---
 
-All 5 Figma pages exist: 01 · Cover (0:1), 02 · Design System (7:2), 03 · Homepage (7:3 — most work lives here), 04 · About (7:4), 05 · Contact (7:5). Each page has Desktop / Tablet / Mobile frames.
+## STATUS AT A GLANCE
 
-Three case studies, all BUILT. Confirmed order (set 2026-06-18):
+- **Live site:** https://mel-rowlands-portfolio.vercel.app (deployed, all routes 200)
+- **Repo:** `git@github.com:melanierowlands-cyber/mel-rowlands-portfolio.git` — branch `main`, latest commit `2c4391c`
+- **Working dir:** `/Users/melanierowlands/Library/CloudStorage/Dropbox/UX ROLE/Portfolio/PORTFOLIO_LIVE`
+- **Figma source of truth:** file `DHXrCjbgmnmQUGoG89JdYU` (desktop frames only)
+- **Phase 1 (desktop) = built, deployed, verbatim content.** Phase 2 (responsive) = deferred.
 
-  1st  Ingenio       PROJECT 01   (node 60:72)
-  2nd  Wildlife Ops  PROJECT 02   (node 151:57)
-  3rd  Huddle        PROJECT 03   (node 110:62)
+---
 
-Order rationale: lead with Ingenio (most credible — real research + real results), Wildlife Ops second (most distinctive — conservation + AI-build story), Huddle last (founder/human closer). This is the "safe" order while Wildlife Ops still uses drafted (not yet validated) numbers. Once Mel gets real numbers from Mziki, consider promoting Wildlife Ops to 1st.
+## TECH STACK
 
-Next/Previous nav chain (circular):
-  Ingenio:      Prev = Portfolio Home   Next = Wildlife Ops
-  Wildlife Ops: Prev = Ingenio          Next = Huddle
-  Huddle:       Prev = Wildlife Ops      Next = Ingenio
+- **Next.js 16.2.9** (App Router) + **TypeScript** + **Tailwind CSS v3.4** + **React 19.2.7**
+- Fonts via `next/font/google`: **Hanken Grotesk** (`--font-heading`) + **Poppins** (`--font-body`)
+- Deploy: **Vercel** (auto-deploys on push to `main`). `vercel.json` pins `framework: nextjs`.
+- Local: `npm run dev` (localhost:3000) · `npm run build` · `npm run start`. Node 24, npm 11.
 
-────────────────────────────────────────
-CASE STUDIES
-────────────────────────────────────────
+---
 
-Ingenio (node 60:72) — COMPLETE
-Real EdTech platform Mel co-founded. Sections: Problem, Personas, Key Insight, The Fix (5-step), Solution before/after pricing visual, Results (real bar-chart data), Key Learnings, Next Project nav. Project tone = clay/ingenio VariableID:3:10.
+## BUILD DIRECTIVES (locked decisions)
 
-Wildlife Ops (node 151:57) — BUILT 2026-06-18
-Reskinned from a duplicated Huddle frame. NOT the old "dark Palantir ops console" idea — that was abandoned. It is editorial OLIVE (proj-wildlife VariableID:3:11 #41503C); all 65 clay/ingenio fills were rebound to olive.
-Subject: "Mziki — Big 5 Wildlife Ops" dashboard for a 6,000-ha private game reserve in KwaZulu-Natal (Munywana Conservancy, alongside &Beyond Phinda). Framing = "Conservation is logistics. I designed the system that holds it together." Live-app product nav = Overview / Animal Health / Team Dispatch. Head-ranger persona "Kumba Dwongeza".
-Sections: Problem 151:83 · Goal 151:97 · Research/personas 151:124 (Reserve Manager + Field Ranger) · Key Insight 151:178 · UX Strategy 151:182 (includes "Simplicity as a deliberate constraint / Big Five scope" callout) · Key Features 151:214 · The Dashboard 151:246 (2 real screenshots: Reserve Overview 197:54, Animal Health Record 197:57) · Process & Iteration 151:262 · Where This Goes Next 151:279 · Prototype & Build 207:53 (5 pipeline cards: Figma → Figma Make → Claude Code → GitHub → Netlify) · Key Learnings 151:323 · Next Project nav 151:340.
-STILL NEEDS MEL TO VERIFY (drafted, credible but not from real research): personas + quotes, Goal success criteria, the two iteration stories, "Where this goes next" roadmap, Key Learnings, and the Prototype & Build tool roles (did GitHub/Netlify actually feature?). Persona portraits are still leftover Huddle placeholders — swap when wildlife-appropriate images are available.
+1. **All headings use Hanken Grotesk. Geist is NOT used anywhere** (Figma uses Geist in places; we override to Hanken). Body = Poppins.
+2. **Accent colour = `#D98245`** (amber).
+3. **Desktop is the sole source of truth.** Figma tablet/mobile frames are exploratory — ignored.
+4. **Case-study copy is transcribed VERBATIM from Figma** — do not paraphrase, summarise, or invent. (An earlier build had generated placeholder copy; it was fully replaced.)
+5. No design/content changes without being asked.
 
-Huddle (node 110:62) — COMPLETE, awaiting screenshots
-14 sections incl. Goal checklist, student personas, Design Approach, Key Features, "A Look at Huddle" showcase, Results, Business Opportunity, Reflection, Next Project nav.
-USER ACTION: drag 3 screenshots into the named drop-frames, then delete the hint labels:
-  home dashboard → 131:60   ·   categories/expenses → 131:65   ·   budget bar closeup → 132:53 (inside Results card 126:62)
+---
 
-"View Live Prototype ↗" CTA added to ALL 3 case-study header bars (centered between MEL ROWLANDS and PROJECT XX): Ingenio 235:19, Wildlife 235:20, Huddle 235:21. Poppins Medium 13px, ink-muted, 8% letter-spacing. NOTE: no URLs attached yet — Mel to wire each to its live prototype.
+## SITE STRUCTURE
 
-────────────────────────────────────────
-ABOUT PAGE (7:4) — written 2026-06-18, all 3 breakpoints
-────────────────────────────────────────
+Routes (all static / SSG):
+- `/` — Home (Nav · Hero · Selected Work · Footer)
+- `/about` — About (Hero+headshot · Background · Four threads · Footer)
+- `/contact` — Contact (availability pill · headline · 3 link rows · bottom bar)
+- `/work/[slug]` — Case studies: `ingenio`, `wildlife-ops`, `huddle` (`generateStaticParams`)
 
-Recruiter-focused copy, identical across Desktop (25:2) / Tablet (31:17) / Mobile (32:32). Title kept as "product designer" (NOT "Senior" — Mel's call; keep homepage hero consistent).
+**Case-study circular prev/next chain:** Ingenio → Wildlife Ops → Huddle → Ingenio.
 
-Headline: "I design products that make complicated things feel simple"
-Intro pitch para: 20+ yrs design depth, research-led, owns design end-to-end (research/IA/interaction/UI), pairs Figma + Claude Code; "product thinking, research and polished UI from one person, at shipping speed."
-Logistics line: "CAPE TOWN · UK PASSPORT · AVAILABLE FOR REMOTE ROLES ON UK / US EAST-COAST HOURS"
-Background — subhead "Designer. Founder. Builder." + 3 paras:
-  1) "I've spent 20+ years turning complex ideas into products people can actually use."
-  2) "My career started in design studios and investment research, before moving into product design, UX and startup building. Most recently I co-founded iNGENiO Education, where I led product strategy, UX, research and growth for a digital learning platform used by schools and families."
-  3) "Today I combine product thinking, research and AI-assisted development to take ideas from early concepts to shipped experiences."
-"Four threads through my work" cards (kept): Education / Conservation / AI / Community — map to the 3 case studies + AI workflow.
+### File map (`src/`)
+```
+app/ layout.tsx · globals.css · page.tsx (Home) · about/page.tsx · contact/page.tsx · work/[slug]/page.tsx
+components/ Nav · Footer · Button · Tag · TextLink · SectionHeader · Container · ProjectCard
+  about/ThreadCard
+  contact/AvailabilityBadge · ContactLinkRow
+  case-study/ CaseHeaderBar · CaseBlocks (all section renderers + dispatcher) · NextProjectNav · ImagePlaceholder
+content/projects/ ingenio.ts · wildlife-ops.ts · huddle.ts   ← verbatim case-study content + data
+lib/ site.ts (nav/footer/contact data) · projects.ts (types + index + getAdjacent prev/next)
+```
+Tokens live in `app/globals.css` (CSS variables) and are mapped in `tailwind.config.ts`.
 
-PORTRAIT: headshot added to DESKTOP only. Tablet (31:24) and Mobile (32:39) portraits still show the "MR / ADD YOUR PHOTO" placeholder — needs the same photo.
+---
 
-MOBILE LAYOUT BUG (fixed 2026-06-18): the About/Mobile frame was 25,425px tall — inner frames had layoutGrow:1 inside fixed-height parents, and the Background column's counter-axis width was pinned to 1px (text wrapped 1 char per line). Fixed by setting layoutGrow:0, layoutSizingHorizontal:FILL, layoutSizingVertical:HUG on inner frames, parents to HUG, and the Four-threads heading to FILL+wrap. Now ~3,570px. LESSON: other mobile frames (Homepage, Contact) likely carry the same bug — check before trusting.
+## DESIGN SYSTEM (as implemented)
 
-────────────────────────────────────────
-DESIGN SYSTEM (current values — some changed 2026-06-18)
-────────────────────────────────────────
+**Colours** (CSS vars in globals.css → Tailwind `theme.colors`):
+paper `#F4F0E8` · paper-alt `#EAE3D6` · surface `#FBF9F4` · line `#DAD3C6` · ink `#1C1A17` · ink-muted `#6B635A` · accent `#D98245` · on-accent `#F7F3EB` · proj-ingenio `#B85C38` · proj-wildlife `#41503C` · proj-huddle `#5E777A` · footer-bg `#4B4744`.
 
-Colour variables:
-  paper        3:3   #F4F0E8
-  paper-alt    3:4   slightly off-paper
-  surface      3:5
-  ink          3:6   #1C1A17
-  ink-muted    3:7   #6B635A
-  line         3:8   hairline border
-  accent       3:9   #D98245  amber  ← CHANGED from clay #B4552F (2026-06-18). Auto-propagates to all accent-bound fills (section eyebrows, buttons).
-  proj-ingenio 3:10  clay #B85C38
-  proj-wildlife 3:11 olive #41503C
-  proj-huddle  3:12  teal-slate #5E777A
-  on-accent    3:13
+**Per-case-study theming** via `data-theme` on the case root: sets `--color-theme` (secondary accent — Ingenio/Huddle = amber `#D98245`, Wildlife = olive `#41503C`) and `--color-mark` (logo-square fill = the project colour). Tailwind aliases: `text-theme`, `bg-theme`, `bg-mark`.
 
-Footer component (11:2) background rectangle (11:9): #4B4744 dark charcoal — set as a DIRECT fill (was bound to ink-muted variable). Propagates to all footer instances.
+**Typography (case-study scale, exact from Figma):** hero headline Hanken Bold 64px/1.0; section titles Hanken SemiBold 44px; eyebrows Poppins SemiBold 20px (tracked 0.06em); body Poppins 24px (problem) / 16–19px; key-insight statement Hanken Bold 64px on a paper-alt rounded card. Home hero 56px; Contact headline 62px; About headline 50px.
 
-Section eyebrow labels across all 3 case studies: 20px Poppins SemiBold, 6% letter-spacing (was 16px, inconsistent spacing). 37 labels updated 2026-06-18.
+**Spacing / radius:** Tailwind scale `xs..6xl` (4/8/12/16/24/32/48/64/96/128) and `radius sm..full` (8/14/24/32/999).
 
-Spacing tokens space/xs..6xl = 4:3..4:12 (4/8/12/16/24/32/48/64/96/128).
-Radius tokens radius/sm..full = 4:14..4:18 (8/14/24/32/999).
+**Layout:** content max-width 1280 inside a 1440 container, 80px gutters (`Container.tsx`). Case sections separated by 128px.
 
-Typography:
-  Case-study headings  = Hanken Grotesk
-  Portfolio/homepage headings = Geist
-  Body everywhere      = Poppins
-  NOTE: some text nodes mix fonts unexpectedly (e.g. an About background paragraph used Hanken Grotesk Medium; the Ingenio nav "next project" title uses Geist Medium). ALWAYS load a node's own fonts via getStyledTextSegments(['fontName']) before editing — never assume the family/style.
+---
 
-────────────────────────────────────────
-KEY DECISIONS & CONSTRAINTS
-────────────────────────────────────────
+## KEY IMPLEMENTATION NOTES
 
-Always invoke the figma:figma-use skill before every use_figma call — never skip this. Pass skillNames: "resource:figma-use".
+- **Global scale stopgap:** `html { zoom: 0.66 }` in globals.css renders the 1440-authored design ~34% smaller so it's comfortable on desktops. This is NOT real responsiveness (see Phase 2).
+- **Home "Selected Work" cards** = single **pre-composed banner images** (`/public/images/home/{ingenio,wildlifeops,huddle}-case-study-image.png`, 1322×412) wrapped in a link to the case study. Copy/links/imagery are baked into the artwork. Home layout is intentionally spacious so **only the first card (Ingenio) sits above the fold**, full-width (aligned to the hero title), with extra space around the View Work / About Me buttons.
+- **Case-study header bar** (`CaseHeaderBar`) replaces the global nav on case pages: "MEL ROWLANDS · View Live Prototype ↗ · PROJECT 0X" (matches Figma).
+- **Footer** (charcoal `#4B4744`) on Home + About; Contact has its own bottom bar.
+- Images served via `next/image`; placeholders via `ImagePlaceholder` (holds exact aspect ratio).
 
-Case-study headings = Hanken Grotesk (NOT Geist). Homepage/portfolio headings = Geist. Body = Poppins.
+---
 
-No glassmorphism, heavy gradients, neon, startup clichés — minimalist editorial only.
+## DEPLOYMENT NOTES (for resuming)
 
-Wildlife Ops is editorial olive, NOT a dark ops console (old idea abandoned).
+- **GitHub:** `gh` CLI is NOT installed; the stored gh keychain token is invalid. The repo was **created manually by the user** on github.com. **Push works via SSH** (key authenticated as `melanierowlands-cyber`) — `git push origin main` just works.
+- **Vercel:** imported via the dashboard (no CLI/token on this machine). Auto-deploys on push to `main`.
+- **Resolved issues:** (1) Vercel flagged Next 15.1.6 as vulnerable → upgraded to **16.2.9** (+ React 19.2.7); no code changes needed. (2) Production domain initially returned `x-vercel-error: NOT_FOUND` (no deployment aliased) → fixed by pushing a fresh commit + adding `vercel.json`; domain now bound and serving.
 
-Plugin-API gotchas:
-  appendChild must fire BEFORE setting layoutSizingHorizontal/Vertical = 'FILL' or 'HUG' on children.
-  Fixed-size frames need primaryAxisSizingMode/counterAxisSizingMode + resize(w,h).
-  Beware layoutGrow:1 inside a fixed-height parent — it stretches the child to fill (root cause of the mobile bug). Prefer HUG.
-  Page switching: await figma.setCurrentPageAsync(page) — the sync setter throws.
-  Editing text: load each node's CURRENT fonts (getStyledTextSegments) before setting .characters.
-  setBoundVariableForPaint returns a NEW paint — must capture and reassign.
+---
 
-Figma plan: Professional, Full editor seat.
+## OPEN ITEMS / PLACEHOLDERS
 
-────────────────────────────────────────
-ESSENTIAL CODE / CONFIG SNIPPETS
-────────────────────────────────────────
+1. **Live-prototype URLs (×3)** not wired — `prototypeUrl: undefined` in each `content/projects/*.ts`. CTAs render dimmed; on Home the "View live prototype" text is baked into the card images (whole card links to the case study).
+2. **Persona portraits** = initial-avatar placeholders (no portrait images in the file).
+3. **Wildlife "early concept" iteration image** = labelled placeholder; image strips use available hero images, not the exact Figma collage.
+4. **Ingenio pricing-reframe** before-cards use placeholder feature bars (Figma showed greeked lines); all prices/names/notes are verbatim.
+5. **Feature-card icons** = neutral tiles (Figma icons not exported).
+6. **Netlify vs Vercel:** Wildlife case-study copy says "Netlify" (verbatim from Figma — pipeline, caption, reflection). The site itself deploys to Vercel. **Flagged for the user to confirm** whether to change the copy.
 
-// Resolve a variable by ID
-const V = async id => await figma.variables.getVariableByIdAsync(id);
-const paper    = await V('VariableID:3:3');
-const ink      = await V('VariableID:3:6');
-const inkMuted = await V('VariableID:3:7');
-const accent   = await V('VariableID:3:9');  // now amber #D98245
-const wildlife = await V('VariableID:3:11'); // olive — for Wildlife Ops
+---
 
-// Bind a colour variable to a fill
-function bindFill(node, variable) {
-  node.fills = [figma.variables.setBoundVariableForPaint(
-    { type: 'SOLID', color: { r:0, g:0, b:0 } }, 'color', variable
-  )];
-}
+## PHASE 2 — RESPONSIVE (deferred, agreed 2026-06-19)
 
-// Safe EDIT of existing text — load the node's own fonts first (robust to mixed fonts)
-async function setText(id, str){
-  const n = await figma.getNodeByIdAsync(id);
-  const segs = n.getStyledTextSegments(['fontName']);
-  const seen = new Set();
-  for (const s of segs){ const k = s.fontName.family+'|'+s.fontName.style; if(!seen.has(k)){ seen.add(k); await figma.loadFontAsync(s.fontName); } }
-  if (segs.length === 0) await figma.loadFontAsync(n.fontName);
-  n.characters = str;
-}
+- **Full phone + tablet + desktop.** Single-column + hamburger nav on phones (~390px); 2-col adapted on tablets (~768–1024); fluid desktop.
+- **Replace the `zoom: 0.66` hack** with a real fluid system: responsive `Container`, `clamp()` type, Tailwind breakpoints collapsing the multi-column sections (Problem grid, Personas, Features, Business-opportunity, Pipeline, Footer, Contact rows, Nav).
+- **GOTCHA:** re-baseline the px scale *before* removing `zoom` — deleting it alone makes everything ~1.5× bigger and re-triggers the "too big" complaint.
+- **Wide screens (decided):** cap content ~1280px and **centre** (don't stretch). User's screen is 2880×1864 (~1512–1800 logical).
+- Verify the Home "Ingenio above the fold" intent still holds responsively.
+- Full detail in `implementation-plan.md` §7.
 
-// Switch to working page (Homepage = 7:3, About = 7:4)
-const page = figma.root.children.find(p => p.id === '7:3');
-await figma.setCurrentPageAsync(page);
+---
 
-────────────────────────────────────────
-PENDING WORK (priority order)
-────────────────────────────────────────
+## RELATED FILES
 
-1. USER: drop the 3 Huddle screenshots into drop-frames 131:60 / 131:65 / 132:53, delete hint labels.
-2. USER: add headshot to About Tablet (31:24) + Mobile (32:39) portraits (Desktop already done). Claude can copy the Desktop image fill across if asked.
-3. USER: wire "View Live Prototype" CTAs (235:19/20/21) to real prototype URLs.
-4. Mel to verify Wildlife Ops drafted copy + numbers (esp. once Mziki gives real data) and swap persona portraits.
-5. Check Homepage + Contact mobile frames for the same layoutGrow/fixed-height bug found on About/Mobile.
-6. (Deferred) Coded static HTML/CSS site → deploy to Netlify (same as CV at melrowlandscv.netlify.app).
+- `implementation-plan.md` — full plan (site map, component hierarchy, tokens, Phase 2 scope).
+- Memory: `/Users/melanierowlands/.claude/projects/-Users-melanierowlands-Library-CloudStorage-Dropbox-UX-ROLE-Portfolio-PORTFOLIO-LIVE/memory/` (`MEMORY.md`, `phase2-responsive.md`).
+- Figma file `DHXrCjbgmnmQUGoG89JdYU` — design source (desktop frames). Case-study frames: Ingenio `60:72`, Wildlife Ops `151:57`, Huddle `110:62`; About `25:2`; Contact `28:2`; Design System `7:2`.
+- Source design assets in `/Assets` (originals + the supplied `*-case-study-image.png` card banners).
 
-────────────────────────────────────────
-FILES & LOCATIONS
-────────────────────────────────────────
+---
 
-Figma file        DHXrCjbgmnmQUGoG89JdYU
-Memory index      /Users/melanierowlands/.claude/projects/-Users-melanierowlands-Library-CloudStorage-Dropbox-UX-ROLE-Portfolio/memory/MEMORY.md
-Full node map / handoff   …/memory/handoff.md   (richest source of node IDs — keep both in sync)
-User profile      …/memory/mel-rowlands-profile.md
-Figma project memory  …/memory/portfolio-figma-project.md
+## COMMIT HISTORY (milestones)
+
+- `1fcc61d` Portfolio build - Claude v1 (initial desktop build)
+- `0ed319f` Update Next.js for Vercel deployment (15.1.6 → 16.2.9)
+- `6b0c1d7` Add explicit Vercel framework config; force clean production deploy
+- `4964561` Scale site down ~34%, swap in new card artwork
+- `2c4391c` Home: spacious hero, full-width work cards, Ingenio above the fold *(current)*

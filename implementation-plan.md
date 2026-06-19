@@ -252,9 +252,14 @@ sm 8 · md 14 · lg 24 · xl 32 · full 999  (px — 'full' = pill buttons/tags)
 
 ## 7. Responsive — DEFERRED (phase 2)
 
-- **Phase 1 builds desktop only**, pixel-perfect to the 1440 frames. No tablet/mobile work, no fluid scaling, no breakpoint queries beyond what's needed to keep the desktop layout from breaking on very wide screens (centre + cap at 1280).
-- The existing Figma tablet/mobile frames are **ignored** (exploratory, not final).
-- Phase 2 (after desktop approval) will design and implement tablet + mobile from scratch, layering mobile-first breakpoints onto the existing components. Build components now with that in mind (semantic structure, tokenised spacing) but do not implement responsive behaviour yet.
+Phase 1 is desktop-only. The site was authored at the Figma 1440 scale and is currently rendered **~34% smaller via a global `html { zoom: 0.66 }` hack** (in `src/app/globals.css`) so it sits comfortably on real desktops. This is a stopgap, **not** real responsiveness — fixed-px layouts still overflow below ~950px.
+
+**Phase 2 scope (agreed 2026-06-19):**
+- **Full responsive: phone + tablet + desktop.** Single-column + hamburger nav on phones (~390px); adapted 2-col on tablets (~768–1024px); fluid desktop.
+- **Replace the global `zoom: 0.66` hack** with a genuine fluid system: responsive `Container` (fluid gutters), responsive type via `clamp()` (headings shrink on small screens), and Tailwind breakpoints that collapse the multi-column sections — Problem grid, Personas, Features, Business-opportunity columns, Pipeline, Footer, Contact rows, Nav — into single columns. NOTE: removing `zoom` means re-baselining the px scale so the comfortable look (≈ today's zoomed size) is the *native* scale; don't just delete `zoom` or everything jumps ~1.5× larger again.
+- **Wide screens (decided): cap content at ~1280px and centre** with margins (standard editorial); keep readable line lengths. Do not stretch to fill ultra-wide displays.
+- Target the common screens: desktop 1920/1536/1440/1366/1280, tablet 768–1024, phone 390/360. Verify the home "Ingenio above the fold" intent still holds responsively.
+- The existing Figma tablet/mobile frames remain **ignored** (exploratory) — design these breakpoints from the desktop source.
 
 ---
 
