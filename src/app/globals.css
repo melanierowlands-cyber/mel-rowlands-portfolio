@@ -49,6 +49,12 @@
   box-sizing: border-box;
 }
 
+/* Global scale-down: the design is authored at the Figma 1440 scale,
+   rendered 30% smaller so it sits comfortably on real desktop screens. */
+html {
+  zoom: 0.66;
+}
+
 html,
 body {
   padding: 0;

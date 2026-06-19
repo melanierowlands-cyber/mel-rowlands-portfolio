@@ -136,7 +136,9 @@ export type Project = {
   tags: string;
   blurb: string;
   prototypeUrl?: string;
-  /* Home "Selected Work" banner */
+  /* Home "Selected Work" banner — single pre-composed image */
+  cardImage: string;
+  /* Legacy collage data (no longer rendered) */
   card: { bg: string; textColor: string; stripe: string; images: CardImage[] };
   /* Case-study hero */
   logoLetter: string;

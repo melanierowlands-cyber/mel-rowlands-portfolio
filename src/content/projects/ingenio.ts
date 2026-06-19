@@ -10,6 +10,7 @@ export const ingenio: Project = {
   blurb:
     "A digital learning platform that helps young artists build creative and technology skills through structured online courses.",
   prototypeUrl: undefined,
+  cardImage: "/images/home/ingenio-case-study-image.png",
   card: {
     bg: "#f3a361",
     textColor: "#ffffff",

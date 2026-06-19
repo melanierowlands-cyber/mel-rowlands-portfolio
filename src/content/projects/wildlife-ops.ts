@@ -10,6 +10,7 @@ export const wildlife: Project = {
   blurb:
     "A wildlife management platform that helps reserve teams coordinate operations, monitor assets and respond faster in the field.",
   prototypeUrl: undefined,
+  cardImage: "/images/home/wildlifeops-case-study-image.png",
   card: {
     bg: "#837c74",
     textColor: "#ffffff",

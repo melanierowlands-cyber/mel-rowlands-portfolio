@@ -10,6 +10,7 @@ export const huddle: Project = {
   blurb:
     "A shared expense app that helps students manage household costs, split bills and avoid awkward money conversations.",
   prototypeUrl: undefined,
+  cardImage: "/images/home/huddle-case-study-image.png",
   card: {
     bg: "#adcdc0",
     textColor: "#4b4744",
