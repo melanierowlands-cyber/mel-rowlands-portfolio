@@ -9,7 +9,7 @@ export const ingenio: Project = {
   tags: "UX RESEARCH  ·  PRODUCT DESIGN  ·  LEARNING EXPERIENCE",
   blurb:
     "A digital learning platform that helps young artists build creative and technology skills through structured online courses.",
-  prototypeUrl: undefined,
+  prototypeUrl: "https://ingenioeducation.com/",
   card: {
     bg: "#f3a361",
     textColor: "#ffffff",
@@ -57,6 +57,7 @@ export const ingenio: Project = {
         {
           quote: "“Show me it’s worth it — fast. I’ll decide in five minutes.”",
           name: "Busy Parent",
+          portrait: "/images/ingenio/busy-parent.png",
           traits: [
             "Time-poor — judging value fast",
             "Wants real educational substance",
@@ -68,6 +69,7 @@ export const ingenio: Project = {
         {
           quote: "“I’ve never seen this before — let me explore at my own pace first.”",
           name: "Hesitant Parent",
+          portrait: "/images/ingenio/hesitant-parent.png",
           traits: [
             "Distrusts a brand-new, unproven category",
             "Wants to explore on their own terms",

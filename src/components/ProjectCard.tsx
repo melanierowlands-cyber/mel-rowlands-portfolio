@@ -2,6 +2,25 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Project } from "@/lib/projects";
 
+const CORNER: Record<string, string> = {
+  br: "bottom-[22px] right-[24px]",
+  bl: "bottom-[22px] left-[24px]",
+  tl: "top-[22px] left-[24px]",
+  tr: "top-[22px] right-[24px]",
+};
+
+function CardLogo({ card }: { card: Project["card"] }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={card.logo}
+      alt=""
+      className={`pointer-events-none absolute h-auto ${CORNER[card.logoCorner ?? "br"]}`}
+      style={{ width: card.logoWidth }}
+    />
+  );
+}
+
 /**
  * Home "Selected Work" banner, composed from live elements (so text stays
  * crisp, selectable and responsive-ready): a colour panel with copy + links
@@ -68,7 +87,9 @@ export default function ProjectCard({ project }: { project: Project }) {
               fill
               sizes="(max-width: 1280px) 28vw, 360px"
               className="object-cover"
+              style={{ objectPosition: card.photoLeftPos ?? "center" }}
             />
+            {(card.logoOn ?? "right") === "left" && <CardLogo card={card} />}
           </div>
           <div className="w-[14px] shrink-0" style={{ backgroundColor: card.stripe }} />
           <div className="relative flex-1 overflow-hidden">
@@ -77,15 +98,10 @@ export default function ProjectCard({ project }: { project: Project }) {
               alt=""
               fill
               sizes="(max-width: 1280px) 32vw, 420px"
-              className={`object-cover ${card.photoRightFit === "top" ? "object-top" : ""}`}
+              className="object-cover"
+              style={{ objectPosition: card.photoRightPos ?? "center" }}
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={card.logo}
-              alt=""
-              className="absolute bottom-[22px] right-[24px] h-auto"
-              style={{ width: card.logoWidth }}
-            />
+            {(card.logoOn ?? "right") === "right" && <CardLogo card={card} />}
           </div>
         </div>
       </div>

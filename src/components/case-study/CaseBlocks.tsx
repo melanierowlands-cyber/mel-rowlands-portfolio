@@ -139,14 +139,24 @@ function Research({ s }: { s: Extract<Section, { type: "research" }> }) {
           {s.personas.map((p, i) => (
             <div key={i} className={`${card} flex w-[624px] flex-col gap-[28px] rounded-[14px] p-[40px]`}>
               <div className="flex items-center gap-[24px]">
-                <div className="flex h-[86px] w-[86px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[26px] font-semibold text-theme">
-                  {p.name
-                    .replace(/^The\s+/, "")
-                    .split(/[\s-]/)
-                    .map((w) => w[0])
-                    .slice(0, 2)
-                    .join("")}
-                </div>
+                {p.portrait ? (
+                  <Image
+                    src={p.portrait}
+                    alt={p.name}
+                    width={86}
+                    height={86}
+                    className="h-[86px] w-[86px] shrink-0 rounded-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-[86px] w-[86px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[26px] font-semibold text-theme">
+                    {p.name
+                      .replace(/^The\s+/, "")
+                      .split(/[\s-]/)
+                      .map((w) => w[0])
+                      .slice(0, 2)
+                      .join("")}
+                  </div>
+                )}
                 <p className="font-body text-[16px] italic leading-[1.5] text-ink">{p.quote}</p>
               </div>
               <p className="font-heading text-[32px] font-medium leading-[1.12] tracking-[-0.01em] text-ink">

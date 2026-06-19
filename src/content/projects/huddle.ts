@@ -9,14 +9,14 @@ export const huddle: Project = {
   tags: "UX RESEARCH  ·  PRODUCT DESIGN  ·  MOBILE APP DESIGN",
   blurb:
     "A shared expense app that helps students manage household costs, split bills and avoid awkward money conversations.",
-  prototypeUrl: undefined,
+  prototypeUrl: "https://yourhuddle.lovable.app/demo",
   card: {
     bg: "#adcdc0",
     textColor: "#4b4744",
     stripe: "#f59c54",
     photoLeft: "/images/home/huddle-hands.png",
-    photoRight: "/images/home/huddle-expenses.png",
-    photoRightFit: "top",
+    photoLeftPos: "20% center",
+    photoRight: "/images/home/huddle-mockup-teal.png",
     logo: "/images/home/huddle-wordmark.png",
     logoWidth: 92,
   },

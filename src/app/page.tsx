@@ -46,7 +46,7 @@ export default function Home() {
             <SectionHeader
               eyebrow="SELECTED WORK · 03"
               heading="Things I've designed & built"
-              className="mb-[28px]"
+              className="mb-[48px]"
               headingClassName="text-[34px] leading-[1.05] tracking-[-0.02em]"
             />
             {/* full content width — roughly matches the hero title width */}

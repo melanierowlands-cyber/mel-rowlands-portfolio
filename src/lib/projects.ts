@@ -10,6 +10,7 @@ export type Persona = {
   name: string;
   traits: string[];
   implication: string;
+  portrait?: string; // optional avatar image; falls back to initials
 };
 export type MetricCard = { label: string; value: string };
 export type FeatureItem = { title: string; body: string };
@@ -143,9 +144,12 @@ export type Project = {
     stripe: string; // vertical divider between the two photos
     photoLeft: string;
     photoRight: string;
-    photoRightFit?: "cover" | "top"; // object-position for the right photo
-    logo: string; // white/transparent mark overlaid bottom-right of the right photo
+    photoLeftPos?: string; // CSS object-position for left photo (default "center")
+    photoRightPos?: string; // CSS object-position for right photo (default "center")
+    logo: string; // white/transparent mark overlaid on a photo
     logoWidth: number; // displayed width in px (card coordinate space)
+    logoOn?: "left" | "right"; // which photo the logo sits on (default "right")
+    logoCorner?: "br" | "bl" | "tl" | "tr"; // corner (default "br")
   };
   /* Case-study hero */
   logoLetter: string;

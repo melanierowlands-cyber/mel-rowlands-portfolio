@@ -9,7 +9,7 @@ export const wildlife: Project = {
   tags: "UX RESEARCH  ·  PRODUCT DESIGN  ·  DASHBOARD DESIGN",
   blurb:
     "A wildlife management platform that helps reserve teams coordinate operations, monitor assets and respond faster in the field.",
-  prototypeUrl: undefined,
+  prototypeUrl: "https://wildlife-ops.vercel.app/",
   card: {
     bg: "#837c74",
     textColor: "#ffffff",
@@ -17,7 +17,9 @@ export const wildlife: Project = {
     photoLeft: "/images/home/wildlife-card-elephant.png",
     photoRight: "/images/home/wildlife-card-dashboard.png",
     logo: "/images/home/wildlife-paw.png",
-    logoWidth: 64,
+    logoWidth: 70,
+    logoOn: "left",
+    logoCorner: "bl",
   },
   logoLetter: "w",
   logoLabel: "WILDLIFE OPS DASHBOARD",
