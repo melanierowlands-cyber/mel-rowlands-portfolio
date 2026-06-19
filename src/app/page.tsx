@@ -15,20 +15,21 @@ export default function Home() {
       <main>
         {/* Hero */}
         <Container>
-          <section className="flex flex-col items-start gap-[14px] pb-[24px] pt-[24px]">
+          <section className="flex flex-col items-start pb-[16px] pt-[44px]">
             <Tag className="!text-[13px] tracking-[0.06em]">
               ✦&nbsp;&nbsp;&nbsp;CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE FOR
               PRODUCT DESIGN ROLES
             </Tag>
-            <h1 className="w-[1180px] max-w-full font-heading text-[52px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink">
+            <h1 className="mt-[28px] w-[1180px] max-w-full font-heading text-[56px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink">
               Hi, I&apos;m Mel. I design products, build prototypes and ship
               solutions with AI.
             </h1>
-            <p className="font-body text-[19px] leading-[1.5] text-ink-muted">
+            <p className="mt-[24px] font-body text-[19px] leading-[1.5] text-ink-muted">
               Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
               Workflow
             </p>
-            <div className="mt-[6px] flex gap-[16px]">
+            {/* generous space above + below the CTAs */}
+            <div className="mb-[8px] mt-[44px] flex gap-[16px]">
               <Button href="/#work" variant="primary">
                 View Work
               </Button>
@@ -40,15 +41,16 @@ export default function Home() {
         </Container>
 
         {/* Selected Work */}
-        <section id="work" className="scroll-mt-[97px] pb-[64px]">
+        <section id="work" className="scroll-mt-[97px] pb-[64px] pt-[40px]">
           <Container>
             <SectionHeader
               eyebrow="SELECTED WORK · 03"
               heading="Things I've designed & built"
-              className="mb-[14px]"
-              headingClassName="text-[30px] leading-[1.05] tracking-[-0.02em]"
+              className="mb-[28px]"
+              headingClassName="text-[34px] leading-[1.05] tracking-[-0.02em]"
             />
-            <div className="mx-auto flex max-w-[820px] flex-col gap-[12px]">
+            {/* full content width — roughly matches the hero title width */}
+            <div className="flex flex-col gap-[28px]">
               {projects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
