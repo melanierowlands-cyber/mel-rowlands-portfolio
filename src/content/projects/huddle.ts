@@ -15,7 +15,7 @@ export const huddle: Project = {
     textColor: "#4b4744",
     stripe: "#f59c54",
     photoLeft: "/images/home/huddle-hands.png",
-    photoLeftPos: "20% center",
+    photoLeftPos: "left center",
     photoRight: "/images/home/huddle-mockup-teal.png",
     logo: "/images/home/huddle-wordmark.png",
     logoWidth: 92,

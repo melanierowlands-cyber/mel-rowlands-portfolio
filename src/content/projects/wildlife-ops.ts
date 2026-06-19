@@ -19,7 +19,7 @@ export const wildlife: Project = {
     logo: "/images/home/wildlife-paw.png",
     logoWidth: 70,
     logoOn: "left",
-    logoCorner: "bl",
+    logoCorner: "br",
   },
   logoLetter: "w",
   logoLabel: "WILDLIFE OPS DASHBOARD",
