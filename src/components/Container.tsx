@@ -1,9 +1,5 @@
 import { ReactNode } from "react";
 
-/**
- * Centres content at the desktop column width.
- * Desktop spec: 1440 frame, 80px gutter, 1280px max content.
- */
 export default function Container({
   children,
   className = "",
@@ -12,7 +8,7 @@ export default function Container({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto w-full max-w-[1440px] px-[80px] ${className}`}>
+    <div className={`mx-auto w-full max-w-[1440px] px-[20px] sm:px-[40px] lg:px-[80px] ${className}`}>
       {children}
     </div>
   );

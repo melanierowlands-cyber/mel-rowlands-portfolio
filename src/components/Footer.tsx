@@ -1,19 +1,14 @@
 import { footerLinks, site } from "@/lib/site";
 
-/**
- * Site footer CTA band. Desktop spec:
- * bg #4B4744 · pt 88 / pb 44 / px 80 · gap 56
- * heading Hanken Grotesk Medium 40px (no Geist) · links Poppins 17px underlined
- */
 export default function Footer() {
   return (
     <footer className="w-full bg-footer-bg">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-[56px] px-[80px] pb-[44px] pt-[88px]">
-        <div className="flex items-start justify-between text-paper">
-          <h2 className="w-[520px] font-heading text-[40px] font-medium leading-[1.08] tracking-[-0.6px]">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-[40px] px-[20px] pb-[32px] pt-[56px] sm:px-[40px] md:gap-[56px] md:pb-[44px] md:pt-[72px] lg:px-[80px] lg:pt-[88px]">
+        <div className="flex flex-col gap-[24px] text-paper md:flex-row md:items-start md:justify-between md:gap-0">
+          <h2 className="font-heading text-[28px] font-medium leading-[1.08] tracking-[-0.6px] md:w-[400px] md:text-[36px] lg:w-[520px] lg:text-[40px]">
             Let&apos;s work together.
           </h2>
-          <div className="flex flex-col items-end gap-[14px] font-body text-[17px]">
+          <div className="flex flex-col gap-[14px] font-body text-[17px] md:items-end">
             {footerLinks.map((link) => (
               <a
                 key={link.label}

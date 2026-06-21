@@ -1,9 +1,5 @@
 type Arrow = "→" | "↗" | "↓";
 
-/**
- * Contact links list row: label left, value + arrow right, hairline top border.
- * Desktop spec: row height ~102px, label Hanken ~32px, value Poppins ~22px.
- */
 export default function ContactLinkRow({
   label,
   value,
@@ -22,14 +18,14 @@ export default function ContactLinkRow({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="group flex items-center justify-between border-t border-line py-[30px] transition-colors"
+      className="group flex items-center justify-between border-t border-line py-[20px] transition-colors md:py-[30px]"
     >
-      <span className="font-heading text-[32px] font-medium tracking-[-0.01em] text-ink transition-colors group-hover:text-accent">
+      <span className="font-heading text-[22px] font-medium tracking-[-0.01em] text-ink transition-colors group-hover:text-accent md:text-[28px] lg:text-[32px]">
         {label}
       </span>
-      <span className="flex items-center gap-[16px] font-body text-[22px] text-ink-muted transition-colors group-hover:text-ink">
-        {value}
-        <span className="text-[24px] transition-transform group-hover:translate-x-[3px]">
+      <span className="flex items-center gap-[10px] font-body text-[14px] text-ink-muted transition-colors group-hover:text-ink md:gap-[16px] md:text-[18px] lg:text-[22px]">
+        <span className="hidden sm:inline">{value}</span>
+        <span className="text-[18px] transition-transform group-hover:translate-x-[3px] md:text-[24px]">
           {arrow}
         </span>
       </span>

@@ -1,9 +1,5 @@
 import Link from "next/link";
 
-/**
- * Case-study top bar — matches the Figma "MEL ROWLANDS · View Live Prototype ↗
- * · PROJECT 0X" strip. Replaces the global nav on case-study pages.
- */
 export default function CaseHeaderBar({
   projectNumber,
   prototypeUrl,
@@ -13,10 +9,10 @@ export default function CaseHeaderBar({
 }) {
   return (
     <div className="border-b border-line">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-[80px] py-[20px]">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-[20px] py-[16px] sm:px-[40px] md:py-[20px] lg:px-[80px]">
         <Link
           href="/"
-          className="font-body text-[13px] font-medium uppercase tracking-[0.08em] text-ink transition-opacity hover:opacity-70"
+          className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-ink transition-opacity hover:opacity-70 md:text-[13px]"
         >
           Mel Rowlands
         </Link>
@@ -26,20 +22,20 @@ export default function CaseHeaderBar({
             href={prototypeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-[13px] font-medium uppercase tracking-[0.08em] text-ink-muted transition-colors hover:text-ink"
+            className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-ink-muted transition-colors hover:text-ink md:text-[13px]"
           >
             View Live Prototype ↗
           </a>
         ) : (
           <span
-            className="font-body text-[13px] font-medium uppercase tracking-[0.08em] text-ink-muted opacity-40"
+            className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-ink-muted opacity-40 md:text-[13px]"
             title="Live prototype URL pending"
           >
             View Live Prototype ↗
           </span>
         )}
 
-        <span className="font-body text-[13px] font-medium uppercase tracking-[0.08em] text-theme">
+        <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-theme md:text-[13px]">
           PROJECT {projectNumber}
         </span>
       </div>

@@ -35,22 +35,22 @@ export default async function CaseStudyPage({
     <div data-theme={project.theme}>
       <CaseHeaderBar projectNumber={project.projectNumber} prototypeUrl={project.prototypeUrl} />
 
-      <div className="flex flex-col gap-[128px] pb-[128px] pt-[128px]">
+      <div className="flex flex-col gap-[64px] pb-[64px] pt-[64px] md:gap-[96px] md:pb-[96px] md:pt-[96px] lg:gap-[128px] lg:pb-[128px] lg:pt-[128px]">
         {/* Hero */}
-        <section className="mx-auto w-full max-w-[1440px] px-[80px]">
-          <div className="flex flex-col gap-[28px]">
+        <section className="mx-auto w-full max-w-[1440px] px-[20px] sm:px-[40px] lg:px-[80px]">
+          <div className="flex flex-col gap-[20px] md:gap-[28px]">
             <div className="flex items-center gap-[12px]">
-              <div className="flex h-[34px] w-[34px] items-center justify-center rounded-[8px] bg-mark font-heading text-[24px] font-medium text-on-accent">
+              <div className="flex h-[30px] w-[30px] items-center justify-center rounded-[8px] bg-mark font-heading text-[20px] font-medium text-on-accent md:h-[34px] md:w-[34px] md:text-[24px]">
                 {project.logoLetter}
               </div>
-              <span className="font-body text-[20px] font-semibold uppercase tracking-[0.06em] text-accent">
+              <span className="font-body text-[16px] font-semibold uppercase tracking-[0.06em] text-accent md:text-[20px]">
                 {project.logoLabel}
               </span>
             </div>
-            <h1 className="max-w-[1060px] font-heading text-[64px] font-bold leading-[1.0] tracking-[-0.02em] text-ink">
+            <h1 className="font-heading text-[32px] font-bold leading-[1.0] tracking-[-0.02em] text-ink sm:text-[44px] md:text-[52px] lg:text-[64px]">
               {project.headline}
             </h1>
-            <p className="max-w-[822px] font-body text-[24px] font-medium leading-[1.6] text-ink-muted">
+            <p className="font-body text-[17px] font-medium leading-[1.6] text-ink-muted md:text-[20px] lg:text-[24px]">
               {project.intro}
             </p>
           </div>
@@ -58,7 +58,7 @@ export default async function CaseStudyPage({
 
         {/* Full-bleed image strip */}
         <section className="w-full overflow-hidden bg-paper-alt">
-          <div className="flex h-[228px] w-full">
+          <div className="flex h-[140px] w-full md:h-[180px] lg:h-[228px]">
             {project.strip.map((img, i) => (
               <div key={i} className="relative h-full flex-1">
                 <Image src={img.src} alt={img.alt} fill sizes="50vw" className="object-cover" priority={i === 0} />
