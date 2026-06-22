@@ -14,7 +14,7 @@ export const ingenio: Project = {
     bg: "#f3a361",
     textColor: "#ffffff",
     stripe: "#4282d0",
-    photoLeft: "/images/home/ingenio-girl.png",
+    photoLeft: "/images/home/ingenio-hand-ipad.png",
     photoRight: "/images/home/ingenio-desktop-mockup.png",
     logo: "/images/home/ingenio-wordmark.png",
     logoWidth: 118,
