@@ -13,7 +13,7 @@ export type Persona = {
   portrait?: string; // optional avatar image; falls back to initials
 };
 export type MetricCard = { label: string; value: string };
-export type FeatureItem = { title: string; body: string };
+export type FeatureItem = { title: string; body: string; icon?: string };
 export type Step = { title: string; body: string; tag?: string };
 export type Stat = { label: string; value: string; sub: string };
 export type ChartBar = { value: number };

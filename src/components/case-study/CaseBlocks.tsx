@@ -362,9 +362,14 @@ function Features({ s }: { s: Extract<Section, { type: "features" }> }) {
           {s.items.map((f, i) => (
             <div key={i} className={`${card} flex flex-col gap-[12px] p-[20px] md:gap-[14px] md:p-[24px]`}>
               <div
-                className="h-[38px] w-[38px] rounded-[10px] md:h-[42px] md:w-[42px]"
-                style={{ backgroundColor: "color-mix(in srgb, var(--color-theme) 14%, transparent)" }}
-              />
+                className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[10px] md:h-[46px] md:w-[46px]"
+                style={{ backgroundColor: "color-mix(in srgb, var(--color-theme) 80%, transparent)" }}
+              >
+                {f.icon ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={f.icon} alt="" className="h-[24px] w-[24px] object-contain md:h-[26px] md:w-[26px]" />
+                ) : null}
+              </div>
               <p className="font-heading text-[17px] font-medium tracking-[-0.005em] text-ink md:text-[19px]">
                 {f.title}
               </p>

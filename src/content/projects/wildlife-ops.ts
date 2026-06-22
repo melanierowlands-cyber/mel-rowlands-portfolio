@@ -140,10 +140,10 @@ export const wildlife: Project = {
       eyebrow: "KEY FEATURES",
       title: "What Wildlife Ops does",
       items: [
-        { title: "Live operations overview", body: "A single dashboard of animals tracked, open incidents, field teams on duty and overall herd health — the pulse of the reserve, refreshed in real time." },
-        { title: "Incident tracking", body: "Every snare, injury, sighting or breakdown logged, categorised and tracked from first report to resolution — so nothing slips through the cracks." },
-        { title: "Live reserve map", body: "A live map plots herds and field-team positions across the reserve, turning thousands of hectares into one readable picture and surfacing where attention is needed." },
-        { title: "Wildlife & impact insights", body: "Breakdowns of herd health and incident types reveal the patterns behind the day-to-day — which animals need attention, and what’s getting better or worse." },
+        { icon: "/images/wildlife/icon-live-operations.png", title: "Live operations overview", body: "A single dashboard of animals tracked, open incidents, field teams on duty and overall herd health — the pulse of the reserve, refreshed in real time." },
+        { icon: "/images/wildlife/icon-tracking.png", title: "Incident tracking", body: "Every snare, injury, sighting or breakdown logged, categorised and tracked from first report to resolution — so nothing slips through the cracks." },
+        { icon: "/images/wildlife/icon-incident-map.png", title: "Live reserve map", body: "A live map plots herds and field-team positions across the reserve, turning thousands of hectares into one readable picture and surfacing where attention is needed." },
+        { icon: "/images/wildlife/icon-insights.png", title: "Wildlife & impact insights", body: "Breakdowns of herd health and incident types reveal the patterns behind the day-to-day — which animals need attention, and what’s getting better or worse." },
       ],
     },
     {
