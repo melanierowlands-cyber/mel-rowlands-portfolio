@@ -150,6 +150,8 @@ export type Project = {
     logoWidth: number; // displayed width in px (card coordinate space)
     logoOn?: "left" | "right"; // which photo the logo sits on (default "right")
     logoCorner?: "br" | "bl" | "tl" | "tr"; // corner (default "br")
+    photoRightFrame?: "ipad"; // render right photo inside a CSS device frame at an angle
+    photoRightBg?: string; // background colour behind the frame
   };
   /* Case-study hero */
   logoLetter: string;

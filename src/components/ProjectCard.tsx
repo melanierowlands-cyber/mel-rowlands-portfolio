@@ -86,15 +86,44 @@ export default function ProjectCard({ project }: { project: Project }) {
             {(card.logoOn ?? "right") === "left" && <CardLogo card={card} />}
           </div>
           <div className="w-[10px] shrink-0 md:w-[11px]" style={{ backgroundColor: card.stripe }} />
-          <div className="relative flex-1 overflow-hidden">
-            <Image
-              src={card.photoRight}
-              alt=""
-              fill
-              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 32vw, 420px"
-              className="object-cover"
-              style={{ objectPosition: card.photoRightPos ?? "center" }}
-            />
+          <div
+            className="relative flex-1 overflow-hidden"
+            style={card.photoRightBg ? { backgroundColor: card.photoRightBg } : undefined}
+          >
+            {card.photoRightFrame === "ipad" ? (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "3%",
+                  left: "-15%",
+                  width: "130%",
+                  height: "94%",
+                  border: "10px solid #1c1c1e",
+                  borderRadius: "14px",
+                  boxShadow: "-10px 8px 36px rgba(0,0,0,0.42)",
+                  transform: "perspective(620px) rotateY(-11deg) rotateX(2deg)",
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src={card.photoRight}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 50vw, 560px"
+                  className="object-cover"
+                  style={{ objectPosition: card.photoRightPos ?? "left top" }}
+                />
+              </div>
+            ) : (
+              <Image
+                src={card.photoRight}
+                alt=""
+                fill
+                sizes="(max-width: 768px) 50vw, (max-width: 1280px) 32vw, 420px"
+                className="object-cover"
+                style={{ objectPosition: card.photoRightPos ?? "center" }}
+              />
+            )}
             {(card.logoOn ?? "right") === "right" && <CardLogo card={card} />}
           </div>
         </div>
