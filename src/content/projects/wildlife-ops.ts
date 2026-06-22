@@ -77,6 +77,7 @@ export const wildlife: Project = {
       title: "Who the dashboard had to serve",
       personas: [
         {
+          portrait: "/images/wildlife/avatar-reserve-manager.png",
           quote: "“By the time something reaches me, it’s usually already a problem. I need to see it coming.”",
           name: "The Reserve Manager",
           traits: [
@@ -89,6 +90,7 @@ export const wildlife: Project = {
             "Lead with a single overview — incidents, teams and activity — so the state of the reserve is legible in seconds.",
         },
         {
+          portrait: "/images/wildlife/avatar-field-ranger.png",
           quote: "“I’m out in the bush all day. If logging something takes more than a few taps, it won’t happen.”",
           name: "The Field Ranger",
           traits: [
