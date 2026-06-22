@@ -3,10 +3,10 @@ import Image from "next/image";
 import type { Project } from "@/lib/projects";
 
 const CORNER: Record<string, string> = {
-  br: "bottom-[22px] right-[24px]",
-  bl: "bottom-[22px] left-[24px]",
-  tl: "top-[22px] left-[24px]",
-  tr: "top-[22px] right-[24px]",
+  br: "bottom-[16px] right-[18px]",
+  bl: "bottom-[16px] left-[18px]",
+  tl: "top-[16px] left-[18px]",
+  tr: "top-[16px] right-[18px]",
 };
 
 function CardLogo({ card }: { card: Project["card"] }) {
@@ -16,7 +16,7 @@ function CardLogo({ card }: { card: Project["card"] }) {
       src={card.logo}
       alt=""
       className={`pointer-events-none absolute h-auto ${CORNER[card.logoCorner ?? "br"]}`}
-      style={{ width: card.logoWidth }}
+      style={{ width: card.logoWidth ? card.logoWidth * 0.7 : undefined }}
     />
   );
 }
@@ -28,28 +28,28 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <article
-      className="relative w-full overflow-hidden rounded-[12px] shadow-[0px_6px_16px_rgba(0,0,0,0.12)] transition-transform duration-200 hover:-translate-y-[2px] md:aspect-[1322/412]"
+      className="relative w-full overflow-hidden rounded-[10px] shadow-[0px_4px_12px_rgba(0,0,0,0.12)] transition-transform duration-200 hover:-translate-y-[2px] md:aspect-[1322/412]"
       style={{ color: card.textColor }}
     >
       <div className="flex h-full w-full flex-col md:flex-row">
-        {/* Colour panel — full width on mobile, 37% on desktop */}
+        {/* Colour panel */}
         <div
-          className="flex w-full shrink-0 flex-col justify-between px-[24px] py-[28px] md:basis-[37%] md:py-[34px] md:pl-[40px] md:pr-[28px]"
+          className="flex w-full shrink-0 flex-col justify-between px-[20px] py-[22px] md:basis-[37%] md:py-[26px] md:pl-[30px] md:pr-[22px]"
           style={{ backgroundColor: card.bg }}
         >
-          <p className="font-body text-[13px] font-semibold lowercase tracking-[0.01em] opacity-85">
+          <p className="font-body text-[11px] font-semibold lowercase tracking-[0.01em] opacity-85">
             {tags}
           </p>
-          <div className="mt-[20px] flex flex-col gap-[10px] md:mt-0 md:gap-[12px]">
-            <h3 className="font-heading text-[18px] font-semibold leading-[1.04] md:text-[38px]">
+          <div className="mt-[16px] flex flex-col gap-[8px] md:mt-0 md:gap-[10px]">
+            <h3 className="font-heading text-[18px] font-semibold leading-[1.04] md:text-[26px]">
               {title}
             </h3>
-            <p className="max-w-[400px] font-body text-[14px] leading-[1.5] opacity-90 md:text-[15px]">
+            <p className="max-w-[400px] font-body text-[12px] leading-[1.5] opacity-90 md:text-[13px]">
               {blurb}
             </p>
-            <div className="mt-[4px] flex flex-wrap items-center gap-[12px] font-body text-[12px] font-medium md:mt-[6px] md:gap-[20px] md:text-[13px]">
+            <div className="mt-[4px] flex flex-nowrap items-center gap-[12px] font-body text-[11px] font-medium md:gap-[16px] md:text-[11px]">
               <span
-                className="rounded-full px-[14px] py-[6px] md:px-[16px] md:py-[7px]"
+                className="whitespace-nowrap rounded-full px-[12px] py-[5px]"
                 style={{ backgroundColor: chip }}
               >
                 View case study
@@ -59,12 +59,12 @@ export default function ProjectCard({ project }: { project: Project }) {
                   href={prototypeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-20 inline-flex items-center gap-[8px] underline decoration-from-font underline-offset-2"
+                  className="relative z-20 inline-flex shrink-0 items-center gap-[6px] underline decoration-from-font underline-offset-2"
                 >
                   View live prototype →
                 </a>
               ) : (
-                <span className="inline-flex items-center gap-[8px] underline decoration-from-font underline-offset-2 opacity-55">
+                <span className="inline-flex shrink-0 items-center gap-[6px] underline decoration-from-font underline-offset-2 opacity-55">
                   View live prototype →
                 </span>
               )}
@@ -72,8 +72,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        {/* Image zone — fixed height on mobile, flex-1 on desktop */}
-        <div className="flex h-[200px] flex-1 items-stretch sm:h-[240px] md:h-full">
+        {/* Image zone */}
+        <div className="flex h-[180px] flex-1 items-stretch sm:h-[220px] md:h-full">
           <div className="relative flex-1 overflow-hidden">
             <Image
               src={card.photoLeft}
@@ -85,7 +85,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             />
             {(card.logoOn ?? "right") === "left" && <CardLogo card={card} />}
           </div>
-          <div className="w-[10px] shrink-0 md:w-[14px]" style={{ backgroundColor: card.stripe }} />
+          <div className="w-[10px] shrink-0 md:w-[11px]" style={{ backgroundColor: card.stripe }} />
           <div className="relative flex-1 overflow-hidden">
             <Image
               src={card.photoRight}
@@ -100,7 +100,6 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      {/* Whole-card link (sits beneath the prototype link) */}
       <Link
         href={caseHref}
         aria-label={`${title} — view case study`}

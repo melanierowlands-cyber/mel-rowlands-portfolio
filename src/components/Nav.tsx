@@ -16,16 +16,16 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-paper">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-[20px] py-[20px] sm:px-[40px] md:py-[28px] lg:px-[80px] lg:py-[34px]">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-[20px] py-[18px] sm:px-[40px] md:py-[22px] lg:px-[80px] lg:py-[26px]">
         <Link
           href="/"
-          className="font-heading text-[18px] font-medium tracking-[-0.22px] text-ink lg:text-[22px]"
+          className="font-heading text-[17px] font-medium tracking-[-0.22px] text-ink lg:text-[18px]"
         >
           {site.name}
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-[32px] font-body text-[15px] md:flex lg:gap-[44px] lg:text-[17px]">
+        <nav className="hidden items-center gap-[28px] font-body text-[14px] md:flex lg:gap-[36px] lg:text-[15px]">
           {navLinks.map((link) => {
             const active = isActive(link.href);
             return (

@@ -19,12 +19,12 @@ export default function ContactPage() {
       <main>
         {/* Hero */}
         <Container>
-          <section className="flex flex-col gap-[20px] pb-[48px] pt-[56px] md:gap-[28px] md:pb-[72px] md:pt-[110px]">
+          <section className="flex flex-col gap-[16px] pb-[36px] pt-[40px] md:gap-[20px] md:pb-[56px] md:pt-[64px]">
             <AvailabilityBadge />
-            <h1 className="max-w-[1280px] font-heading text-[32px] font-medium leading-[1.06] tracking-[-0.02em] text-ink sm:text-[44px] md:text-[52px] lg:text-[62px]">
+            <h1 className="max-w-[900px] font-heading text-[28px] font-medium leading-[1.06] tracking-[-0.02em] text-ink sm:text-[34px] md:text-[42px]">
               Let&apos;s build something good together.
             </h1>
-            <p className="max-w-[760px] font-body text-[16px] font-light leading-[1.6] text-ink-muted md:text-[20px]">
+            <p className="max-w-[560px] font-body text-[15px] font-light leading-[1.6] text-ink-muted md:text-[17px]">
               Open to product design roles and selective collaborations. Based
               in Cape Town, working with teams anywhere.
             </p>
@@ -59,7 +59,7 @@ export default function ContactPage() {
 
         {/* Bottom bar */}
         <Container>
-          <div className="flex items-center justify-between py-[28px] font-body text-[14px] text-ink-muted md:py-[36px]">
+          <div className="flex items-center justify-between py-[24px] font-body text-[13px] text-ink-muted md:py-[32px]">
             <p>{site.copyright}</p>
             <p>{site.location}</p>
           </div>

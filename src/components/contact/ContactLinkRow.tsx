@@ -18,14 +18,14 @@ export default function ContactLinkRow({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className="group flex items-center justify-between border-t border-line py-[20px] transition-colors md:py-[30px]"
+      className="group flex items-center justify-between border-t border-line py-[16px] transition-colors md:py-[22px]"
     >
-      <span className="font-heading text-[22px] font-medium tracking-[-0.01em] text-ink transition-colors group-hover:text-accent md:text-[28px] lg:text-[32px]">
+      <span className="font-heading text-[18px] font-medium tracking-[-0.01em] text-ink transition-colors group-hover:text-accent md:text-[22px] lg:text-[26px]">
         {label}
       </span>
-      <span className="flex items-center gap-[10px] font-body text-[14px] text-ink-muted transition-colors group-hover:text-ink md:gap-[16px] md:text-[18px] lg:text-[22px]">
+      <span className="flex items-center gap-[8px] font-body text-[13px] text-ink-muted transition-colors group-hover:text-ink md:gap-[12px] md:text-[15px] lg:text-[17px]">
         <span className="hidden sm:inline">{value}</span>
-        <span className="text-[18px] transition-transform group-hover:translate-x-[3px] md:text-[24px]">
+        <span className="text-[16px] transition-transform group-hover:translate-x-[3px] md:text-[20px]">
           {arrow}
         </span>
       </span>

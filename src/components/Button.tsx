@@ -20,7 +20,7 @@ export default function Button({
   className?: string;
 }) {
   const base =
-    "inline-flex items-center justify-center rounded-full font-body font-medium text-[14px] tracking-[0.01em] px-[22px] py-[12px] md:text-[18px] md:px-[35px] md:py-[18px] transition-colors duration-150";
+    "inline-flex items-center justify-center rounded-full font-body font-medium text-[14px] tracking-[0.01em] px-[22px] py-[11px] md:text-[15px] md:px-[28px] md:py-[13px] transition-colors duration-150";
   const styles =
     variant === "primary"
       ? "bg-accent text-on-accent hover:bg-[#c9743b]"

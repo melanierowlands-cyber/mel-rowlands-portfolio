@@ -43,13 +43,13 @@ export default function AboutPage() {
       <main>
         {/* Intro */}
         <Container>
-          <section className="flex flex-col items-start gap-[40px] pb-[64px] pt-[56px] md:flex-row md:gap-[72px] md:pb-[104px] md:pt-[96px]">
-            <div className="flex flex-1 flex-col gap-[24px] md:gap-[28px]">
+          <section className="flex flex-col items-start gap-[32px] pb-[48px] pt-[40px] md:flex-row md:gap-[56px] md:pb-[72px] md:pt-[64px]">
+            <div className="flex flex-1 flex-col gap-[20px] md:gap-[24px]">
               <Tag>ABOUT</Tag>
-              <h1 className="font-heading text-[34px] font-medium leading-[1.12] tracking-[-1px] text-ink md:text-[44px] lg:text-[50px]">
+              <h1 className="font-heading text-[28px] font-medium leading-[1.12] tracking-[-1px] text-ink md:text-[36px]">
                 I design products that make complicated things feel simple
               </h1>
-              <p className="font-body text-[17px] font-light leading-[1.66] text-ink-muted md:text-[19px]">
+              <p className="font-body text-[15px] font-light leading-[1.66] text-ink-muted md:text-[17px]">
                 I&apos;m Mel — a product designer with 20+ years of design depth
                 and a research-led process. I own design end-to-end — research,
                 IA, interaction and UI — and pair Figma with Claude Code to take
@@ -57,17 +57,17 @@ export default function AboutPage() {
                 thinking, research and polished UI from one person, at shipping
                 speed.
               </p>
-              <p className="font-body text-[13px] font-medium leading-normal tracking-[0.04em] text-ink-muted">
+              <p className="font-body text-[12px] font-medium leading-normal tracking-[0.04em] text-ink-muted">
                 CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;UK PASSPORT&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE
                 FOR REMOTE ROLES ON UK / US EAST-COAST HOURS
               </p>
             </div>
-            <div className="relative h-[220px] w-[220px] shrink-0 overflow-hidden rounded-full md:h-[268px] md:w-[268px]">
+            <div className="relative h-[200px] w-[200px] shrink-0 overflow-hidden rounded-full md:h-[220px] md:w-[220px]">
               <Image
                 src="/images/about/headshot.png"
                 alt="Mel Rowlands"
                 fill
-                sizes="(max-width: 768px) 220px, 268px"
+                sizes="(max-width: 768px) 200px, 220px"
                 className="object-cover"
                 priority
               />
@@ -82,14 +82,14 @@ export default function AboutPage() {
 
         {/* Background */}
         <Container>
-          <section className="flex flex-col gap-[32px] pb-[64px] pt-[56px] md:flex-row md:items-start md:gap-[72px] md:pb-[96px] md:pt-[88px]">
-            <div className="flex shrink-0 flex-col gap-[14px] md:w-[280px] lg:w-[320px]">
+          <section className="flex flex-col gap-[24px] pb-[48px] pt-[40px] md:flex-row md:items-start md:gap-[56px] md:pb-[64px] md:pt-[56px]">
+            <div className="flex shrink-0 flex-col gap-[12px] md:w-[240px] lg:w-[280px]">
               <Tag>BACKGROUND</Tag>
-              <h2 className="font-heading text-[20px] font-medium tracking-[-0.01em] text-ink md:text-[22px]">
+              <h2 className="font-heading text-[18px] font-medium tracking-[-0.01em] text-ink md:text-[20px]">
                 Designer. Founder. Builder.
               </h2>
             </div>
-            <div className="flex flex-1 flex-col gap-[22px] font-body text-[17px] font-light leading-[1.68] text-ink-muted md:gap-[26px] md:text-[19px]">
+            <div className="flex flex-1 flex-col gap-[18px] font-body text-[15px] font-light leading-[1.68] text-ink-muted md:gap-[20px] md:text-[16px]">
               <p>
                 I&apos;ve spent 20+ years turning complex ideas into products
                 people can actually use.
@@ -117,14 +117,14 @@ export default function AboutPage() {
 
         {/* Other Work */}
         <Container>
-          <section className="flex flex-col gap-[32px] pb-[64px] pt-[56px] md:flex-row md:items-start md:gap-[72px] md:pb-[96px] md:pt-[88px]">
-            <div className="flex shrink-0 flex-col gap-[14px] md:w-[280px] lg:w-[320px]">
+          <section className="flex flex-col gap-[24px] pb-[48px] pt-[40px] md:flex-row md:items-start md:gap-[56px] md:pb-[64px] md:pt-[56px]">
+            <div className="flex shrink-0 flex-col gap-[12px] md:w-[240px] lg:w-[280px]">
               <Tag>OTHER WORK</Tag>
-              <h2 className="font-heading text-[20px] font-medium tracking-[-0.01em] text-ink md:text-[22px]">
+              <h2 className="font-heading text-[18px] font-medium tracking-[-0.01em] text-ink md:text-[20px]">
                 More of what I&apos;ve done.
               </h2>
             </div>
-            <div className="flex flex-1 flex-col gap-[0px]">
+            <div className="flex flex-1 flex-col">
               {[
                 {
                   label: "Brand & Packaging",
@@ -142,14 +142,14 @@ export default function AboutPage() {
                   body: "Dashboard and portal design for a B2B data annotation platform. Client confidential — NDA.",
                 },
               ].map((item, i) => (
-                <div key={i} className="border-t border-line py-[24px] md:py-[28px]">
-                  <div className="flex flex-col gap-[6px] sm:flex-row sm:items-baseline sm:gap-[16px]">
-                    <span className="font-heading text-[16px] font-semibold text-ink md:text-[17px]">
+                <div key={i} className="border-t border-line py-[20px] md:py-[24px]">
+                  <div className="flex flex-col gap-[4px] sm:flex-row sm:items-baseline sm:gap-[14px]">
+                    <span className="font-heading text-[15px] font-semibold text-ink md:text-[16px]">
                       {item.label}
                     </span>
-                    <span className="font-body text-[13px] text-ink-muted">{item.years}</span>
+                    <span className="font-body text-[12px] text-ink-muted">{item.years}</span>
                   </div>
-                  <p className="mt-[8px] font-body text-[15px] font-light leading-[1.62] text-ink-muted md:text-[16px]">
+                  <p className="mt-[6px] font-body text-[14px] font-light leading-[1.62] text-ink-muted md:text-[15px]">
                     {item.body}
                   </p>
                 </div>
@@ -166,14 +166,14 @@ export default function AboutPage() {
 
         {/* Interests */}
         <Container>
-          <section className="flex flex-col gap-[32px] pb-[80px] pt-[56px] md:gap-[40px] md:pb-[120px] md:pt-[88px]">
-            <div className="flex flex-col gap-[12px]">
+          <section className="flex flex-col gap-[24px] pb-[64px] pt-[40px] md:gap-[32px] md:pb-[80px] md:pt-[56px]">
+            <div className="flex flex-col gap-[10px]">
               <Tag>WHAT I CARE ABOUT</Tag>
-              <h2 className="font-heading text-[28px] font-semibold tracking-[-0.015em] text-ink md:text-[34px] lg:text-[38px]">
+              <h2 className="font-heading text-[22px] font-semibold tracking-[-0.015em] text-ink md:text-[28px]">
                 Four threads through my work
               </h2>
             </div>
-            <div className="grid grid-cols-2 gap-[16px] md:flex md:items-stretch md:gap-[24px]">
+            <div className="grid grid-cols-2 gap-[14px] md:flex md:items-stretch md:gap-[20px]">
               {threads.map((t) => (
                 <ThreadCard key={t.number} {...t} />
               ))}

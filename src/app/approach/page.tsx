@@ -70,12 +70,12 @@ export default function ApproachPage() {
       <main>
         {/* Hero */}
         <Container>
-          <section className="flex flex-col gap-[20px] pb-[64px] pt-[56px] md:gap-[28px] md:pb-[96px] md:pt-[96px]">
+          <section className="flex flex-col gap-[16px] pb-[48px] pt-[40px] md:gap-[20px] md:pb-[64px] md:pt-[56px]">
             <Tag>HOW I WORK</Tag>
-            <h1 className="max-w-[900px] font-heading text-[34px] font-semibold leading-[1.08] tracking-[-0.02em] text-ink md:text-[48px] lg:text-[56px]">
+            <h1 className="max-w-[800px] font-heading text-[28px] font-semibold leading-[1.08] tracking-[-0.02em] text-ink sm:text-[34px] md:text-[38px]">
               Research-led design, built and shipped with AI.
             </h1>
-            <p className="max-w-[720px] font-body text-[17px] font-light leading-[1.68] text-ink-muted md:text-[19px]">
+            <p className="max-w-[640px] font-body text-[15px] font-light leading-[1.68] text-ink-muted md:text-[17px]">
               I design using the same process I always have — research, Figma, iteration. What&apos;s changed is what happens after the screens are done. A modern AI-assisted toolchain means I can take a design from first concept to a live, deployed product without a separate development team.
             </p>
           </section>
@@ -88,10 +88,10 @@ export default function ApproachPage() {
 
         {/* Toolchain */}
         <Container>
-          <section className="pb-[64px] pt-[56px] md:pb-[96px] md:pt-[88px]">
-            <div className="mb-[40px] flex flex-col gap-[12px] md:mb-[56px]">
+          <section className="pb-[48px] pt-[40px] md:pb-[64px] md:pt-[56px]">
+            <div className="mb-[28px] flex flex-col gap-[10px] md:mb-[40px]">
               <Tag>THE TOOLCHAIN</Tag>
-              <h2 className="font-heading text-[26px] font-semibold tracking-[-0.015em] text-ink md:text-[36px] lg:text-[44px]">
+              <h2 className="font-heading text-[22px] font-semibold tracking-[-0.015em] text-ink md:text-[28px]">
                 From first brief to live product
               </h2>
             </div>
@@ -99,17 +99,17 @@ export default function ApproachPage() {
             <div className="flex flex-col">
               {steps.map((step, i) => (
                 <div key={i} className="border-t border-line">
-                  <div className="flex gap-[20px] py-[28px] md:gap-[40px] md:py-[36px]">
-                    <div className="flex w-[48px] shrink-0 flex-col gap-[6px] md:w-[80px]">
-                      <span className="font-heading text-[22px] font-semibold tracking-[-0.01em] text-accent md:text-[30px]">
+                  <div className="flex gap-[16px] py-[22px] md:gap-[28px] md:py-[24px]">
+                    <div className="flex w-[40px] shrink-0 flex-col gap-[4px] md:w-[56px]">
+                      <span className="font-heading text-[18px] font-semibold tracking-[-0.01em] text-accent md:text-[22px]">
                         {step.number}
                       </span>
                     </div>
-                    <div className="flex flex-1 flex-col gap-[8px] md:flex-row md:gap-[48px]">
-                      <p className="w-full font-heading text-[18px] font-semibold text-ink md:w-[200px] md:shrink-0 md:text-[20px] lg:w-[240px]">
+                    <div className="flex flex-1 flex-col gap-[6px] md:flex-row md:gap-[36px]">
+                      <p className="w-full font-heading text-[16px] font-semibold text-ink md:w-[180px] md:shrink-0 md:text-[17px] lg:w-[200px]">
                         {step.tool}
                       </p>
-                      <p className="flex-1 font-body text-[15px] leading-[1.68] text-ink-muted md:text-[16px]">
+                      <p className="flex-1 font-body text-[14px] leading-[1.68] text-ink-muted md:text-[15px]">
                         {step.desc}
                       </p>
                     </div>
@@ -128,23 +128,23 @@ export default function ApproachPage() {
 
         {/* What this means */}
         <Container>
-          <section className="pb-[64px] pt-[56px] md:pb-[96px] md:pt-[88px]">
-            <div className="mb-[40px] flex flex-col gap-[12px] md:mb-[48px]">
+          <section className="pb-[48px] pt-[40px] md:pb-[64px] md:pt-[56px]">
+            <div className="mb-[28px] flex flex-col gap-[10px] md:mb-[36px]">
               <Tag>WHAT THIS MEANS IN PRACTICE</Tag>
-              <h2 className="font-heading text-[26px] font-semibold tracking-[-0.015em] text-ink md:text-[36px] lg:text-[44px]">
+              <h2 className="font-heading text-[22px] font-semibold tracking-[-0.015em] text-ink md:text-[28px]">
                 The difference it makes
               </h2>
             </div>
-            <div className="grid grid-cols-1 gap-[16px] sm:grid-cols-2 md:gap-[20px]">
+            <div className="grid grid-cols-1 gap-[14px] sm:grid-cols-2 md:gap-[16px]">
               {outcomes.map((o, i) => (
                 <div
                   key={i}
-                  className="flex flex-col gap-[12px] rounded-[16px] border border-line bg-surface p-[28px] md:gap-[14px] md:p-[36px]"
+                  className="flex flex-col gap-[10px] rounded-[14px] border border-line bg-surface p-[22px] md:gap-[12px] md:p-[24px]"
                 >
-                  <p className="font-heading text-[20px] font-semibold tracking-[-0.005em] text-ink md:text-[22px]">
+                  <p className="font-heading text-[17px] font-semibold tracking-[-0.005em] text-ink md:text-[18px]">
                     {o.title}
                   </p>
-                  <p className="font-body text-[15px] leading-[1.62] text-ink-muted md:text-[16px]">
+                  <p className="font-body text-[14px] leading-[1.62] text-ink-muted md:text-[15px]">
                     {o.body}
                   </p>
                 </div>
@@ -155,13 +155,13 @@ export default function ApproachPage() {
 
         {/* Honesty callout */}
         <Container>
-          <section className="pb-[80px] md:pb-[120px]">
-            <div className="rounded-[16px] border border-line bg-paper-alt p-[32px] md:rounded-[24px] md:p-[64px] lg:p-[80px]">
-              <Tag className="mb-[24px] md:mb-[32px]">ON DESIGN JUDGMENT</Tag>
-              <p className="max-w-[820px] font-heading text-[22px] font-medium leading-[1.48] tracking-[-0.01em] text-ink md:text-[30px] lg:text-[36px]">
+          <section className="pb-[64px] md:pb-[80px]">
+            <div className="rounded-[14px] border border-line bg-paper-alt p-[28px] md:rounded-[20px] md:p-[40px]">
+              <Tag className="mb-[20px] md:mb-[24px]">ON DESIGN JUDGMENT</Tag>
+              <p className="max-w-[720px] font-heading text-[19px] font-medium leading-[1.48] tracking-[-0.01em] text-ink md:text-[24px]">
                 AI accelerates the making. It doesn&apos;t replace knowing what to build.
               </p>
-              <p className="mt-[20px] max-w-[680px] font-body text-[16px] font-light leading-[1.7] text-ink-muted md:mt-[28px] md:text-[18px]">
+              <p className="mt-[16px] max-w-[600px] font-body text-[14px] font-light leading-[1.7] text-ink-muted md:mt-[20px] md:text-[15px]">
                 The hard part of design isn&apos;t producing the screens — it&apos;s deciding what to put on them and why. AI doesn&apos;t replace user research, or the judgment call about which feature to cut, or the instinct that tells you a flow feels wrong before you can articulate why. What it does is remove the distance between a good decision and a shipped product. I still own the thinking. AI accelerates the making.
               </p>
             </div>

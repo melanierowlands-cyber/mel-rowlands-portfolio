@@ -20,15 +20,15 @@ export default function Home() {
               ✦&nbsp;&nbsp;&nbsp;CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE FOR
               PRODUCT DESIGN ROLES
             </Tag>
-            <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[36px] md:mt-[28px] md:text-[48px] lg:text-[56px]">
+            <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[32px] md:mt-[28px] md:text-[38px]">
               Hi, I&apos;m Mel. I design products and platforms for teams
               that need to move fast.
             </h1>
-            <p className="mt-[16px] font-body text-[16px] leading-[1.5] text-ink-muted md:mt-[24px] md:text-[19px]">
+            <p className="mt-[16px] font-body text-[15px] leading-[1.5] text-ink-muted md:mt-[20px] md:text-[17px]">
               Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
               Workflow
             </p>
-            <div className="mb-[8px] mt-[32px] flex flex-wrap gap-[12px] md:mt-[44px] md:gap-[16px]">
+            <div className="mb-[8px] mt-[28px] flex flex-wrap gap-[12px] md:mt-[36px] md:gap-[16px]">
               <Button href="/#work" variant="primary">
                 View Work
               </Button>
@@ -40,15 +40,15 @@ export default function Home() {
         </Container>
 
         {/* Selected Work */}
-        <section id="work" className="scroll-mt-[80px] pb-[48px] pt-[32px] md:scroll-mt-[97px] md:pb-[64px] md:pt-[40px]">
+        <section id="work" className="scroll-mt-[70px] pb-[48px] pt-[32px] md:pb-[56px] md:pt-[36px]">
           <Container>
             <SectionHeader
               eyebrow="SELECTED WORK · 03"
               heading="Things I've designed & built"
-              className="mb-[32px] md:mb-[48px]"
-              headingClassName="text-[24px] leading-[1.05] tracking-[-0.02em] md:text-[30px] lg:text-[34px]"
+              className="mb-[28px] md:mb-[40px]"
+              headingClassName="text-[22px] leading-[1.05] tracking-[-0.02em] md:text-[26px]"
             />
-            <div className="flex flex-col gap-[20px] md:gap-[28px]">
+            <div className="flex flex-col gap-[20px] md:gap-[24px]">
               {projects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
               ))}
