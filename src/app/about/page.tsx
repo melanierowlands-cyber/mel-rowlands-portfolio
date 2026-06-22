@@ -110,9 +110,63 @@ export default function AboutPage() {
           </section>
         </Container>
 
+        {/* Rule */}
+        <Container>
+          <div className="h-px w-full bg-line" />
+        </Container>
+
+        {/* Other Work */}
+        <Container>
+          <section className="flex flex-col gap-[32px] pb-[64px] pt-[56px] md:flex-row md:items-start md:gap-[72px] md:pb-[96px] md:pt-[88px]">
+            <div className="flex shrink-0 flex-col gap-[14px] md:w-[280px] lg:w-[320px]">
+              <Tag>OTHER WORK</Tag>
+              <h2 className="font-heading text-[20px] font-medium tracking-[-0.01em] text-ink md:text-[22px]">
+                More of what I&apos;ve done.
+              </h2>
+            </div>
+            <div className="flex flex-1 flex-col gap-[0px]">
+              {[
+                {
+                  label: "Brand & Packaging",
+                  years: "2015 – 2022",
+                  body: "At Fineday Design Studio I co-led seven years of brand and packaging work for South African food and lifestyle companies — including Yuppie Chef, Sarah Graham, Jimmy's Public and Shackleton.",
+                },
+                {
+                  label: "International Licensing",
+                  years: "2015 – 2022",
+                  body: "Surface pattern designs licensed to Studio E Fabrics and Nested Bean in the USA — used in commercial fabric collections and baby products.",
+                },
+                {
+                  label: "B2B Data Platform Design",
+                  years: "2022 – 2023",
+                  body: "Dashboard and portal design for a B2B data annotation platform. Client confidential — NDA.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="border-t border-line py-[24px] md:py-[28px]">
+                  <div className="flex flex-col gap-[6px] sm:flex-row sm:items-baseline sm:gap-[16px]">
+                    <span className="font-heading text-[16px] font-semibold text-ink md:text-[17px]">
+                      {item.label}
+                    </span>
+                    <span className="font-body text-[13px] text-ink-muted">{item.years}</span>
+                  </div>
+                  <p className="mt-[8px] font-body text-[15px] font-light leading-[1.62] text-ink-muted md:text-[16px]">
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+              <div className="border-t border-line" />
+            </div>
+          </section>
+        </Container>
+
+        {/* Rule */}
+        <Container>
+          <div className="h-px w-full bg-line" />
+        </Container>
+
         {/* Interests */}
         <Container>
-          <section className="flex flex-col gap-[32px] pb-[80px] pt-[8px] md:gap-[40px] md:pb-[120px]">
+          <section className="flex flex-col gap-[32px] pb-[80px] pt-[56px] md:gap-[40px] md:pb-[120px] md:pt-[88px]">
             <div className="flex flex-col gap-[12px]">
               <Tag>WHAT I CARE ABOUT</Tag>
               <h2 className="font-heading text-[28px] font-semibold tracking-[-0.015em] text-ink md:text-[34px] lg:text-[38px]">

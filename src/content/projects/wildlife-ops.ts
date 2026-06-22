@@ -150,7 +150,7 @@ export const wildlife: Project = {
       type: "showcase",
       eyebrow: "THE DASHBOARD",
       title: "A look at Wildlife Ops",
-      intro: "The live product — built in Figma Make, refined in code, deployed on Netlify.",
+      intro: "The live product — built in Figma Make, refined in code, deployed on Vercel.",
       images: [
         { src: "/images/wildlife/dashboard-overview.png", alt: "Reserve Overview dashboard", caption: "Reserve Overview — animals tracked, field teams, open incidents and herd health, with a live map of the reserve.", width: 1280, height: 832 },
         { src: "/images/wildlife/dashboard-health.png", alt: "Animal Health Record", caption: "Animal Health Record — a detailed view of each individual or herd, with health trend, observation log and vet scheduling.", width: 1280, height: 832 },
@@ -220,7 +220,7 @@ export const wildlife: Project = {
         { tool: "Figma Make", desc: "Turned the design into a real, interactive front-end — fast." },
         { tool: "Claude Code", desc: "A pair-programmer to extend the app, wire up data and fix issues in the code." },
         { tool: "GitHub", desc: "Every change versioned — safe to iterate on, easy to roll back." },
-        { tool: "Netlify", desc: "Deployed to a live URL, ready to open, test and demo anywhere." },
+        { tool: "Vercel", desc: "Deployed to a live URL, ready to open, test and demo anywhere." },
       ],
       closing:
         "A modern design-to-deploy workflow — evidence that I can take an idea all the way to a working, shipped product, not just a mockup.",
@@ -232,7 +232,7 @@ export const wildlife: Project = {
       cards: [
         { title: "Start with the operation, not the org chart", body: "The reserve didn’t need a prettier database — it needed the day’s reality in one place. Designing close to how people actually work surfaced needs no feature list would have." },
         { title: "The best move was deciding what not to build", body: "Rather than competing with Mziki’s tracking systems, Wildlife Ops became the layer that makes them legible. It’s useful precisely because it doesn’t try to do everything." },
-        { title: "Design carries further when it ships", body: "Taking it from Figma through Figma Make, Claude Code and Netlify turned a concept into something a reserve can actually open and react to. A working product starts a different conversation than a slide." },
+        { title: "Design carries further when it ships", body: "Taking it from Figma through Figma Make, Claude Code and Vercel turned a concept into something a reserve can actually open and react to. A working product starts a different conversation than a slide." },
       ],
     },
   ],

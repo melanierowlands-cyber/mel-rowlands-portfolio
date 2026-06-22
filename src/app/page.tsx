@@ -21,8 +21,8 @@ export default function Home() {
               PRODUCT DESIGN ROLES
             </Tag>
             <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[36px] md:mt-[28px] md:text-[48px] lg:text-[56px]">
-              Hi, I&apos;m Mel. I design products, build prototypes and ship
-              solutions with AI.
+              Hi, I&apos;m Mel. I design products and platforms for teams
+              that need to move fast.
             </h1>
             <p className="mt-[16px] font-body text-[16px] leading-[1.5] text-ink-muted md:mt-[24px] md:text-[19px]">
               Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
