@@ -174,7 +174,7 @@ export const wildlife: Project = {
           label: "ITERATION · 02",
           title: "From incident console to animal-first",
           body: "An early concept leaned on a generic ops console — missions, alerts, a map. Watching how a reserve actually reasons, it was clear the animals are the unit that matters. I rebuilt the product around individuals and herds — their health, history and location — with incidents and teams hanging off them.",
-          image: { alt: "Early concept", width: 566, height: 360 },
+          image: { src: "/images/wildlife/early-concept.png", alt: "Early concept", width: 1439, height: 1093 },
         },
       ],
       closing:
