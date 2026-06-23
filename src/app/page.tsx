@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
@@ -15,26 +16,41 @@ export default function Home() {
       <main>
         {/* Hero */}
         <Container>
-          <section className="flex flex-col items-start pb-[16px] pt-[32px] md:pt-[44px]">
-            <Tag className="!text-[13px] tracking-[0.06em]">
-              ✦&nbsp;&nbsp;&nbsp;CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE FOR
-              PRODUCT DESIGN ROLES
-            </Tag>
-            <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[32px] md:mt-[28px] md:text-[38px]">
-              Hi, I&apos;m Mel. I design products and platforms for teams
-              that need to move fast.
-            </h1>
-            <p className="mt-[16px] font-body text-[15px] leading-[1.5] text-ink-muted md:mt-[20px] md:text-[17px]">
-              Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
-              Workflow
-            </p>
-            <div className="mb-[8px] mt-[28px] flex flex-wrap gap-[12px] md:mt-[36px] md:gap-[16px]">
-              <Button href="/#work" variant="primary">
-                View Work
-              </Button>
-              <Button href="/about" variant="secondary">
-                About Me
-              </Button>
+          <section className="flex flex-col pb-[16px] pt-[32px] md:flex-row md:items-center md:gap-[48px] md:pt-[44px] lg:gap-[64px]">
+            {/* Text */}
+            <div className="flex flex-1 flex-col items-start">
+              <Tag className="!text-[13px] tracking-[0.06em]">
+                ✦&nbsp;&nbsp;&nbsp;CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE FOR
+                PRODUCT DESIGN ROLES
+              </Tag>
+              <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[32px] md:mt-[28px] md:text-[38px]">
+                Hi, I&apos;m Mel. I design products and platforms for teams
+                that need to move fast.
+              </h1>
+              <p className="mt-[16px] font-body text-[15px] leading-[1.5] text-ink-muted md:mt-[20px] md:text-[17px]">
+                Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
+                Workflow
+              </p>
+              <div className="mb-[8px] mt-[28px] flex flex-wrap gap-[12px] md:mt-[36px] md:gap-[16px]">
+                <Button href="/#work" variant="primary">
+                  View Work
+                </Button>
+                <Button href="/about" variant="secondary">
+                  About Me
+                </Button>
+              </div>
+            </div>
+
+            {/* Illustration */}
+            <div className="mt-[32px] flex justify-center md:mt-0 md:shrink-0">
+              <Image
+                src="/images/home/about-illustration.png"
+                alt="Mel at her desk"
+                width={340}
+                height={290}
+                className="w-[180px] mix-blend-multiply sm:w-[210px] md:w-[240px] lg:w-[290px] xl:w-[340px]"
+                priority
+              />
             </div>
           </section>
         </Container>
