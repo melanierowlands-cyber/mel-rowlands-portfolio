@@ -49,6 +49,13 @@ export default function AboutPage() {
               <h1 className="font-heading text-[28px] font-medium leading-[1.12] tracking-[-1px] text-ink md:text-[36px]">
                 I design products that make complicated things feel simple
               </h1>
+              <Image
+                src="/images/home/about-illustration.png"
+                alt="Mel at her desk"
+                width={320}
+                height={272}
+                className="w-[160px] mix-blend-multiply sm:w-[190px] md:w-[220px]"
+              />
               <p className="font-body text-[15px] font-light leading-[1.66] text-ink-muted md:text-[17px]">
                 I&apos;m Mel — a product designer with 20+ years of design depth
                 and a research-led process. I own design end-to-end — research,
