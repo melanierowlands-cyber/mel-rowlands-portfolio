@@ -131,7 +131,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <Link
         href={caseHref}
-        aria-label={`${title} — view case study`}
+        aria-label={`${title} - view case study`}
         className="absolute inset-0 z-10"
       />
     </article>

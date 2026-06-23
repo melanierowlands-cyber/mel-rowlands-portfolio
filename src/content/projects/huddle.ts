@@ -23,7 +23,7 @@ export const huddle: Project = {
   logoLetter: "h",
   logoLabel: "THE HUDDLE APP",
   headline: "Money is the hardest conversation between housemates. Huddle makes it the easiest.",
-  intro: "Built for my daughter's first year — and every student splitting a bill.",
+  intro: "Built for my daughter's first year - and every student splitting a bill.",
   strip: [
     { src: "/images/home/huddle-scene.png", alt: "Hand holding a phone running Huddle" },
     { src: "/images/huddle/app-mockup.png", alt: "Huddle app screens" },
@@ -37,7 +37,7 @@ export const huddle: Project = {
       type: "problem",
       eyebrow: "THE PROBLEM",
       paragraphs: [
-        "Starting university is exciting — but for many first-years, it's the first time they're managing their own money. Add shared living arrangements into the mix, and things get complicated fast.",
+        "Starting university is exciting - but for many first-years, it's the first time they're managing their own money. Add shared living arrangements into the mix, and things get complicated fast.",
         "Most students cobble it together with screenshots, notes, spreadsheets and WhatsApp messages. The result is confusion, unnecessary admin, and sometimes real tension between friends.",
         "There was a clear opportunity: a tool that takes out both the financial complexity and the social friction of sharing a home.",
       ],
@@ -60,13 +60,13 @@ export const huddle: Project = {
       intro:
         "Design a simple expense-sharing app made specifically for students sharing a home. Success would mean someone could, at a glance:",
       criteria: [
-        "See exactly what they owe — and what they’re owed",
+        "See exactly what they owe - and what they’re owed",
         "Understand where they stand for the rest of the month",
         "Add a shared expense in seconds",
         "Split costs automatically between housemates",
         "Avoid the awkward money conversations altogether",
       ],
-      closing: "And above all, it had to feel calm and approachable — never like accounting.",
+      closing: "And above all, it had to feel calm and approachable - never like accounting.",
     },
     {
       type: "research",
@@ -74,7 +74,7 @@ export const huddle: Project = {
       title: "Understanding the user",
       personas: [
         {
-          quote: "“I just want to know I’m not overspending — without doing maths every week.”",
+          quote: "“I just want to know I’m not overspending - without doing maths every week.”",
           name: "The First-Year",
           portrait: "/images/huddle/avatar-firstyear.png",
           traits: [
@@ -84,7 +84,7 @@ export const huddle: Project = {
             "Wants reassurance they’re okay for the month",
           ],
           implication:
-            "Lead with one clear number — what they owe, and whether they’re still okay this month.",
+            "Lead with one clear number - what they owe, and whether they’re still okay this month.",
           demographics: [
             { icon: "person", label: "Age 18" },
             { icon: "graduation", label: "First year uni student" },
@@ -93,7 +93,7 @@ export const huddle: Project = {
           ],
         },
         {
-          quote: "“I always end up chasing everyone for money — and I hate being the bad guy.”",
+          quote: "“I always end up chasing everyone for money - and I hate being the bad guy.”",
           name: "The House Treasurer",
           portrait: "/images/huddle/avatar-housetreasurer.png",
           traits: [
@@ -103,7 +103,7 @@ export const huddle: Project = {
             "Needs one shared source of truth everyone trusts",
           ],
           implication:
-            "Make balances automatic and visible to everyone — so no one has to play the bad guy.",
+            "Make balances automatic and visible to everyone - so no one has to play the bad guy.",
           demographics: [
             { icon: "person", label: "Age 20" },
             { icon: "house", label: "Shared house, 4–6 people" },
@@ -113,7 +113,7 @@ export const huddle: Project = {
         },
       ],
       bridge:
-        "Two roles, one need: students don’t want accounting — they want to know they’re okay, and that things feel fair.",
+        "Two roles, one need: students don’t want accounting - they want to know they’re okay, and that things feel fair.",
     },
     {
       type: "keyInsight",
@@ -126,11 +126,11 @@ export const huddle: Project = {
       eyebrow: "DESIGN APPROACH",
       title: "Designing for calm, not control",
       intro:
-        "Student life is already busy — so instead of adding features, every decision optimised for clarity. Three principles shaped the design.",
+        "Student life is already busy - so instead of adding features, every decision optimised for clarity. Three principles shaped the design.",
       steps: [
         {
           title: "Keep the important information visible",
-          body: "The first thing users see is a simple financial snapshot — what they owe, what they’re owed, total household spend and their balance. The questions students care about, answered before they have to dig.",
+          body: "The first thing users see is a simple financial snapshot - what they owe, what they’re owed, total household spend and their balance. The questions students care about, answered before they have to dig.",
         },
         {
           title: "Reduce cognitive load",
@@ -138,12 +138,12 @@ export const huddle: Project = {
         },
         {
           title: "Make shared living collaborative",
-          body: "Anyone can create a household and invite their roommates. As expenses are added, balances update for everyone automatically — one shared version of the truth, with no manual maths.",
+          body: "Anyone can create a household and invite their roommates. As expenses are added, balances update for everyone automatically - one shared version of the truth, with no manual maths.",
         },
       ],
       callout: {
         label: "WHAT I CHOSE NOT TO BUILD",
-        body: "Many finance apps try to do everything. Huddle deliberately does less. Every screen was tested against one question — does this make student life easier, or create more work? If it added complexity without clear value, it came out.",
+        body: "Many finance apps try to do everything. Huddle deliberately does less. Every screen was tested against one question - does this make student life easier, or create more work? If it added complexity without clear value, it came out.",
       },
     },
     {
@@ -153,7 +153,7 @@ export const huddle: Project = {
       items: [
         { icon: "/images/huddle/icon-household-setup.png", title: "Shared household setup", body: "Create a household and invite your roommates. Everyone shares one financial space where expenses and balances live together." },
         { icon: "/images/huddle/icon-expense-splitting.png", title: "Automatic expense splitting", body: "Add an expense and Huddle works out each person’s share and updates balances in real time. No calculators, no spreadsheets." },
-        { icon: "/images/huddle/icon-budget-tracking.png", title: "Budget tracking", body: "A monthly budget card shows total budget, current spend, what’s left and your progress through the month — so there are no end-of-month surprises." },
+        { icon: "/images/huddle/icon-budget-tracking.png", title: "Budget tracking", body: "A monthly budget card shows total budget, current spend, what’s left and your progress through the month - so there are no end-of-month surprises." },
         { icon: "/images/huddle/icon-expense-history.png", title: "Expense history", body: "A simple, scannable feed of every expense: what was bought, who paid, when, and how it changes each balance. Transparency that heads off disputes." },
       ],
     },
@@ -171,27 +171,27 @@ export const huddle: Project = {
       eyebrow: "RESULTS",
       title: "Tested live, in a real student kitchen",
       intro:
-        "I had the best possible test environment: my daughter and her roommate used Huddle for real, every day, in their first year of shared living. Watching them actually live with it surfaced issues no mockup ever would — and let me fix them fast.",
+        "I had the best possible test environment: my daughter and her roommate used Huddle for real, every day, in their first year of shared living. Watching them actually live with it surfaced issues no mockup ever would - and let me fix them fast.",
       items: [
         {
           label: "ITERATION · 01",
           title: "“Invite to household”",
-          body: "Setup was clumsy at first. Through their feedback it became a clear two-step flow: the first housemate creates the household, then sends an invite for the others to “join household.” One shared space, set up in seconds — but it took several rounds to get the roles and permissions right.",
+          body: "Setup was clumsy at first. Through their feedback it became a clear two-step flow: the first housemate creates the household, then sends an invite for the others to “join household.” One shared space, set up in seconds - but it took several rounds to get the roles and permissions right.",
         },
         {
           label: "ITERATION · 02",
           title: "The budget progress bar",
-          body: "They wanted to know, at any moment, how much was left for the month — without doing the maths. So I added a progress bar that fills as spending grows. A single glance tells you where you stand. No end-of-month surprises.",
+          body: "They wanted to know, at any moment, how much was left for the month - without doing the maths. So I added a progress bar that fills as spending grows. A single glance tells you where you stand. No end-of-month surprises.",
           image: { src: "/images/huddle/app-4.png", alt: "Huddle budget progress bar", width: 566, height: 239 },
         },
       ],
       closing:
-        "Designing with real users in the room — not a persona on a slide — made every decision sharper, and the product genuinely more usable.",
+        "Designing with real users in the room - not a persona on a slide - made every decision sharper, and the product genuinely more usable.",
     },
     {
       type: "businessOpp",
       eyebrow: "BUSINESS OPPORTUNITY",
-      title: "Built for Stellenbosch — designed to scale",
+      title: "Built for Stellenbosch - designed to scale",
       intro:
         "Huddle launches into the Stellenbosch student community, where shared accommodation is the norm and expense-sharing is a daily reality. From there, the natural path is other university towns and student-housing markets.",
       columns: [
@@ -199,7 +199,7 @@ export const huddle: Project = {
           label: "ALWAYS FREE",
           title: "The everyday core",
           bullets: ["Record shared expenses", "Split costs automatically", "Track balances & monthly budget"],
-          footnote: "Free for every student — always.",
+          footnote: "Free for every student - always.",
         },
         {
           label: "PREMIUM · FUTURE",
@@ -220,25 +220,25 @@ export const huddle: Project = {
       eyebrow: "PROTOTYPE & BUILD",
       title: "How it was designed and shipped",
       intro:
-        "Huddle went from a sketch and a set of prompts to a live, tested app — without a traditional development handoff.",
+        "Huddle went from a sketch and a set of prompts to a live, tested app - without a traditional development handoff.",
       steps: [
-        { tool: "Pen & Paper", desc: "Sketched the core idea and brainstormed the key prompts before touching any tool — clarifying what the app needed to do before worrying about how." },
-        { tool: "Lovable", desc: "Turned the prompts into a working front-end — fast. Lovable generated the UI from natural-language descriptions, making it possible to go from idea to interactive prototype in hours." },
-        { tool: "Supabase", desc: "Connected as the back-end — handling user data, shared expenses and real-time sync between housemates." },
+        { tool: "Pen & Paper", desc: "Sketched the core idea and brainstormed the key prompts before touching any tool - clarifying what the app needed to do before worrying about how." },
+        { tool: "Lovable", desc: "Turned the prompts into a working front-end - fast. Lovable generated the UI from natural-language descriptions, making it possible to go from idea to interactive prototype in hours." },
+        { tool: "Supabase", desc: "Connected as the back-end - handling user data, shared expenses and real-time sync between housemates." },
         { tool: "Vercel", desc: "Deployed to a live URL so the app could be opened, tested and shared anywhere." },
-        { tool: "Live testing", desc: "My daughter and her roommate used the app for real — the closest thing to genuine user testing, with actual shared expenses and honest feedback." },
+        { tool: "Live testing", desc: "My daughter and her roommate used the app for real - the closest thing to genuine user testing, with actual shared expenses and honest feedback." },
       ],
       closing:
-        "A prompt-to-production workflow — proof that a well-framed design idea, the right AI tools and a real test user can close the gap between concept and working product.",
+        "A prompt-to-production workflow - proof that a well-framed design idea, the right AI tools and a real test user can close the gap between concept and working product.",
     },
     {
       type: "learnings",
       eyebrow: "REFLECTION",
       title: "Reflection",
       cards: [
-        { title: "Born from something real", body: "Huddle was inspired by a genuine challenge facing someone close to me. That made the user impossible to abstract away — and kept every decision honest." },
+        { title: "Born from something real", body: "Huddle was inspired by a genuine challenge facing someone close to me. That made the user impossible to abstract away - and kept every decision honest." },
         { title: "A narrow audience kept it focused", body: "Designing specifically for students sharing a home prevented feature creep. A clear, specific user made it obvious what to leave out." },
-        { title: "From awkward to effortless", body: "The best UX often isn’t more functionality — it’s removing friction from an everyday task. Huddle turns one of the most uncomfortable conversations, money, into one of the simplest." },
+        { title: "From awkward to effortless", body: "The best UX often isn’t more functionality - it’s removing friction from an everyday task. Huddle turns one of the most uncomfortable conversations, money, into one of the simplest." },
       ],
     },
   ],

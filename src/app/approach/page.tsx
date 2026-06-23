@@ -5,48 +5,48 @@ import Container from "@/components/Container";
 import Tag from "@/components/Tag";
 
 export const metadata: Metadata = {
-  title: "Approach — Mel Rowlands",
+  title: "Approach - Mel Rowlands",
   description:
-    "How I work: research-led design, AI-augmented delivery. From first brief to live product — faster than you'd expect.",
+    "How I work: research-led design, AI-augmented delivery. From first brief to live product - faster than you'd expect.",
 };
 
 const steps = [
   {
     number: "01",
     tool: "Discovery & Research",
-    desc: "I use Claude to synthesise interview notes, spot patterns in user responses and pressure-test early assumptions against the brief. What used to take a week of affinity mapping takes an afternoon — without losing the rigour. Research findings feed directly into design decisions, not into a slide deck that gets set aside.",
+    desc: "I use Claude to synthesise interview notes, spot patterns in user responses and pressure-test early assumptions against the brief. What used to take a week of affinity mapping takes an afternoon - without losing the rigour. Research findings feed directly into design decisions, not into a slide deck that gets set aside.",
   },
   {
     number: "02",
     tool: "Figma",
-    desc: "Wireframes, design systems and high-fidelity screens. I work system-first — tokens, components, variants — so the design scales, stays consistent and hands off cleanly. No separate spec document. No translation layer between the design and the build.",
+    desc: "Wireframes, design systems and high-fidelity screens. I work system-first - tokens, components, variants - so the design scales, stays consistent and hands off cleanly. No separate spec document. No translation layer between the design and the build.",
   },
   {
     number: "03",
     tool: "Figma Make",
-    desc: "Turns the Figma design into a real, interactive front-end. Stakeholders interact with something that actually works — not a clickable mockup — so feedback is grounded in real use rather than imagination. It's also the fastest path from a finished design to running code.",
+    desc: "Turns the Figma design into a real, interactive front-end. Stakeholders interact with something that actually works - not a clickable mockup - so feedback is grounded in real use rather than imagination. It's also the fastest path from a finished design to running code.",
   },
   {
     number: "04",
     tool: "Claude Code",
-    desc: "A pair-programmer I use to extend and refine what Figma Make generates — wiring up real data, building custom logic, fixing edge cases. The result is production-quality code, not throwaway prototype code. I can take a product further and faster than I could alone, without a separate development team.",
+    desc: "A pair-programmer I use to extend and refine what Figma Make generates - wiring up real data, building custom logic, fixing edge cases. The result is production-quality code, not throwaway prototype code. I can take a product further and faster than I could alone, without a separate development team.",
   },
   {
     number: "05",
     tool: "GitHub",
-    desc: "Every change versioned. Safe to iterate, easy to roll back, ready for a development team to pick up if the product scales. The codebase is clean and handoff-ready from the start — not a prototype that needs to be rebuilt before it can ship.",
+    desc: "Every change versioned. Safe to iterate, easy to roll back, ready for a development team to pick up if the product scales. The codebase is clean and handoff-ready from the start - not a prototype that needs to be rebuilt before it can ship.",
   },
   {
     number: "06",
     tool: "Vercel",
-    desc: "Deployed to a live URL in minutes. The finished product is something anyone can open on any device — ready to test, share with stakeholders, or demonstrate to a client on the first call. A real product starts a different conversation than a screen recording.",
+    desc: "Deployed to a live URL in minutes. The finished product is something anyone can open on any device - ready to test, share with stakeholders, or demonstrate to a client on the first call. A real product starts a different conversation than a screen recording.",
   },
 ];
 
 const outcomes = [
   {
     title: "Brief to live product in weeks",
-    body: "The full loop — research, design, build, deploy — compressed into a timeline that used to require a team of three or four.",
+    body: "The full loop - research, design, build, deploy - compressed into a timeline that used to require a team of three or four.",
   },
   {
     title: "Prototypes that are real products",
@@ -54,11 +54,11 @@ const outcomes = [
   },
   {
     title: "One person. Full-stack output.",
-    body: "Research, UX, UI and front-end implementation — I own the whole chain. Less handoff friction, fewer misunderstandings between design and build.",
+    body: "Research, UX, UI and front-end implementation - I own the whole chain. Less handoff friction, fewer misunderstandings between design and build.",
   },
   {
     title: "Research goes straight into the product",
-    body: "No translation layer between insight and design decision. What I learn in discovery directly shapes what gets built — and why.",
+    body: "No translation layer between insight and design decision. What I learn in discovery directly shapes what gets built - and why.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function ApproachPage() {
               Research-led design, built and shipped with AI.
             </h1>
             <p className="max-w-[640px] font-body text-[15px] font-light leading-[1.68] text-ink-muted md:text-[17px]">
-              I design using the same process I always have — research, Figma, iteration. What&apos;s changed is what happens after the screens are done. A modern AI-assisted toolchain means I can take a design from first concept to a live, deployed product without a separate development team.
+              I design using the same process I always have - research, Figma, iteration. What&apos;s changed is what happens after the screens are done. A modern AI-assisted toolchain means I can take a design from first concept to a live, deployed product without a separate development team.
             </p>
           </section>
         </Container>
@@ -162,7 +162,7 @@ export default function ApproachPage() {
                 AI accelerates the making. It doesn&apos;t replace knowing what to build.
               </p>
               <p className="mt-[16px] max-w-[600px] font-body text-[14px] font-light leading-[1.7] text-ink-muted md:mt-[20px] md:text-[15px]">
-                The hard part of design isn&apos;t producing the screens — it&apos;s deciding what to put on them and why. AI doesn&apos;t replace user research, or the judgment call about which feature to cut, or the instinct that tells you a flow feels wrong before you can articulate why. What it does is remove the distance between a good decision and a shipped product. I still own the thinking. AI accelerates the making.
+                The hard part of design isn&apos;t producing the screens - it&apos;s deciding what to put on them and why. AI doesn&apos;t replace user research, or the judgment call about which feature to cut, or the instinct that tells you a flow feels wrong before you can articulate why. What it does is remove the distance between a good decision and a shipped product. I still own the thinking. AI accelerates the making.
               </p>
             </div>
           </section>

@@ -25,7 +25,7 @@ export const wildlife: Project = {
   logoLabel: "WILDLIFE OPS DASHBOARD",
   headline: "Conservation is logistics. I designed the system that holds it together.",
   intro:
-    "A live operations dashboard for a working game reserve — pulling animal health, field teams and incidents into one clear view.",
+    "A live operations dashboard for a working game reserve - pulling animal health, field teams and incidents into one clear view.",
   strip: [
     { src: "/images/home/wildlife-elephant.png", alt: "Elephant on the reserve" },
     { src: "/images/wildlife/dashboard-overview.png", alt: "Reserve dashboard" },
@@ -60,16 +60,16 @@ export const wildlife: Project = {
       eyebrow: "THE GOAL",
       title: "One clear view of everything happening on the reserve",
       intro:
-        "Design an operations dashboard that pulls field activity, incidents and team movements into a single screen. Success would mean anyone — from a ranger to the head of conservation — could, at a glance:",
+        "Design an operations dashboard that pulls field activity, incidents and team movements into a single screen. Success would mean anyone - from a ranger to the head of conservation - could, at a glance:",
       criteria: [
         "See what happened across the reserve, day or night",
         "Know where every field team is, and what they’re working on",
         "Track each incident from first report to resolution",
-        "Spot patterns — snaring hotspots, repeat-incident areas — before they escalate",
+        "Spot patterns - snaring hotspots, repeat-incident areas - before they escalate",
         "Turn scattered field data into decisions, fast",
       ],
       closing:
-        "And above all, it had to work for people in the field — fast, glanceable, and usable on a bad-signal day.",
+        "And above all, it had to work for people in the field - fast, glanceable, and usable on a bad-signal day.",
     },
     {
       type: "research",
@@ -87,7 +87,7 @@ export const wildlife: Project = {
             "Needs the overnight picture before the day begins",
           ],
           implication:
-            "Lead with a single overview — incidents, teams and activity — so the state of the reserve is legible in seconds.",
+            "Lead with a single overview - incidents, teams and activity - so the state of the reserve is legible in seconds.",
         },
         {
           portrait: "/images/wildlife/avatar-field-ranger.png",
@@ -100,7 +100,7 @@ export const wildlife: Project = {
             "Needs to trust that what they report gets acted on",
           ],
           implication:
-            "Keep capture fast and forgiving — and make every logged report visibly feed the bigger picture.",
+            "Keep capture fast and forgiving - and make every logged report visibly feed the bigger picture.",
         },
       ],
       bridge:
@@ -117,19 +117,19 @@ export const wildlife: Project = {
       eyebrow: "UX STRATEGY",
       title: "Why the dashboard is built the way it is",
       intro:
-        "Three principles shaped every screen — built for glanceability, for field reality, and for one shared source of truth.",
+        "Three principles shaped every screen - built for glanceability, for field reality, and for one shared source of truth.",
       steps: [
         {
           title: "Lead with the overview",
-          body: "The first thing anyone sees is the state of the reserve — animals tracked, open incidents, field teams on duty and overall herd health. The questions a manager actually asks, answered before they have to dig for them.",
+          body: "The first thing anyone sees is the state of the reserve - animals tracked, open incidents, field teams on duty and overall herd health. The questions a manager actually asks, answered before they have to dig for them.",
         },
         {
           title: "Design for the field, not the office",
-          body: "Rangers work on the move with patchy signal, so capture is fast and the interface leans on clarity over completeness — cards, clear status colours, large figures, minimal navigation. Understandable in seconds, on any screen.",
+          body: "Rangers work on the move with patchy signal, so capture is fast and the interface leans on clarity over completeness - cards, clear status colours, large figures, minimal navigation. Understandable in seconds, on any screen.",
         },
         {
           title: "One shared source of truth",
-          body: "Every report a ranger logs flows into the same live view the manager sees. No re-keying, no parallel spreadsheets — one version of what’s happening on the reserve, updating for everyone at once.",
+          body: "Every report a ranger logs flows into the same live view the manager sees. No re-keying, no parallel spreadsheets - one version of what’s happening on the reserve, updating for everyone at once.",
         },
       ],
       callout: {
@@ -142,20 +142,20 @@ export const wildlife: Project = {
       eyebrow: "KEY FEATURES",
       title: "What Wildlife Ops does",
       items: [
-        { icon: "/images/wildlife/icon-live-operations.png", title: "Live operations overview", body: "A single dashboard of animals tracked, open incidents, field teams on duty and overall herd health — the pulse of the reserve, refreshed in real time." },
-        { icon: "/images/wildlife/icon-tracking.png", title: "Incident tracking", body: "Every snare, injury, sighting or breakdown logged, categorised and tracked from first report to resolution — so nothing slips through the cracks." },
+        { icon: "/images/wildlife/icon-live-operations.png", title: "Live operations overview", body: "A single dashboard of animals tracked, open incidents, field teams on duty and overall herd health - the pulse of the reserve, refreshed in real time." },
+        { icon: "/images/wildlife/icon-tracking.png", title: "Incident tracking", body: "Every snare, injury, sighting or breakdown logged, categorised and tracked from first report to resolution - so nothing slips through the cracks." },
         { icon: "/images/wildlife/icon-incident-map.png", title: "Live reserve map", body: "A live map plots herds and field-team positions across the reserve, turning thousands of hectares into one readable picture and surfacing where attention is needed." },
-        { icon: "/images/wildlife/icon-insights.png", title: "Wildlife & impact insights", body: "Breakdowns of herd health and incident types reveal the patterns behind the day-to-day — which animals need attention, and what’s getting better or worse." },
+        { icon: "/images/wildlife/icon-insights.png", title: "Wildlife & impact insights", body: "Breakdowns of herd health and incident types reveal the patterns behind the day-to-day - which animals need attention, and what’s getting better or worse." },
       ],
     },
     {
       type: "showcase",
       eyebrow: "THE DASHBOARD",
       title: "A look at Wildlife Ops",
-      intro: "The live product — built in Figma Make, refined in code, deployed on Vercel.",
+      intro: "The live product - built in Figma Make, refined in code, deployed on Vercel.",
       images: [
-        { src: "/images/wildlife/dashboard-health.png", alt: "Reserve Overview dashboard", caption: "Reserve Overview — animals tracked, field teams, open incidents and herd health, with a live map of the reserve.", width: 1280, height: 832 },
-        { src: "/images/wildlife/dashboard-overview.png", alt: "Animal Health Record", caption: "Animal Health Record — a detailed view of each individual or herd, with health trend, observation log and vet scheduling.", width: 1280, height: 832 },
+        { src: "/images/wildlife/dashboard-health.png", alt: "Reserve Overview dashboard", caption: "Reserve Overview - animals tracked, field teams, open incidents and herd health, with a live map of the reserve.", width: 1280, height: 832 },
+        { src: "/images/wildlife/dashboard-overview.png", alt: "Animal Health Record", caption: "Animal Health Record - a detailed view of each individual or herd, with health trend, observation log and vet scheduling.", width: 1280, height: 832 },
       ],
     },
     {
@@ -168,37 +168,37 @@ export const wildlife: Project = {
         {
           label: "ITERATION · 01",
           title: "Design for the field first",
-          body: "The earliest screens were built for the office — dense, detailed, desktop-first. But the people generating the data are out in the bush on a phone with patchy signal. I reworked capture to be fast, forgiving and glanceable, so logging an observation takes seconds, not minutes — and the office view is fed by what the field can realistically do.",
+          body: "The earliest screens were built for the office - dense, detailed, desktop-first. But the people generating the data are out in the bush on a phone with patchy signal. I reworked capture to be fast, forgiving and glanceable, so logging an observation takes seconds, not minutes - and the office view is fed by what the field can realistically do.",
         },
         {
           label: "ITERATION · 02",
           title: "From incident console to animal-first",
-          body: "An early concept leaned on a generic ops console — missions, alerts, a map. Watching how a reserve actually reasons, it was clear the animals are the unit that matters. I rebuilt the product around individuals and herds — their health, history and location — with incidents and teams hanging off them.",
+          body: "An early concept leaned on a generic ops console - missions, alerts, a map. Watching how a reserve actually reasons, it was clear the animals are the unit that matters. I rebuilt the product around individuals and herds - their health, history and location - with incidents and teams hanging off them.",
           image: { src: "/images/wildlife/early-concept.png", alt: "Early concept", width: 1439, height: 1093 },
         },
       ],
       closing:
-        "Designing close to the real operation — not an imagined one — is what turned a generic dashboard into something a reserve could actually run on.",
+        "Designing close to the real operation - not an imagined one - is what turned a generic dashboard into something a reserve could actually run on.",
     },
     {
       type: "businessOpp",
       eyebrow: "WHERE THIS GOES NEXT",
       title: "From prototype to the people who’d use it",
       intro:
-        "Wildlife Ops is a working prototype, built to start a conversation. The next step is to put it in front of Mziki’s team — who already hold sophisticated tracking and telemetry data, but not always the design layer that turns it into daily decisions. That’s the gap this is meant to fill.",
+        "Wildlife Ops is a working prototype, built to start a conversation. The next step is to put it in front of Mziki’s team - who already hold sophisticated tracking and telemetry data, but not always the design layer that turns it into daily decisions. That’s the gap this is meant to fill.",
       columns: [
         {
-          label: "TODAY — THE PROTOTYPE",
+          label: "TODAY - THE PROTOTYPE",
           title: "What’s already built",
           bullets: [
             "Live reserve overview & herd health",
             "Animal & herd records with history",
             "Incident tracking & team dispatch",
           ],
-          footnote: "Designed, built and deployed — ready to demo.",
+          footnote: "Designed, built and deployed - ready to demo.",
         },
         {
-          label: "NEXT — WITH MZIKI",
+          label: "NEXT - WITH MZIKI",
           title: "Where it could go",
           bullets: [
             "Wire in live telemetry & collar data",
@@ -216,23 +216,23 @@ export const wildlife: Project = {
       eyebrow: "PROTOTYPE & BUILD",
       title: "How it was designed and shipped",
       intro:
-        "Wildlife Ops wasn’t just designed — it was built and deployed. This is the toolchain that took it from a first idea to a live product anyone can open.",
+        "Wildlife Ops wasn’t just designed - it was built and deployed. This is the toolchain that took it from a first idea to a live product anyone can open.",
       steps: [
-        { tool: "Figma", desc: "Wireframes, the design system and the final high-fidelity screens — the source of truth." },
-        { tool: "Figma Make", desc: "Turned the design into a real, interactive front-end — fast." },
+        { tool: "Figma", desc: "Wireframes, the design system and the final high-fidelity screens - the source of truth." },
+        { tool: "Figma Make", desc: "Turned the design into a real, interactive front-end - fast." },
         { tool: "Claude Code", desc: "A pair-programmer to extend the app, wire up data and fix issues in the code." },
-        { tool: "GitHub", desc: "Every change versioned — safe to iterate on, easy to roll back." },
+        { tool: "GitHub", desc: "Every change versioned - safe to iterate on, easy to roll back." },
         { tool: "Vercel", desc: "Deployed to a live URL, ready to open, test and demo anywhere." },
       ],
       closing:
-        "A modern design-to-deploy workflow — evidence that I can take an idea all the way to a working, shipped product, not just a mockup.",
+        "A modern design-to-deploy workflow - evidence that I can take an idea all the way to a working, shipped product, not just a mockup.",
     },
     {
       type: "learnings",
       eyebrow: "KEY LEARNINGS",
       title: "What this project taught me",
       cards: [
-        { title: "Start with the operation, not the org chart", body: "The reserve didn’t need a prettier database — it needed the day’s reality in one place. Designing close to how people actually work surfaced needs no feature list would have." },
+        { title: "Start with the operation, not the org chart", body: "The reserve didn’t need a prettier database - it needed the day’s reality in one place. Designing close to how people actually work surfaced needs no feature list would have." },
         { title: "The best move was deciding what not to build", body: "Rather than competing with Mziki’s tracking systems, Wildlife Ops became the layer that makes them legible. It’s useful precisely because it doesn’t try to do everything." },
         { title: "Design carries further when it ships", body: "Taking it from Figma through Figma Make, Claude Code and Vercel turned a concept into something a reserve can actually open and react to. A working product starts a different conversation than a slide." },
       ],

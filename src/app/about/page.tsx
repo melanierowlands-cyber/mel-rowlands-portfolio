@@ -7,7 +7,7 @@ import Tag from "@/components/Tag";
 import ThreadCard from "@/components/about/ThreadCard";
 
 export const metadata: Metadata = {
-  title: "About — Mel Rowlands",
+  title: "About - Mel Rowlands",
   description:
     "Product designer with 20+ years of design depth and a research-led process. Designer. Founder. Builder.",
 };
@@ -26,7 +26,7 @@ const threads = [
   {
     number: "03",
     title: "AI",
-    body: "Augmenting design and development with AI — thoughtfully, and with intent.",
+    body: "Augmenting design and development with AI - thoughtfully, and with intent.",
   },
   {
     number: "04",
@@ -56,9 +56,9 @@ export default function AboutPage() {
               className="w-[270px] sm:w-[310px] md:w-[360px]"
             />
             <p className="font-body text-[15px] font-light leading-[1.66] text-ink-muted md:text-[17px]">
-              I&apos;m Mel — a product designer with 20+ years of design depth
-              and a research-led process. I own design end-to-end — research,
-              IA, interaction and UI — and pair Figma with Claude Code to take
+              I&apos;m Mel - a product designer with 20+ years of design depth
+              and a research-led process. I own design end-to-end - research,
+              IA, interaction and UI - and pair Figma with Claude Code to take
               work from prototype to production. Small teams get product
               thinking, research and polished UI from one person, at shipping
               speed.
@@ -124,17 +124,17 @@ export default function AboutPage() {
                 {
                   label: "B2B Data Platform Design",
                   years: "2022 – 2023",
-                  body: "Dashboard and portal design for a B2B data annotation platform. Client confidential — NDA.",
+                  body: "Dashboard and portal design for a B2B data annotation platform. Client confidential - NDA.",
                 },
                 {
                   label: "Brand & Packaging",
                   years: "2015 – 2022",
-                  body: "At Fineday Design Studio I co-led seven years of brand and packaging work for South African food and lifestyle companies — including Yuppie Chef, Sarah Graham, Jimmy's Public and Shackleton.",
+                  body: "At Fineday Design Studio I co-led seven years of brand and packaging work for South African food and lifestyle companies - including Yuppie Chef, Sarah Graham, Jimmy's Public and Shackleton.",
                 },
                 {
                   label: "International Licensing",
                   years: "2015 – 2022",
-                  body: "Surface pattern designs licensed to Studio E Fabrics and Nested Bean in the USA — used in commercial fabric collections and baby products.",
+                  body: "Surface pattern designs licensed to Studio E Fabrics and Nested Bean in the USA - used in commercial fabric collections and baby products.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-t border-line py-[20px] md:py-[24px]">

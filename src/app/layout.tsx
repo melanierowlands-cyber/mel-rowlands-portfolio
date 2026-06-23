@@ -17,7 +17,7 @@ const body = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Mel Rowlands — Product Designer",
+  title: "Mel Rowlands - Product Designer",
   description:
     "Product designer, founder and AI-augmented builder. I design products, build prototypes and ship solutions with AI. Based in Cape Town.",
 };

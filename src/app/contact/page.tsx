@@ -6,7 +6,7 @@ import ContactLinkRow from "@/components/contact/ContactLinkRow";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Mel Rowlands",
+  title: "Contact - Mel Rowlands",
   description:
     "Open to product design roles and selective collaborations. Based in Cape Town, working with teams anywhere.",
 };

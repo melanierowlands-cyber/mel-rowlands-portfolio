@@ -58,19 +58,19 @@ export const ingenio: Project = {
       title: "Understanding Our Users",
       personas: [
         {
-          quote: "“Show me it’s worth it — fast. I’ll decide in five minutes.”",
+          quote: "“Show me it’s worth it - fast. I’ll decide in five minutes.”",
           name: "Busy Parent",
           portrait: "/images/ingenio/busy-parent.png",
           traits: [
-            "Time-poor — judging value fast",
+            "Time-poor - judging value fast",
             "Wants real educational substance",
             "Low tolerance for setup friction",
             "Makes quick keep-or-drop calls",
           ],
-          implication: "Show real course value in the first minute — no card, no setup wall.",
+          implication: "Show real course value in the first minute - no card, no setup wall.",
         },
         {
-          quote: "“I’ve never seen this before — let me explore at my own pace first.”",
+          quote: "“I’ve never seen this before - let me explore at my own pace first.”",
           name: "Hesitant Parent",
           portrait: "/images/ingenio/hesitant-parent.png",
           traits: [
@@ -84,14 +84,14 @@ export const ingenio: Project = {
         },
       ],
       bridge:
-        "Different parents, same blocker — in a category with no reference points, they needed to lower the risk before they’d commit.",
+        "Different parents, same blocker - in a category with no reference points, they needed to lower the risk before they’d commit.",
     },
     { type: "keyInsight", eyebrow: "KEY INSIGHT", statement: "The free trial wasn't really free." },
     {
       type: "approach",
       eyebrow: "THE FIX",
       title: "Rebuilding the trial, end to end",
-      intro: "No half-measures — if the trial was the barrier, the trial had to change.",
+      intro: "No half-measures - if the trial was the barrier, the trial had to change.",
       steps: [
         {
           title: "Confirmed where people were dropping off.",
@@ -99,11 +99,11 @@ export const ingenio: Project = {
         },
         {
           title: "Made the free trial impossible to miss.",
-          body: "I rebuilt the CTAs across the site so “Start Free Trial” became the clear, primary action — repeated, and visually distinct from “Subscribe.” No more guessing how to begin.",
+          body: "I rebuilt the CTAs across the site so “Start Free Trial” became the clear, primary action - repeated, and visually distinct from “Subscribe.” No more guessing how to begin.",
         },
         {
           title: "Reframed the trial as its own product.",
-          body: "I restructured pricing from two tiers to three, pulling Free Trial out as a standalone first column alongside Monthly and Yearly — so it read as a real option, not a feature buried inside a subscription.",
+          body: "I restructured pricing from two tiers to three, pulling Free Trial out as a standalone first column alongside Monthly and Yearly - so it read as a real option, not a feature buried inside a subscription.",
         },
         {
           title: "Stripped out every barrier to entry.",
@@ -121,14 +121,14 @@ export const ingenio: Project = {
       eyebrow: "THE PRICING REFRAME",
       title: "Before & after: the free-trial entry point",
       intro:
-        "Restructured pricing from two tiers to three — making the Free Trial a first-class product, not a feature buried inside a subscription.",
+        "Restructured pricing from two tiers to three - making the Free Trial a first-class product, not a feature buried inside a subscription.",
       before: {
         heading: "Before",
         plans: [
           { name: "Monthly Plan", note: "7 day free trial included" },
           { name: "Yearly Plan", note: "7 day free trial included" },
         ],
-        caption: "Two tiers. The trial sat buried inside both — and a credit card was required to start.",
+        caption: "Two tiers. The trial sat buried inside both - and a credit card was required to start.",
       },
       after: {
         heading: "After",
@@ -137,10 +137,10 @@ export const ingenio: Project = {
             flag: "NO COMMITMENT",
             name: "Free Trial",
             price: "R0",
-            meta: "7 days free — no credit card required",
+            meta: "7 days free - no credit card required",
             features: [
               "Full access to all 100+ lessons for 7 days",
-              "No credit card needed — just sign up and start",
+              "No credit card needed - just sign up and start",
               "Ages 5–18 · CAPS, IEB & Cambridge aligned",
             ],
             cta: "Start Your Free Trial →",
@@ -155,7 +155,7 @@ export const ingenio: Project = {
             unit: "/ month",
             meta: "Billed monthly · Cancel anytime",
             features: [
-              "100+ creative lessons — animation, illustration, landscapes & more",
+              "100+ creative lessons - animation, illustration, landscapes & more",
               "Curriculum-aligned resources",
               "New lessons added every month",
               "EPiCCS™ social-emotional learning built in",
@@ -174,7 +174,7 @@ export const ingenio: Project = {
             features: [
               "Everything in Monthly, plus:",
               "Two months free (save R1810)",
-              "Freebies — brushes & graphics",
+              "Freebies - brushes & graphics",
               "Priority access to new content",
             ],
             cta: "Lock in my rate →",
@@ -182,7 +182,7 @@ export const ingenio: Project = {
           },
         ],
         annotation: "The unlock: a true zero-commitment entry point",
-        note: "Note: pricing shown in ZAR — iNGENiO’s home market",
+        note: "Note: pricing shown in ZAR - iNGENiO’s home market",
       },
     },
     {
@@ -190,7 +190,7 @@ export const ingenio: Project = {
       eyebrow: "THE RESULTS",
       title: "One change, a measurable shift",
       intro:
-        "Free-trial sign-ups after the credit-card barrier came down — the trial went live on 25 March 2026. Before the change, almost no one reached the trial at all.",
+        "Free-trial sign-ups after the credit-card barrier came down - the trial went live on 25 March 2026. Before the change, almost no one reached the trial at all.",
       stats: [
         { label: "FIRST 7 WEEKS", value: "76", sub: "trial sign-ups" },
         { label: "FIRST FULL MONTH", value: "56", sub: "sign-ups in April 2026" },
@@ -205,23 +205,23 @@ export const ingenio: Project = {
         label: "WHAT THIS VALIDATED",
         body: "The core bet held: remove the credit-card barrier and people will actually start the trial. Sign-ups went from effectively zero - gated behind a card - to a steady daily flow.",
       },
-      note: "Honest note: iNGENiO is an early-stage platform I co-founded, so these are real counts from a small but genuine user base. The consistency of daily sign-ups — not the raw scale — is the signal.",
+      note: "Honest note: iNGENiO is an early-stage platform I co-founded, so these are real counts from a small but genuine user base. The consistency of daily sign-ups - not the raw scale - is the signal.",
     },
     {
       type: "pipeline",
       eyebrow: "PROTOTYPE & BUILD",
       title: "How it was designed and shipped",
       intro:
-        "Ingenio wasn't just designed — it was built and running. This is the toolchain that took it from concept to a live platform with paying students.",
+        "Ingenio wasn't just designed - it was built and running. This is the toolchain that took it from concept to a live platform with paying students.",
       steps: [
-        { tool: "Figma", desc: "Wireframes, user flows and high-fidelity screens — the design source of truth before a line of code was written." },
-        { tool: "WordPress + WooCommerce", desc: "Site structure, course catalogue and checkout — WooCommerce handled course products and PayFast wired up the payment gateway." },
+        { tool: "Figma", desc: "Wireframes, user flows and high-fidelity screens - the design source of truth before a line of code was written." },
+        { tool: "WordPress + WooCommerce", desc: "Site structure, course catalogue and checkout - WooCommerce handled course products and PayFast wired up the payment gateway." },
         { tool: "Claude Code", desc: "Generated the HTML for the website front-end and the PHP powering automated email confirmations and a nurture sequence for new free-trial sign-ups." },
-        { tool: "LearnDash", desc: "Delivered the course content and surfaced engagement analytics — completion rates, lesson drop-off and learner progress." },
+        { tool: "LearnDash", desc: "Delivered the course content and surfaced engagement analytics - completion rates, lesson drop-off and learner progress." },
         { tool: "Hotjar", desc: "Session recordings and heatmaps to monitor how students moved through the platform and where friction appeared." },
       ],
       closing:
-        "A full design-to-deploy stack — evidence that I can take a product from Figma all the way to a live, revenue-generating platform.",
+        "A full design-to-deploy stack - evidence that I can take a product from Figma all the way to a live, revenue-generating platform.",
     },
     {
       type: "learnings",
