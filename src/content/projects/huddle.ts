@@ -76,6 +76,7 @@ export const huddle: Project = {
         {
           quote: "“I just want to know I’m not overspending — without doing maths every week.”",
           name: "The First-Year",
+          portrait: "/images/huddle/avatar-firstyear.png",
           traits: [
             "Managing their own money for the first time",
             "Easily put off by anything that looks like accounting",
@@ -94,6 +95,7 @@ export const huddle: Project = {
         {
           quote: "“I always end up chasing everyone for money — and I hate being the bad guy.”",
           name: "The House Treasurer",
+          portrait: "/images/huddle/avatar-housetreasurer.png",
           traits: [
             "Ends up tracking shared costs for the whole house",
             "Wants splits to be fair and obvious to everyone",

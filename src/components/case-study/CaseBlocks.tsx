@@ -206,9 +206,19 @@ function Research({ s }: { s: Extract<Section, { type: "research" }> }) {
                   )}
                   <div className="flex flex-col gap-[18px] p-[22px] md:gap-[20px] md:p-[28px]">
                     <div className="flex items-start gap-[14px]">
-                      <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[15px] font-semibold text-theme">
-                        {initials}
-                      </div>
+                      {p.portrait ? (
+                        <Image
+                          src={p.portrait}
+                          alt={p.name}
+                          width={44}
+                          height={44}
+                          className="h-[44px] w-[44px] shrink-0 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[15px] font-semibold text-theme">
+                          {initials}
+                        </div>
+                      )}
                       <p className="font-body text-[13px] italic leading-[1.55] text-ink md:text-[14px]">{p.quote}</p>
                     </div>
                     <p className="font-heading text-[20px] font-medium leading-[1.12] tracking-[-0.01em] text-ink md:text-[22px]">
