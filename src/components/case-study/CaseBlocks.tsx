@@ -132,7 +132,54 @@ function Goal({ s }: { s: Extract<Section, { type: "goal" }> }) {
   );
 }
 
+const PERSONA_ICONS: Record<string, React.ReactNode> = {
+  person: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <circle cx="8" cy="4.5" r="2.5" />
+      <path d="M3 15a5 5 0 0110 0H3z" />
+    </svg>
+  ),
+  graduation: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M8 2L1 6l7 3.5L15 6 8 2z" />
+      <path d="M5 8v2.5c0 1.38 1.34 2.5 3 2.5s3-1.12 3-2.5V8" />
+    </svg>
+  ),
+  location: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M8 1a5 5 0 00-5 5c0 3.9 5 9 5 9s5-5.1 5-9a5 5 0 00-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" />
+    </svg>
+  ),
+  phone: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M5 1h6a1 1 0 011 1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V2a1 1 0 011-1zm3 12a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+    </svg>
+  ),
+  house: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M8 1.5L2 7v7h4v-4h4v4h4V7L8 1.5z" />
+    </svg>
+  ),
+  budget: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <rect x="2" y="2" width="12" height="2.5" rx="1.25" />
+      <rect x="2" y="6.75" width="12" height="2.5" rx="1.25" />
+      <rect x="2" y="11.5" width="8" height="2.5" rx="1.25" />
+    </svg>
+  ),
+  people: (
+    <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <circle cx="5.5" cy="4.5" r="2" />
+      <circle cx="10.5" cy="4.5" r="2" />
+      <path d="M1 13a4.5 4.5 0 019 0H1z" />
+      <path d="M10.5 10.8a4.5 4.5 0 014.5 2.2h-4.5" />
+    </svg>
+  ),
+};
+
 function Research({ s }: { s: Extract<Section, { type: "research" }> }) {
+  const isRich = s.personas.some((p) => p.demographics);
+
   return (
     <Wrap>
       <div className="flex flex-col gap-[32px] md:gap-[40px]">
@@ -140,50 +187,102 @@ function Research({ s }: { s: Extract<Section, { type: "research" }> }) {
           <Eyebrow>{s.eyebrow}</Eyebrow>
           <Title>{s.title}</Title>
         </div>
-        <div className="flex flex-col gap-[20px] md:flex-row md:gap-[24px]">
-          {s.personas.map((p, i) => (
-            <div key={i} className={`${card} flex w-full flex-col gap-[18px] rounded-[14px] p-[22px] md:gap-[22px] md:p-[28px]`}>
-              <div className="flex items-center gap-[16px] md:gap-[20px]">
-                {p.portrait ? (
-                  <Image
-                    src={p.portrait}
-                    alt={p.name}
-                    width={72}
-                    height={72}
-                    className="h-[60px] w-[60px] shrink-0 rounded-full object-cover md:h-[72px] md:w-[72px]"
-                  />
-                ) : (
-                  <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[20px] font-semibold text-theme md:h-[72px] md:w-[72px] md:text-[22px]">
-                    {p.name
-                      .replace(/^The\s+/, "")
-                      .split(/[\s-]/)
-                      .map((w) => w[0])
-                      .slice(0, 2)
-                      .join("")}
+        <div className={`flex flex-col gap-[20px] md:flex-row ${isRich ? "md:gap-[28px]" : "md:gap-[24px]"}`}>
+          {s.personas.map((p, i) => {
+            const initials = p.name
+              .replace(/^The\s+/, "")
+              .split(/[\s-]/)
+              .map((w) => w[0])
+              .slice(0, 2)
+              .join("");
+
+            if (p.demographics) {
+              return (
+                <div key={i} className={`${card} flex w-full flex-col overflow-hidden`}>
+                  {p.photo && (
+                    <div className="relative h-[200px] w-full overflow-hidden md:h-[240px]">
+                      <Image src={p.photo} alt={p.name} fill className="object-cover object-top" />
+                    </div>
+                  )}
+                  <div className="flex flex-col gap-[18px] p-[22px] md:gap-[20px] md:p-[28px]">
+                    <div className="flex items-start gap-[14px]">
+                      <div className="flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[15px] font-semibold text-theme">
+                        {initials}
+                      </div>
+                      <p className="font-body text-[13px] italic leading-[1.55] text-ink md:text-[14px]">{p.quote}</p>
+                    </div>
+                    <p className="font-heading text-[20px] font-medium leading-[1.12] tracking-[-0.01em] text-ink md:text-[22px]">
+                      {p.name}
+                    </p>
+                    <div className="grid grid-cols-2 gap-x-[20px]">
+                      <ul className="flex flex-col gap-[10px]">
+                        {p.demographics.map((d, j) => (
+                          <li key={j} className="flex items-center gap-[8px]">
+                            <span className="shrink-0 text-theme">{PERSONA_ICONS[d.icon]}</span>
+                            <span className="font-body text-[12px] leading-[1.4] text-ink md:text-[13px]">{d.label}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="flex flex-col gap-[10px]">
+                        {p.traits.map((t, j) => (
+                          <li key={j} className="flex items-start gap-[8px]">
+                            <span className="mt-[5px] h-[5px] w-[5px] shrink-0 rounded-full bg-theme" />
+                            <span className="font-body text-[12px] leading-[1.4] text-ink-muted md:text-[13px]">{t}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="flex flex-col gap-[10px]">
+                      <div className="h-px w-full bg-line" />
+                      <p className="font-body text-[11px] font-semibold uppercase tracking-[0.06em] text-theme">
+                        → Design Implication
+                      </p>
+                      <p className="font-body text-[13px] leading-[1.5] text-ink md:text-[14px]">{p.implication}</p>
+                    </div>
                   </div>
-                )}
-                <p className="font-body text-[14px] italic leading-[1.5] text-ink md:text-[15px]">{p.quote}</p>
-              </div>
-              <p className="font-heading text-[20px] font-medium leading-[1.12] tracking-[-0.01em] text-ink md:text-[24px]">
-                {p.name}
-              </p>
-              <ul className="flex flex-col gap-[12px]">
-                {p.traits.map((t, j) => (
-                  <li key={j} className="flex items-center gap-[10px]">
-                    <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-theme" />
-                    <span className="font-body text-[14px] leading-[1.6] text-ink-muted md:text-[15px]">{t}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex flex-col gap-[10px]">
-                <div className="h-px w-full bg-line" />
-                <p className="font-body text-[11px] font-semibold uppercase tracking-[0.06em] text-theme">
-                  → Design Implication
+                </div>
+              );
+            }
+
+            return (
+              <div key={i} className={`${card} flex w-full flex-col gap-[18px] rounded-[14px] p-[22px] md:gap-[22px] md:p-[28px]`}>
+                <div className="flex items-center gap-[16px] md:gap-[20px]">
+                  {p.portrait ? (
+                    <Image
+                      src={p.portrait}
+                      alt={p.name}
+                      width={72}
+                      height={72}
+                      className="h-[60px] w-[60px] shrink-0 rounded-full object-cover md:h-[72px] md:w-[72px]"
+                    />
+                  ) : (
+                    <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-paper-alt font-heading text-[20px] font-semibold text-theme md:h-[72px] md:w-[72px] md:text-[22px]">
+                      {initials}
+                    </div>
+                  )}
+                  <p className="font-body text-[14px] italic leading-[1.5] text-ink md:text-[15px]">{p.quote}</p>
+                </div>
+                <p className="font-heading text-[20px] font-medium leading-[1.12] tracking-[-0.01em] text-ink md:text-[24px]">
+                  {p.name}
                 </p>
-                <p className="font-body text-[13px] leading-[1.5] text-ink md:text-[14px]">{p.implication}</p>
+                <ul className="flex flex-col gap-[12px]">
+                  {p.traits.map((t, j) => (
+                    <li key={j} className="flex items-center gap-[10px]">
+                      <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-theme" />
+                      <span className="font-body text-[14px] leading-[1.6] text-ink-muted md:text-[15px]">{t}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col gap-[10px]">
+                  <div className="h-px w-full bg-line" />
+                  <p className="font-body text-[11px] font-semibold uppercase tracking-[0.06em] text-theme">
+                    → Design Implication
+                  </p>
+                  <p className="font-body text-[13px] leading-[1.5] text-ink md:text-[14px]">{p.implication}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <p className="font-body text-[15px] font-light italic leading-[1.5] text-ink-muted md:text-[16px]">
           {s.bridge}

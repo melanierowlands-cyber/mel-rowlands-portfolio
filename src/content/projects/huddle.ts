@@ -84,6 +84,12 @@ export const huddle: Project = {
           ],
           implication:
             "Lead with one clear number — what they owe, and whether they’re still okay this month.",
+          demographics: [
+            { icon: "person", label: "Age 18" },
+            { icon: "graduation", label: "First year uni student" },
+            { icon: "location", label: "Lives in res / on campus" },
+            { icon: "phone", label: "Digital native" },
+          ],
         },
         {
           quote: "“I always end up chasing everyone for money — and I hate being the bad guy.”",
@@ -96,6 +102,12 @@ export const huddle: Project = {
           ],
           implication:
             "Make balances automatic and visible to everyone — so no one has to play the bad guy.",
+          demographics: [
+            { icon: "person", label: "Age 20" },
+            { icon: "house", label: "Shared house, 4–6 people" },
+            { icon: "budget", label: "Handles group bills & budgets" },
+            { icon: "people", label: "Pragmatic and organised" },
+          ],
         },
       ],
       bridge:

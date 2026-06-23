@@ -11,6 +11,8 @@ export type Persona = {
   traits: string[];
   implication: string;
   portrait?: string; // optional avatar image; falls back to initials
+  photo?: string; // optional full-bleed hero photo at top of card
+  demographics?: { icon: string; label: string }[]; // left-column info with icons
 };
 export type MetricCard = { label: string; value: string };
 export type FeatureItem = { title: string; body: string; icon?: string };
