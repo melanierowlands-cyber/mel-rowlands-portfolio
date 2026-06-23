@@ -495,25 +495,32 @@ function Features({ s }: { s: Extract<Section, { type: "features" }> }) {
 
 function Showcase({ s }: { s: Extract<Section, { type: "showcase" }> }) {
   const portrait = s.images.every((i) => i.height > i.width);
+  const twoCol = s.columns === 2;
+  const gridClass = twoCol
+    ? "grid grid-cols-1 gap-[20px] sm:grid-cols-2 md:gap-[28px]"
+    : portrait
+    ? "flex flex-wrap justify-center gap-[16px] md:gap-[24px]"
+    : "flex flex-col gap-[24px] md:gap-[32px]";
+  const figClass = twoCol
+    ? "w-full"
+    : portrait
+    ? "w-full sm:w-[240px] md:w-[280px]"
+    : "w-full";
   return (
     <Wrap>
       <div className="flex flex-col gap-[28px] md:gap-[32px]">
-        <div className="flex flex-col gap-[14px]">
-          <Eyebrow>{s.eyebrow}</Eyebrow>
-          <Title>{s.title}</Title>
-          {s.intro && (
-            <p className="max-w-[640px] font-body text-[14px] leading-[1.6] text-ink-muted md:text-[15px]">{s.intro}</p>
-          )}
-        </div>
-        <div
-          className={
-            portrait
-              ? "flex flex-wrap justify-center gap-[16px] md:gap-[24px]"
-              : "flex flex-col gap-[24px] md:gap-[32px]"
-          }
-        >
+        {(s.eyebrow || s.title || s.intro) && (
+          <div className="flex flex-col gap-[14px]">
+            {s.eyebrow && <Eyebrow>{s.eyebrow}</Eyebrow>}
+            {s.title && <Title>{s.title}</Title>}
+            {s.intro && (
+              <p className="max-w-[640px] font-body text-[14px] leading-[1.6] text-ink-muted md:text-[15px]">{s.intro}</p>
+            )}
+          </div>
+        )}
+        <div className={gridClass}>
           {s.images.map((img, i) => (
-            <figure key={i} className={portrait ? "w-full sm:w-[240px] md:w-[280px]" : "w-full"}>
+            <figure key={i} className={figClass}>
               <Img img={img} />
               {img.caption && (
                 <figcaption className="mt-[10px] font-body text-[13px] leading-[1.5] text-ink-muted md:mt-[12px] md:text-[14px]">

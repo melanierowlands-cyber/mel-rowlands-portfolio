@@ -189,12 +189,21 @@ export const ingenio: Project = {
       type: "showcase",
       eyebrow: "THE PLATFORM",
       title: "A look at iNGENiO",
-      intro: "The live platform - homepage, learning path and course catalogue.",
+      intro: "The live platform - from the homepage through to the learning experience.",
       images: [
         { src: "/images/ingenio/home-page.png", alt: "iNGENiO homepage", caption: "Homepage - 'Turn screen time into creative learning', with a free trial CTA as the primary action.", width: 2860, height: 1320 },
+      ],
+    },
+    {
+      type: "showcase",
+      eyebrow: "",
+      images: [
         { src: "/images/ingenio/learning-path.png", alt: "iNGENiO learning path", caption: "Learning path - a three-step quiz that matches each child to the right course based on age, app and interest.", width: 2858, height: 1340 },
         { src: "/images/ingenio/courses.png", alt: "iNGENiO course catalogue", caption: "Course catalogue - structured lessons organised by subject, with trailers and clear entry points for every level.", width: 1940, height: 1270 },
+        { src: "/images/ingenio/course-overview.png", alt: "iNGENiO course overview", caption: "Course overview - lesson objectives, skills, framework alignment and a clear 'Ready to start' entry point.", width: 1276, height: 1122 },
+        { src: "/images/ingenio/learndash-interface.png", alt: "iNGENiO lesson interface", caption: "Lesson interface - structured content delivered through LearnDash, with navigation, progress tracking and video.", width: 2848, height: 1338 },
       ],
+      columns: 2,
     },
     {
       type: "results",

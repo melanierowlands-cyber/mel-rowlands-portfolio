@@ -90,7 +90,7 @@ export type Section =
       };
     }
   | { type: "features"; eyebrow: string; title: string; items: FeatureItem[] }
-  | { type: "showcase"; eyebrow: string; title: string; intro?: string; images: ShowcaseImage[] }
+  | { type: "showcase"; eyebrow: string; title?: string; intro?: string; images: ShowcaseImage[]; columns?: 2 }
   | {
       type: "results";
       eyebrow: string;
