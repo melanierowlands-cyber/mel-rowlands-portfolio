@@ -31,7 +31,7 @@ const threads = [
   {
     number: "04",
     title: "Community",
-    body: "Products that bring people together and quietly remove everyday friction.",
+    body: "Products that bring people together and remove everyday friction.",
   },
 ];
 
