@@ -207,6 +207,22 @@ export const ingenio: Project = {
       note: "Honest note: iNGENiO is an early-stage platform I co-founded, so these are real counts from a small but genuine user base. The consistency of daily sign-ups — not the raw scale — is the signal.",
     },
     {
+      type: "pipeline",
+      eyebrow: "PROTOTYPE & BUILD",
+      title: "How it was designed and shipped",
+      intro:
+        "Ingenio wasn't just designed — it was built and running. This is the toolchain that took it from concept to a live platform with paying students.",
+      steps: [
+        { tool: "Figma", desc: "Wireframes, user flows and high-fidelity screens — the design source of truth before a line of code was written." },
+        { tool: "WordPress + WooCommerce", desc: "Site structure, course catalogue and checkout — WooCommerce handled course products and PayFast wired up the payment gateway." },
+        { tool: "Claude Code", desc: "Generated the HTML for the website front-end and the PHP powering automated email confirmations and a nurture sequence for new free-trial sign-ups." },
+        { tool: "LearnDash", desc: "Delivered the course content and surfaced engagement analytics — completion rates, lesson drop-off and learner progress." },
+        { tool: "Hotjar", desc: "Session recordings and heatmaps to monitor how students moved through the platform and where friction appeared." },
+      ],
+      closing:
+        "A full design-to-deploy stack — evidence that I can take a product from Figma all the way to a live, revenue-generating platform.",
+    },
+    {
       type: "learnings",
       eyebrow: "WHAT I LEARNED",
       title: "What I Learned",
