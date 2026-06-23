@@ -15,6 +15,7 @@ export default function Footer() {
                 href={link.href}
                 target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                download={link.download || undefined}
                 className="underline decoration-from-font underline-offset-2 transition-opacity hover:opacity-70"
               >
                 {link.label}

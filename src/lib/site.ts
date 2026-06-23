@@ -5,8 +5,8 @@ export const site = {
   email: "melanie.rowlands@gmail.com",
   linkedin: "https://www.linkedin.com/in/melanierowlands/",
   linkedinLabel: "/in/melanierowlands",
-  cvUrl: "/mel-rowlands-cv.html",
-  cvLabel: "View & download",
+  cvUrl: "/Mel-Rowlands-CV.pdf",
+  cvLabel: "Download PDF",
   copyright: "© 2026 Mel Rowlands",
 };
 
@@ -17,8 +17,8 @@ export const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const footerLinks = [
+export const footerLinks: { label: string; href: string; download?: boolean }[] = [
   { label: "melanie.rowlands@gmail.com", href: `mailto:${site.email}` },
   { label: "LinkedIn", href: site.linkedin },
-  { label: "Download CV", href: site.cvUrl },
+  { label: "Download CV", href: site.cvUrl, download: true },
 ];

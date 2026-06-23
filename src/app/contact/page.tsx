@@ -53,6 +53,7 @@ export default function ContactPage() {
               href={site.cvUrl}
               arrow="↓"
               external
+              download
             />
           </div>
         </Container>
