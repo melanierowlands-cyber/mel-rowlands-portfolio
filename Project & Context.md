@@ -9,10 +9,11 @@ Mel Rowlands — Product Design Portfolio. This file is the **session handoff**:
 ## STATUS AT A GLANCE
 
 - **Live site:** https://mel-rowlands-portfolio.vercel.app (deployed, all routes 200)
-- **Repo:** `git@github.com:melanierowlands-cyber/mel-rowlands-portfolio.git` — branch `main`, latest commit `6fc3e39`
+- **Repo:** `git@github.com:melanierowlands-cyber/mel-rowlands-portfolio.git` — branch `main`, latest commit `83aa336`
 - **Working dir:** `/Users/melanierowlands/Library/CloudStorage/Dropbox/UX ROLE/Portfolio/PORTFOLIO_LIVE`
 - **Figma source of truth:** file `DHXrCjbgmnmQUGoG89JdYU` (desktop frames only)
 - **Phase 1 (desktop) = complete. Phase 2 (responsive) = complete.**
+- **Target role:** Tenacity Works (https://www.tenacityworks.com) — B2B digital agency, Bath/Cape Town/Cluj. CV and positioning updated accordingly.
 
 ---
 
@@ -38,11 +39,12 @@ Mel Rowlands — Product Design Portfolio. This file is the **session handoff**:
 ## SITE STRUCTURE
 
 Routes (all static / SSG):
-- `/` — Home (Nav · Hero · Selected Work · Footer)
-- `/about` — About (Hero+headshot · Background · Four threads · Other Work strip · Footer)
+- `/` — Home (Nav · Hero with illustration · Selected Work · Footer)
+- `/about` — About (Tag · h1 · Illustration · Body copy · Background · Other Work · Four threads · Footer)
 - `/contact` — Contact (availability pill · headline · 3 link rows · bottom bar)
 - `/approach` — Approach (hero · 3 process steps · outcome grid · callout · Footer)
 - `/work/[slug]` — Case studies: `ingenio`, `wildlife-ops`, `huddle` (`generateStaticParams`)
+- `/mel-rowlands-cv.html` — Standalone CV page (static HTML in `public/`, print-ready)
 
 **Case-study circular prev/next chain:** Ingenio → Wildlife Ops → Huddle → Ingenio.
 
@@ -102,6 +104,8 @@ paper `#F4F0E8` · paper-alt `#EAE3D6` · surface `#FBF9F4` · line `#DAD3C6` ·
 - **Persona portraits**: optional `portrait?: string` on the `Persona` type in `projects.ts`. Falls back to initials if omitted. All three case studies now have portrait images.
 - **Huddle rich persona cards**: When `demographics?: { icon: string; label: string }[]` is set on a persona, the `Research` component renders a richer two-column card layout (portrait/initials + quote header · name · left col demographics with SVG icons · right col trait bullets · Design Implication footer). The icon set (`PERSONA_ICONS` in `CaseBlocks.tsx`) covers: `person`, `graduation`, `location`, `phone`, `house`, `budget`, `people`. Also supports an optional `photo?: string` for a full-bleed hero image at the top of the card. Wildlife Ops personas have no `demographics` field and render via the standard layout unchanged.
 - **Pipeline sections** (`type: "pipeline"`) exist in all three case studies: Wildlife Ops (Figma → Figma Make → Claude Code → GitHub → Vercel), Ingenio (Figma → WordPress+WooCommerce → Claude Code → LearnDash → Hotjar), Huddle (Pen & Paper → Lovable → Supabase → Vercel → Live testing).
+- **Illustrations** (Home + About): transparent-background PNGs processed via Python Pillow flood-fill. Source originals in `/Assets`. No `mix-blend-multiply` — backgrounds are genuinely transparent. See IMAGES section for file names.
+- **CV HTML** (`public/mel-rowlands-cv.html`): self-contained, print-ready HTML file. Uses Google Fonts (Hanken Grotesk + Poppins) via CDN `@import`. All links have `target="_blank"`. To update copy, edit the HTML directly — no build step needed. To "download as PDF": open in browser, print → Save as PDF.
 - **CRITICAL — Edit tool quote corruption in `.ts` content files**: The Edit tool converts straight ASCII `"` (0x22) to Unicode curly quotes (`"` / `"`, bytes `e2 80 9c` / `e2 80 9d`) on lines near its insertion point, causing `TS1127: Invalid character` TypeScript build errors. **Workaround**: use a Python byte-replacement script for all changes to `src/content/projects/*.ts`. Pattern: `open(path, 'rb')` → replace old bytes → `open(path, 'wb')`. Never use the Edit tool directly on those files.
 
 ---
@@ -146,6 +150,8 @@ home/
   huddle-hands.png               Huddle card — left photo
   huddle-mockup-teal.png         Huddle card — right photo
   huddle-wordmark.png            Huddle card — wordmark logo
+  homepage-illustration.png      Home hero — line-drawing illustration (transparent bg); MacBook, wireframes, checklist
+  about-illustration.png         About page — line-drawing illustration (transparent bg); MacBook, wireframes, coffee
 
 wildlife/
   dashboard-health.png           Showcase TOP — Reserve Overview screen (note: filename says health but shows overview)
@@ -175,7 +181,22 @@ huddle/
 
 **NOTE on Wildlife Ops showcase filenames:** `dashboard-health.png` actually displays the Reserve Overview screen, and `dashboard-overview.png` displays the Animal Health Record screen. The filenames are inverted vs content. The display order in wildlife-ops.ts is correct (Reserve Overview first, Health Record second) — do not swap the files or rename without checking both the data file and the images.
 
+**NOTE on illustrations:** Both illustration PNGs were processed with a Python Pillow flood-fill to remove the white background (alpha=0 on all background pixels). Source originals are in `/Assets/homepage_image.png` and `/Assets/About_Image.png`. If the user provides a new version of either illustration, re-run the flood-fill script before committing.
+
 Source assets in `/Assets` (originals, not committed to git).
+
+---
+
+## CV (`public/mel-rowlands-cv.html`)
+
+A self-contained, print-ready HTML CV written for a **B2B agency / Tenacity Works target**. Key positioning:
+- Headline: "B2B platforms, complex UX & brand"
+- Leads with Dataloop (B2B dashboards/portals) before iNGENiO
+- iNGENiO framed around complex IA and AI-forward workflow, not signup metrics
+- Fineday positioned as brand studio experience (relevant to agency Design Studio work)
+- Cape Town location prominent (Tenacity has a Cape Town office)
+
+To update: edit `public/mel-rowlands-cv.html` directly. All links have `target="_blank"`. The `site.ts` `cvUrl` points to `/mel-rowlands-cv.html` — this drives both the footer "Download CV" link and the Contact page "Curriculum Vitae" row.
 
 ---
 
@@ -184,6 +205,7 @@ Source assets in `/Assets` (originals, not committed to git).
 - **GitHub:** `gh` CLI is NOT installed; stored gh keychain token is invalid. Repo created manually by the user on github.com. **Push works via SSH** (key authenticated as `melanierowlands-cyber`) — `git push origin main` just works.
 - **Vercel:** imported via the dashboard (no CLI/token on this machine). Auto-deploys on push to `main`.
 - **Resolved issues:** (1) Vercel flagged Next 15.1.6 as vulnerable → upgraded to **16.2.9** (+ React 19.2.7). (2) Production domain initially returned `x-vercel-error: NOT_FOUND` → fixed by pushing a fresh commit + adding `vercel.json`.
+- **Next.js image cache:** dev server caches optimised images at `.next/cache/images/`. If a replaced image keeps showing the old version in local screenshots, delete that folder and restart `npm run dev`. Production builds (Vercel) are always fresh.
 
 ---
 
@@ -194,6 +216,7 @@ Source assets in `/Assets` (originals, not committed to git).
 3. **Wildlife Ops pipeline copy** says "Netlify" (verbatim from Figma). Site deploys to Vercel. **Flagged — do not change without being asked.**
 4. **Huddle persona hero photos** — the rich persona card layout supports a full-bleed `photo` at the top of each card (set `photo: "/images/huddle/..."` on the persona in huddle.ts). No photos added yet; cards currently show portrait circle + quote with no hero image. Add when photos are ready.
 5. **Wildlife Ops showcase filename mismatch** — noted above in IMAGES section. Low priority; display order is correct.
+6. **About illustration background** — the about-illustration.png in public/ has been flood-fill processed; the dev server may serve a cached version. Production (Vercel) is always correct.
 
 ---
 
@@ -223,7 +246,15 @@ Source assets in `/Assets` (originals, not committed to git).
 - `e3cafe9` Add Prototype & Build pipeline section to Huddle case study
 - `65a6e6f` Redesign Huddle persona cards with two-column rich layout
 - `c29e7a3` Add persona avatar photos to Huddle case study
-- `6fc3e39` Add feature icons to Huddle 'What Huddle Does' section *(current)*
+- `6fc3e39` Add feature icons to Huddle 'What Huddle Does' section
+- `e39b6c5` Reorder About Other Work section: most recent first (B2B first)
+- `754ebf1` Add Tenacity-targeted CV and wire up Download CV links
+- `0b06dba` Move illustration from home hero to About page below title
+- `23c12ff` About: remove headshot, enlarge illustration
+- `68e30b1` Update about illustration to MacBook+wireframes version, bump size
+- `7f33007` About illustration: remove background, increase size
+- `636515b` Fix LinkedIn URL to /in/melanierowlands across all instances
+- `83aa336` Add homepage illustration below hero title *(current)*
 
 ---
 
