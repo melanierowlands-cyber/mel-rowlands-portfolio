@@ -202,6 +202,22 @@ export const huddle: Project = {
       ],
     },
     {
+      type: "pipeline",
+      eyebrow: "PROTOTYPE & BUILD",
+      title: "How it was designed and shipped",
+      intro:
+        "Huddle went from a sketch and a set of prompts to a live, tested app — without a traditional development handoff.",
+      steps: [
+        { tool: "Pen & Paper", desc: "Sketched the core idea and brainstormed the key prompts before touching any tool — clarifying what the app needed to do before worrying about how." },
+        { tool: "Lovable", desc: "Turned the prompts into a working front-end — fast. Lovable generated the UI from natural-language descriptions, making it possible to go from idea to interactive prototype in hours." },
+        { tool: "Supabase", desc: "Connected as the back-end — handling user data, shared expenses and real-time sync between housemates." },
+        { tool: "Vercel", desc: "Deployed to a live URL so the app could be opened, tested and shared anywhere." },
+        { tool: "Live testing", desc: "My daughter and her roommate used the app for real — the closest thing to genuine user testing, with actual shared expenses and honest feedback." },
+      ],
+      closing:
+        "A prompt-to-production workflow — proof that a well-framed design idea, the right AI tools and a real test user can close the gap between concept and working product.",
+    },
+    {
       type: "learnings",
       eyebrow: "REFLECTION",
       title: "Reflection",
