@@ -94,10 +94,10 @@ export default function ProjectCard({ project }: { project: Project }) {
               <div
                 style={{
                   position: "absolute",
-                  top: "3%",
-                  left: "-15%",
-                  width: "130%",
-                  height: "94%",
+                  top: "8%",
+                  left: "5%",
+                  width: "88%",
+                  height: "84%",
                   border: "10px solid #1c1c1e",
                   borderRadius: "14px",
                   boxShadow: "-10px 8px 36px rgba(0,0,0,0.42)",

@@ -18,6 +18,8 @@ export const ingenio: Project = {
     photoRight: "/images/home/ingenio-desktop-mockup.png",
     logo: "/images/home/ingenio-wordmark.png",
     logoWidth: 118,
+    logoOn: "left",
+    logoCorner: "br",
     photoRightFrame: "ipad",
     photoRightBg: "#ebebeb",
   },
