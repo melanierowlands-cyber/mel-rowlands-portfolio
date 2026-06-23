@@ -53,7 +53,7 @@ export default function AboutPage() {
               alt="Mel at her desk"
               width={320}
               height={272}
-              className="w-[240px] mix-blend-multiply sm:w-[280px] md:w-[320px]"
+              className="w-[270px] sm:w-[310px] md:w-[360px]"
             />
             <p className="font-body text-[15px] font-light leading-[1.66] text-ink-muted md:text-[17px]">
               I&apos;m Mel — a product designer with 20+ years of design depth
