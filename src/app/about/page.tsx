@@ -43,42 +43,30 @@ export default function AboutPage() {
       <main>
         {/* Intro */}
         <Container>
-          <section className="flex flex-col items-start gap-[32px] pb-[48px] pt-[40px] md:flex-row md:gap-[56px] md:pb-[72px] md:pt-[64px]">
-            <div className="flex flex-1 flex-col gap-[20px] md:gap-[24px]">
-              <Tag>ABOUT</Tag>
-              <h1 className="font-heading text-[28px] font-medium leading-[1.12] tracking-[-1px] text-ink md:text-[36px]">
-                I design products that make complicated things feel simple
-              </h1>
-              <Image
-                src="/images/home/about-illustration.png"
-                alt="Mel at her desk"
-                width={320}
-                height={272}
-                className="w-[160px] mix-blend-multiply sm:w-[190px] md:w-[220px]"
-              />
-              <p className="font-body text-[15px] font-light leading-[1.66] text-ink-muted md:text-[17px]">
-                I&apos;m Mel — a product designer with 20+ years of design depth
-                and a research-led process. I own design end-to-end — research,
-                IA, interaction and UI — and pair Figma with Claude Code to take
-                work from prototype to production. Small teams get product
-                thinking, research and polished UI from one person, at shipping
-                speed.
-              </p>
-              <p className="font-body text-[12px] font-medium leading-normal tracking-[0.04em] text-ink-muted">
-                CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;UK PASSPORT&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE
-                FOR REMOTE ROLES ON UK / US EAST-COAST HOURS
-              </p>
-            </div>
-            <div className="relative h-[200px] w-[200px] shrink-0 overflow-hidden rounded-full md:h-[220px] md:w-[220px]">
-              <Image
-                src="/images/about/headshot.png"
-                alt="Mel Rowlands"
-                fill
-                sizes="(max-width: 768px) 200px, 220px"
-                className="object-cover"
-                priority
-              />
-            </div>
+          <section className="flex flex-col gap-[20px] pb-[48px] pt-[40px] md:gap-[24px] md:pb-[72px] md:pt-[64px]">
+            <Tag>ABOUT</Tag>
+            <h1 className="font-heading text-[28px] font-medium leading-[1.12] tracking-[-1px] text-ink md:text-[36px]">
+              I design products that make complicated things feel simple
+            </h1>
+            <Image
+              src="/images/home/about-illustration.png"
+              alt="Mel at her desk"
+              width={320}
+              height={272}
+              className="w-[200px] mix-blend-multiply sm:w-[240px] md:w-[280px]"
+            />
+            <p className="font-body text-[15px] font-light leading-[1.66] text-ink-muted md:text-[17px]">
+              I&apos;m Mel — a product designer with 20+ years of design depth
+              and a research-led process. I own design end-to-end — research,
+              IA, interaction and UI — and pair Figma with Claude Code to take
+              work from prototype to production. Small teams get product
+              thinking, research and polished UI from one person, at shipping
+              speed.
+            </p>
+            <p className="font-body text-[12px] font-medium leading-normal tracking-[0.04em] text-ink-muted">
+              CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;UK PASSPORT&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE
+              FOR REMOTE ROLES ON UK / US EAST-COAST HOURS
+            </p>
           </section>
         </Container>
 
