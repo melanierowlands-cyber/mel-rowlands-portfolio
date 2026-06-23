@@ -2,14 +2,14 @@
 
 Mel Rowlands — Product Design Portfolio. This file is the **session handoff**: read it first to resume work. The portfolio is a **coded Next.js site** built from the Figma designs, pushed to GitHub and deployed on Vercel.
 
-**Last updated:** 2026-06-23
+**Last updated:** 2026-06-23 (session 2)
 
 ---
 
 ## STATUS AT A GLANCE
 
 - **Live site:** https://mel-rowlands-portfolio.vercel.app (deployed, all routes 200)
-- **Repo:** `git@github.com:melanierowlands-cyber/mel-rowlands-portfolio.git` — branch `main`, latest commit `83aa336`
+- **Repo:** `git@github.com:melanierowlands-cyber/mel-rowlands-portfolio.git` — branch `main`, latest commit `9c82381`
 - **Working dir:** `/Users/melanierowlands/Library/CloudStorage/Dropbox/UX ROLE/Portfolio/PORTFOLIO_LIVE`
 - **Figma source of truth:** file `DHXrCjbgmnmQUGoG89JdYU` (desktop frames only)
 - **Phase 1 (desktop) = complete. Phase 2 (responsive) = complete.**
@@ -40,7 +40,7 @@ Mel Rowlands — Product Design Portfolio. This file is the **session handoff**:
 
 Routes (all static / SSG):
 - `/` — Home (Nav · Hero with illustration · Selected Work · Footer)
-- `/about` — About (Tag · h1 · Illustration · Body copy · Background · Other Work · Four threads · Footer)
+- `/about` — About (two-column intro: Tag · h1 · Body copy · Location line LEFT / Illustration RIGHT · Background · Other Work · Four threads · Footer)
 - `/contact` — Contact (availability pill · headline · 3 link rows · bottom bar)
 - `/approach` — Approach (hero · 3 process steps · outcome grid · callout · Footer)
 - `/work/[slug]` — Case studies: `ingenio`, `wildlife-ops`, `huddle` (`generateStaticParams`)
@@ -73,7 +73,7 @@ paper `#F4F0E8` · paper-alt `#EAE3D6` · surface `#FBF9F4` · line `#DAD3C6` ·
 
 | Element | Mobile | Tablet (`md`) | Desktop (`lg`) |
 |---|---|---|---|
-| Home hero h1 | 26px (`sm`: 32px) | 38px | — |
+| Home hero h1 | 26px (`sm`: 32px) | 38px | 44px |
 | Project card titles | 18px | 26px | — |
 | CTA buttons | 14px / px-22 / py-11 | 15px / px-28 / py-13 | — |
 | Contact headline | 32px (`sm`: 34px) | 42px | — |
@@ -94,17 +94,25 @@ paper `#F4F0E8` · paper-alt `#EAE3D6` · surface `#FBF9F4` · line `#DAD3C6` ·
 
 ## KEY IMPLEMENTATION NOTES
 
+- **Home hero layout** = two-column at `md+`: left `div` (`md:flex-1`) holds Tag → h1 → subtitle → buttons; right `div` (`md:w-[380px] lg:w-[460px]`, `shrink-0`) holds the illustration. `md:items-center` centres both columns. h1 goes to `lg:text-[44px]`. On mobile (`< md`), flex-col: text block first, image below.
+- **About page intro** = same two-column layout as the home hero: left `md:flex-1` (Tag · h1 · body · location), right `md:w-[380px] lg:w-[460px]` (illustration). Applied in same session.
 - **Home "Selected Work" cards** = **live React components** (`ProjectCard.tsx`), NOT pre-composed banner images. Left colour panel (`md:basis-[37%]`) contains all copy and CTAs; right zone is two photos split by a colour stripe. Desktop aspect ratio `1322:412` via `md:aspect-[1322/412]`; on mobile the card stacks vertically (colour panel above, image zone below at `h-[180px] sm:h-[220px]`). CTA row is `flex-nowrap` to prevent button wrapping.
-- **Ingenio card right panel** uses a CSS iPad frame effect (`photoRightFrame: "ipad"` on the card config). `ProjectCard.tsx` renders a dark-bezelled div (`border: 10px solid #1c1c1e`, `border-radius: 14px`, `perspective(620px) rotateY(-11deg) rotateX(2deg)`) on a light grey background (`photoRightBg: "#ebebeb"`). Supports an optional `photo` hero image at the top of the frame. This is Ingenio-only; the other two cards use plain `object-cover` images.
+- **Ingenio card right panel** — the CSS angled iPad frame (`photoRightFrame: "ipad"`) has been **removed**. The right image (`ingenio-desktop-mockup.png`) now fills the panel as a plain `object-cover` image with `photoRightPos: "center top"` so "What shall we create today?" is visible. The logo (`ingenio-wordmark.png`) has moved to the **left** photo panel, bottom-right corner (`logoOn: "left"`, `logoCorner: "br"`), matching Wildlife Ops paw positioning. The CSS frame code (`perspective(620px) rotateY(-11deg)...`) still exists in `ProjectCard.tsx` but is unreachable — remove it when tidying.
 - **Case-study header bar** (`CaseHeaderBar`) replaces the global nav on case pages: "MEL ROWLANDS · View Live Prototype ↗ · PROJECT 0X" (matches Figma).
 - **Footer** (charcoal `#4B4744`) on Home, About, Approach; Contact has its own bottom bar (no global footer).
 - **Images** served via `next/image`; placeholders via `ImagePlaceholder` (holds exact aspect ratio).
 - **Feature icons** (Wildlife Ops + Huddle): white on transparent PNG, rendered on a theme-coloured rounded square via `color-mix(in srgb, var(--color-theme) 80%, transparent)`. Icon square `h-[42px] w-[42px]`, icon image `h-[24px] w-[24px]`.
 - **Showcase images** have a subtle drop shadow: `shadow-[0px_4px_20px_rgba(0,0,0,0.08)]` applied globally in the `Img` helper inside `CaseBlocks.tsx`.
+- **Showcase section** (`type: "showcase"`) now supports two optional fields: `title?: string` (omit for continuation blocks with no heading) and `columns?: 2` (renders images in a `grid grid-cols-1 sm:grid-cols-2` two-column grid instead of stacked full-width). Both are defined in `projects.ts` and handled in the `Showcase` component in `CaseBlocks.tsx`.
+- **Ingenio showcase** = two consecutive showcase sections: (1) eyebrow "THE PLATFORM", title "A look at iNGENiO", single full-width homepage screenshot; (2) no eyebrow/title, `columns: 2`, four images in a 2×2 grid (learning path · courses · course overview · lesson interface).
+- **Em dashes** — all `—` characters replaced with ` - ` (hyphen with spaces) across all 9 source files (116 replacements). Use hyphens going forward; do not reintroduce em dashes.
+- **Work history dates** (About page + CV): B2B Data Platform Design 2021–2023; Brand & Packaging 2015–2021; International Licensing 2007–2015.
 - **Persona portraits**: optional `portrait?: string` on the `Persona` type in `projects.ts`. Falls back to initials if omitted. All three case studies now have portrait images.
 - **Huddle rich persona cards**: When `demographics?: { icon: string; label: string }[]` is set on a persona, the `Research` component renders a richer two-column card layout (portrait/initials + quote header · name · left col demographics with SVG icons · right col trait bullets · Design Implication footer). The icon set (`PERSONA_ICONS` in `CaseBlocks.tsx`) covers: `person`, `graduation`, `location`, `phone`, `house`, `budget`, `people`. Also supports an optional `photo?: string` for a full-bleed hero image at the top of the card. Wildlife Ops personas have no `demographics` field and render via the standard layout unchanged.
 - **Pipeline sections** (`type: "pipeline"`) exist in all three case studies: Wildlife Ops (Figma → Figma Make → Claude Code → GitHub → Vercel), Ingenio (Figma → WordPress+WooCommerce → Claude Code → LearnDash → Hotjar), Huddle (Pen & Paper → Lovable → Supabase → Vercel → Live testing).
-- **Illustrations** (Home + About): transparent-background PNGs processed via Python Pillow flood-fill. Source originals in `/Assets`. No `mix-blend-multiply` — backgrounds are genuinely transparent. See IMAGES section for file names.
+- **Illustrations** (Home + About): transparent-background PNGs. Source originals in `/Assets`. No `mix-blend-multiply` — backgrounds are genuinely transparent. See IMAGES section for file names.
+  - **Homepage illustration** (`public/images/home/homepage-illustration.png`): processed with a two-pass Python Pillow script — (1) pixels with all RGB channels > 235 → alpha 0; (2) any remaining opaque pixel where `max(r,g,b) >= 200` AND not strongly orange (HSV sat > 0.4, hue 0–60°) → alpha 0. This removes both pure-white and skin-tone fills while preserving black lines, anti-aliasing, and the orange accents. The file in the public folder IS the processed version.
+  - **About illustration** (`public/images/home/about-illustration.png`): flood-fill processed (background removed). Displays with a visible light background box at desktop widths — this is the image itself, not a CSS background. If a new version is supplied, re-run the same two-pass script.
 - **CV HTML** (`public/mel-rowlands-cv.html`): self-contained, print-ready HTML file. Uses Google Fonts (Hanken Grotesk + Poppins) via CDN `@import`. All links have `target="_blank"`. To update copy, edit the HTML directly — no build step needed. To "download as PDF": open in browser, print → Save as PDF.
 - **CRITICAL — Edit tool quote corruption in `.ts` content files**: The Edit tool converts straight ASCII `"` (0x22) to Unicode curly quotes (`"` / `"`, bytes `e2 80 9c` / `e2 80 9d`) on lines near its insertion point, causing `TS1127: Invalid character` TypeScript build errors. **Workaround**: use a Python byte-replacement script for all changes to `src/content/projects/*.ts`. Pattern: `open(path, 'rb')` → replace old bytes → `open(path, 'wb')`. Never use the Edit tool directly on those files.
 
@@ -167,6 +175,11 @@ wildlife/
 ingenio/
   busy-parent.png                Research persona portrait
   hesitant-parent.png            Research persona portrait
+  home-page.png (2860×1320)      Showcase — platform homepage hero
+  learning-path.png (2858×1340)  Showcase — "What shall we create today?" quiz (2-col grid)
+  courses.png (1940×1270)        Showcase — course catalogue grid (2-col grid)
+  course-overview.png (1276×1122) Showcase — individual course detail / Greenland Adventure (2-col grid)
+  learndash-interface.png (2848×1338) Showcase — LearnDash lesson interface (2-col grid)
 
 huddle/
   app-2.png                      Showcase — home dashboard (portrait)
@@ -216,7 +229,8 @@ To update: edit `public/mel-rowlands-cv.html` directly. All links have `target="
 3. **Wildlife Ops pipeline copy** says "Netlify" (verbatim from Figma). Site deploys to Vercel. **Flagged — do not change without being asked.**
 4. **Huddle persona hero photos** — the rich persona card layout supports a full-bleed `photo` at the top of each card (set `photo: "/images/huddle/..."` on the persona in huddle.ts). No photos added yet; cards currently show portrait circle + quote with no hero image. Add when photos are ready.
 5. **Wildlife Ops showcase filename mismatch** — noted above in IMAGES section. Low priority; display order is correct.
-6. **About illustration background** — the about-illustration.png in public/ has been flood-fill processed; the dev server may serve a cached version. Production (Vercel) is always correct.
+6. **About illustration background** — the about-illustration.png has a visible light background box at desktop widths (it is baked into the image, not CSS). If a transparent version is supplied, replace the file in `public/images/home/about-illustration.png` and run the two-pass Pillow script.
+7. **Dead CSS in ProjectCard.tsx** — the angled iPad frame block (`perspective(620px) rotateY...`) is still in the file but unreachable since no project sets `photoRightFrame: "ipad"` any more. Safe to delete when tidying.
 
 ---
 
@@ -254,7 +268,18 @@ To update: edit `public/mel-rowlands-cv.html` directly. All links have `target="
 - `68e30b1` Update about illustration to MacBook+wireframes version, bump size
 - `7f33007` About illustration: remove background, increase size
 - `636515b` Fix LinkedIn URL to /in/melanierowlands across all instances
-- `83aa336` Add homepage illustration below hero title *(current)*
+- `83aa336` Add homepage illustration below hero title
+- `9352a70` Add portfolio assets; convert homepage illustration to transparent line art
+- `3871512` Remove fills from homepage illustration — correct public/ file (two-pass skin-tone + white removal)
+- `e3b0d18` Ingenio card: move logo to left panel, reduce desktop frame size
+- `f4f593c` Ingenio card: replace angled device frame with full-bleed image
+- `fa2d6c4` Remove 'quietly' from Community thread on About page
+- `d017474` Replace all em dashes with short dashes site-wide (116 replacements across 9 files)
+- `9879ce4` Update work history dates on About page and CV
+- `ba0ce01` Homepage hero: two-column layout — title left (flex-1), illustration right (md:w-[380px] lg:w-[460px])
+- `dd37ad4` Add 'THE PLATFORM' showcase section to Ingenio case study (3 images)
+- `5a090a5` Ingenio showcase: add 2 new screens, split into full-width + 2-col grid (columns:2 support)
+- `9c82381` About page: apply two-column hero layout matching homepage *(current)*
 
 ---
 
