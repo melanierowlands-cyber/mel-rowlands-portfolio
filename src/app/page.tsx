@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
@@ -24,6 +25,14 @@ export default function Home() {
               Hi, I&apos;m Mel. I design products and platforms for teams
               that need to move fast.
             </h1>
+            <Image
+              src="/images/home/homepage-illustration.png"
+              alt="Mel at her desk with wireframes and a MacBook"
+              width={1668}
+              height={943}
+              className="mt-[24px] w-[280px] sm:w-[340px] md:mt-[28px] md:w-[400px]"
+              priority
+            />
             <p className="mt-[16px] font-body text-[15px] leading-[1.5] text-ink-muted md:mt-[20px] md:text-[17px]">
               Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
               Workflow
