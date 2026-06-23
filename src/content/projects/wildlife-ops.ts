@@ -154,8 +154,8 @@ export const wildlife: Project = {
       title: "A look at Wildlife Ops",
       intro: "The live product — built in Figma Make, refined in code, deployed on Vercel.",
       images: [
-        { src: "/images/wildlife/dashboard-overview.png", alt: "Reserve Overview dashboard", caption: "Reserve Overview — animals tracked, field teams, open incidents and herd health, with a live map of the reserve.", width: 1280, height: 832 },
-        { src: "/images/wildlife/dashboard-health.png", alt: "Animal Health Record", caption: "Animal Health Record — a detailed view of each individual or herd, with health trend, observation log and vet scheduling.", width: 1280, height: 832 },
+        { src: "/images/wildlife/dashboard-health.png", alt: "Reserve Overview dashboard", caption: "Reserve Overview — animals tracked, field teams, open incidents and herd health, with a live map of the reserve.", width: 1280, height: 832 },
+        { src: "/images/wildlife/dashboard-overview.png", alt: "Animal Health Record", caption: "Animal Health Record — a detailed view of each individual or herd, with health trend, observation log and vet scheduling.", width: 1280, height: 832 },
       ],
     },
     {
