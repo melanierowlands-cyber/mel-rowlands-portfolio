@@ -37,7 +37,7 @@ function Img({ img, className = "" }: { img: ShowcaseImage; className?: string }
       alt={img.alt}
       width={img.width}
       height={img.height}
-      className={`h-auto w-full rounded-[14px] border border-line object-cover ${className}`}
+      className={`h-auto w-full rounded-[14px] border border-line object-cover shadow-[0px_4px_20px_rgba(0,0,0,0.08)] ${className}`}
     />
   );
 }
