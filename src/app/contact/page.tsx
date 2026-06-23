@@ -51,9 +51,8 @@ export default function ContactPage() {
               label="Curriculum Vitae"
               value={site.cvLabel}
               href={site.cvUrl}
-              arrow="↓"
+              arrow="↗"
               external
-              download
             />
           </div>
         </Container>
