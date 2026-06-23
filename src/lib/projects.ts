@@ -32,7 +32,7 @@ export type ShowcaseImage = {
 
 /* ---------- section union (mirrors Figma section order) ---------- */
 export type Section =
-  | { type: "projectIntro"; text: string }
+  | { type: "projectIntro"; text: string; pullQuote?: string }
   | {
       type: "problem";
       eyebrow: string;
@@ -138,6 +138,7 @@ export type Project = {
   title: string;
   tags: string;
   blurb: string;
+  metaDescription?: string;
   prototypeUrl?: string;
   /* Home "Selected Work" banner — built live from these parts */
   card: {

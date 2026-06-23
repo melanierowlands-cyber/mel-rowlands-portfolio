@@ -46,13 +46,18 @@ const card = "rounded-[16px] border border-line bg-surface";
 
 /* ---------- section renderers ---------- */
 
-function ProjectIntro({ text }: { text: string }) {
+function ProjectIntro({ text, pullQuote }: { text: string; pullQuote?: string }) {
   return (
     <section className="bg-paper-alt">
       <div className="mx-auto max-w-[1440px] px-[20px] py-[28px] sm:px-[40px] md:py-[40px] lg:px-[80px]">
         <p className="font-heading text-[18px] font-medium leading-[1.52] tracking-[-0.01em] text-ink md:text-[20px] lg:text-[24px]">
           {text}
         </p>
+        {pullQuote && (
+          <blockquote className="mt-[20px] border-l-[3px] border-accent pl-[18px] font-body text-[15px] font-medium italic leading-[1.6] text-ink-muted md:mt-[24px] md:text-[16px]">
+            {pullQuote}
+          </blockquote>
+        )}
       </div>
     </section>
   );
@@ -745,7 +750,7 @@ function Learnings({ s }: { s: Extract<Section, { type: "learnings" }> }) {
 export default function CaseSection({ section }: { section: Section }) {
   switch (section.type) {
     case "projectIntro":
-      return <ProjectIntro text={section.text} />;
+      return <ProjectIntro text={section.text} pullQuote={section.pullQuote} />;
     case "problem":
       return <Problem s={section} />;
     case "goal":

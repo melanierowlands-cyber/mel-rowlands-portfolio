@@ -6,9 +6,11 @@ export const wildlife: Project = {
   theme: "wildlife",
   projectNumber: "02",
   title: "Wildlife Ops",
-  tags: "UX RESEARCH  ·  PRODUCT DESIGN  ·  DASHBOARD DESIGN",
+  tags: "B2B PLATFORM  ·  OPERATIONS DASHBOARD  ·  DESIGN & BUILD",
   blurb:
-    "A wildlife management platform that helps reserve teams coordinate operations, monitor assets and respond faster in the field.",
+    "A real-time operations platform that pulls scattered field activity, multiple teams and live incidents into one role-based dashboard.",
+  metaDescription:
+    "A real-time operations dashboard for a working game reserve — multiple user roles, live incident tracking and one shared source of truth. Designed and shipped end-to-end.",
   prototypeUrl: "https://wildlife-ops.vercel.app/",
   card: {
     bg: "#837c74",
@@ -34,6 +36,7 @@ export const wildlife: Project = {
     {
       type: "projectIntro",
       text: "Mziki is a 6,000-hectare game reserve in KwaZulu-Natal where my Dad owns property and our family visit there often. Part of the Munywana Conservancy (alongside &Beyond Phinda Private Game Reserve), it offers a Big Five safari experience and is renowned for birdwatching and rewilding. Behind that experience is a complex operation of rescues, animal health, field teams, and daily activity across remote terrain. This case study explores how I designed and built a dashboard that brings it all into a single, clear view.",
+      pullQuote: "The domain is conservation. The problem is one every operations-heavy business has: critical activity scattered across people, apps and spreadsheets, with no shared, real-time view — and no way to see patterns before they become crises.",
     },
     {
       type: "problem",

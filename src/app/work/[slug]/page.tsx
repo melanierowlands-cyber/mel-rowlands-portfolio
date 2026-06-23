@@ -19,7 +19,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  return { title: `${project.title} - Mel Rowlands`, description: project.blurb };
+  return { title: `${project.title} - Mel Rowlands`, description: project.metaDescription ?? project.blurb };
 }
 
 export default async function CaseStudyPage({
