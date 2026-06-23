@@ -5,8 +5,8 @@ export const site = {
   email: "melanie.rowlands@gmail.com",
   linkedin: "https://www.linkedin.com/in/melrowlands",
   linkedinLabel: "/in/melrowlands",
-  cvUrl: "https://melrowlandscv.netlify.app",
-  cvLabel: "melrowlandscv.netlify.app",
+  cvUrl: "/mel-rowlands-cv.html",
+  cvLabel: "View & download",
   copyright: "© 2026 Mel Rowlands",
 };
 

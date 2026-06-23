@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mel Rowlands — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper: #F4F0E8;
+      --paper-alt: #EAE3D6;
+      --ink: #1C1A17;
+      --ink-muted: #6B635A;
+      --accent: #D98245;
+      --line: #DAD3C6;
+      --sidebar-w: 196px;
+    }
+
+    html { font-size: 10px; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    .header {
+      padding: 28px 32px 22px;
+      border-bottom: 1.5px solid var(--line);
+    }
+
+    .header-name {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .header-name span { color: var(--accent); }
+
+    .header-role {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      margin-top: 4px;
+      letter-spacing: 0.01em;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 10px;
+    }
+
+    .header-meta a,
+    .header-meta span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+
+    .header-meta a { color: var(--accent); }
+    .header-meta a:hover { text-decoration: underline; }
+
+    .meta-sep { color: var(--line); }
+
+    /* ── Body: sidebar + main ── */
+    .body {
+      display: flex;
+      flex: 1;
+    }
+
+    .sidebar {
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+      border-right: 1.5px solid var(--line);
+      padding: 22px 18px 22px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .main {
+      flex: 1;
+      padding: 22px 32px 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* ── Sidebar blocks ── */
+    .sidebar-block { display: flex; flex-direction: column; }
+
+    .skill-group { margin-bottom: 10px; }
+
+    .skill-group-name {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .skill-body {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    .strength-body {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      border-left: 2.5px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .highlight-item {
+      margin-bottom: 8px;
+    }
+
+    .highlight-title {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .highlight-sub {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.4;
+    }
+
+    /* ── Summary ── */
+    .summary {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--ink-muted);
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .summary strong { font-weight: 500; color: var(--ink); }
+
+    /* ── Experience entries ── */
+    .experience-section { display: flex; flex-direction: column; gap: 14px; }
+
+    .exp-entry { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+    .exp-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 1px;
+    }
+
+    .exp-name {
+      font-family: 'Hanken Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .exp-company { color: var(--accent); }
+
+    .exp-years {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-sub {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      font-style: italic;
+      margin-bottom: 6px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .exp-bullets li {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.55;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .exp-bullets li strong { font-weight: 500; color: var(--ink); }
+
+    /* ── Print ── */
+    @media print {
+      @page { size: A4; margin: 0; }
+      html { font-size: 10px; }
+      body { background: var(--paper); }
+      .page { width: 100%; min-height: 100vh; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    @media screen {
+      body { padding: 20px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-name">Mel <span>Rowlands</span></div>
+    <div class="header-role">Product Designer &middot; B2B platforms, complex UX &amp; brand</div>
+    <div class="header-meta">
+      <a href="mailto:melanie.rowlands@gmail.com">melanie.rowlands@gmail.com</a>
+      <span class="meta-sep">&middot;</span>
+      <a href="https://mel-rowlands-portfolio.vercel.app">mel-rowlands-portfolio.vercel.app</a>
+      <span class="meta-sep">&middot;</span>
+      <a href="https://www.linkedin.com/in/melrowlands">/in/melrowlands</a>
+      <span class="meta-sep">&middot;</span>
+      <span>Cape Town, South Africa &middot; remote</span>
+    </div>
+  </header>
+
+  <!-- Body -->
+  <div class="body">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="sidebar-block">
+        <div class="section-label">Core Skills</div>
+        <div class="skill-group">
+          <div class="skill-group-name">Product design</div>
+          <div class="skill-body">End-to-end UX, IA, interaction design, UI, user flows, prototyping, design systems</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">B2B &amp; digital platforms</div>
+          <div class="skill-body">Dashboards, portals, complex IA, multi-stakeholder environments, technical audiences</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Brand &amp; visual design</div>
+          <div class="skill-body">Brand identity, design systems, packaging, visual communication</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">Tools</div>
+          <div class="skill-body">Figma, Claude Code, HTML/CSS, Git/GitHub, Adobe Creative Suite</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-name">AI-augmented shipping</div>
+          <div class="skill-body">Agent-assisted prototyping &amp; production; AI in research, ideation and copy</div>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <div class="section-label">Strengths</div>
+        <div class="strength-body">Taking complex, technical, information-dense problems and turning them into clear, intuitive experiences &mdash; for professional audiences who need to make decisions fast. Comfortable across the full design range, from complex UX to brand and visual systems.</div>
+      </div>
+
+      <div class="sidebar-block">
+        <div class="section-label">Highlights</div>
+        <div class="highlight-item">
+          <div class="highlight-title">B2B platform specialist</div>
+          <div class="highlight-sub">Dashboards, portals, complex data-heavy interfaces</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-title">Full-range designer</div>
+          <div class="highlight-sub">UX to brand &mdash; versatile across a design studio context</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-title">Ships, not just designs</div>
+          <div class="highlight-sub">Comfortable in the codebase via AI-assisted workflows</div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-title">User research &amp; testing</div>
+          <div class="highlight-sub">Validates design decisions with real user behaviour</div>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <div class="section-label">Available</div>
+        <div class="skill-body">Fully remote. Cape Town-based. UK passport. Comfortable across UK and US East Coast hours. Open to full-time or contract.</div>
+      </div>
+
+      <div class="sidebar-block">
+        <div class="section-label">References</div>
+        <div class="skill-body">Written reference from Timothy Sewell, Managing Director, Dataloop. Further references on request.</div>
+      </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Summary -->
+      <p class="summary">
+        Senior product designer with <strong>20+ years of design depth</strong> and a modern, AI-forward workflow. I specialise in making complex, information-dense products clear and usable &mdash; for professional audiences, technical buyers, and senior decision-makers. I work across the full design range: UX and IA through to polished UI, brand and visual systems. I design in Figma and ship with Claude Code, taking ideas from sketch to working product. Most recently I co-founded and led design on a digital learning platform. Before that: B2B platform design, brand studio leadership, and investment research.
+      </p>
+
+      <!-- Experience -->
+      <div class="section-label" style="margin-bottom: 0;">Selected Experience</div>
+
+      <div class="experience-section">
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-name">Co-founder &amp; Lead Designer &middot; <span class="exp-company">iNGENiO Education</span></div>
+            <div class="exp-years">2023 &ndash; Present</div>
+          </div>
+          <div class="exp-sub">Digital learning platform &middot; Cape Town / remote</div>
+          <ul class="exp-bullets">
+            <li>Owned <strong>end-to-end product design</strong> for a complex subscription platform serving schools and families &mdash; IA, UX, interaction design, UI and visual design, implemented on the live stack.</li>
+            <li>Structured a <strong>dense library of 90+ courses</strong> into a scannable, decision-friendly experience, addressing choice paralysis and simplifying complex content hierarchies for non-technical users.</li>
+            <li>Designed an in-product <strong>guided onboarding path</strong> with progressive disclosure and filters, driving first-session engagement and feature discovery for new users.</li>
+            <li>Designed and prototyped interaction patterns for new features using <strong>rapid Figma + AI-assisted prototyping workflows</strong>, testing with users before committing engineering effort.</li>
+            <li>Ships with an AI-forward workflow: Figma for design, <strong>Claude Code</strong> for prototyping and component-level production on the live WordPress, WooCommerce and LearnDash stack.</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-name">Contract Designer &middot; <span class="exp-company">Dataloop</span></div>
+            <div class="exp-years">2022 &ndash; 2023</div>
+          </div>
+          <div class="exp-sub">Data &amp; software consultancy &middot; contract</div>
+          <ul class="exp-bullets">
+            <li>Designed across <strong>client-facing portals, dashboards and internal applications</strong> for a B2B data and software consultancy, taking dense, technical, data-heavy requirements and turning them into clean, usable interfaces.</li>
+            <li>Worked directly with engineering and product teams to <strong>balance real user needs against technical constraints</strong> &mdash; practical, grounded product design in a complex, multi-stakeholder B2B environment.</li>
+            <li>Designed for <strong>professional, technical audiences</strong> including data teams, business stakeholders and senior decision-makers; experience translating specialist domain knowledge into intuitive UI.</li>
+            <li>Delivered to a high standard in a fast-moving consultancy environment, managing multiple concurrent workstreams.</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-name">Co-owner &amp; Designer &middot; <span class="exp-company">Fineday Design Studio</span></div>
+            <div class="exp-years">2015 &ndash; 2022</div>
+          </div>
+          <div class="exp-sub">Brand &amp; packaging studio &middot; co-founded</div>
+          <ul class="exp-bullets">
+            <li>Seven years building <strong>brand and packaging systems</strong> for food and drink businesses, with work reaching retail shelves locally and abroad &mdash; including Yuppie Chef, Sarah Graham, Jimmy&apos;s and Shackleton.</li>
+            <li>Led two <strong>licensed international surface-pattern collaborations</strong> (Studio E Fabrics and Nested Bean, USA), managing craft and consistency across distributed partners.</li>
+          </ul>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-name">Analyst, Investment Research &middot; <span class="exp-company">Goldman Sachs</span></div>
+            <div class="exp-years">2000 &ndash; 2007</div>
+          </div>
+          <div class="exp-sub">London</div>
+          <ul class="exp-bullets">
+            <li>Seven years producing careful, high-stakes analytical work for institutional clients. The research rigour and attention to detail still shape how I approach every design problem.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+</div>
+</body>
+</html>
