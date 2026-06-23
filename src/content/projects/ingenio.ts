@@ -186,6 +186,17 @@ export const ingenio: Project = {
       },
     },
     {
+      type: "showcase",
+      eyebrow: "THE PLATFORM",
+      title: "A look at iNGENiO",
+      intro: "The live platform - homepage, learning path and course catalogue.",
+      images: [
+        { src: "/images/ingenio/home-page.png", alt: "iNGENiO homepage", caption: "Homepage - 'Turn screen time into creative learning', with a free trial CTA as the primary action.", width: 2860, height: 1320 },
+        { src: "/images/ingenio/learning-path.png", alt: "iNGENiO learning path", caption: "Learning path - a three-step quiz that matches each child to the right course based on age, app and interest.", width: 2858, height: 1340 },
+        { src: "/images/ingenio/courses.png", alt: "iNGENiO course catalogue", caption: "Course catalogue - structured lessons organised by subject, with trailers and clear entry points for every level.", width: 1940, height: 1270 },
+      ],
+    },
+    {
       type: "results",
       eyebrow: "THE RESULTS",
       title: "One change, a measurable shift",
