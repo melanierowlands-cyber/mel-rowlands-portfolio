@@ -129,19 +129,22 @@ export default function AboutPage() {
             <div className="flex flex-1 flex-col">
               {[
                 {
-                  label: "B2B Data Platform Design",
+                  label: "Enterprise B2B Data Platform",
                   years: "2021 – 2023",
-                  body: "Dashboard and portal design for a B2B data annotation platform. Client confidential - NDA.",
+                  body: "Product and UX design for an enterprise B2B data-annotation platform. My work focused on data-dense dashboards and portal tooling — structuring complex workflows and high-information interfaces so specialist users could move through them quickly. High-stakes B2B products, delivered under NDA.",
+                  note: "Written reference available from the platform's Managing Director.",
                 },
                 {
                   label: "Brand & Packaging",
                   years: "2015 – 2021",
                   body: "At Fineday Design Studio I co-led seven years of brand and packaging work for South African food and lifestyle companies - including Yuppie Chef, Sarah Graham, Jimmy's Public and Shackleton.",
+                  note: undefined,
                 },
                 {
                   label: "International Licensing",
                   years: "2007 – 2015",
                   body: "Surface pattern designs licensed to Studio E Fabrics and Nested Bean in the USA - used in commercial fabric collections and baby products.",
+                  note: undefined,
                 },
               ].map((item, i) => (
                 <div key={i} className="border-t border-line py-[20px] md:py-[24px]">
@@ -154,6 +157,11 @@ export default function AboutPage() {
                   <p className="mt-[6px] font-body text-[14px] font-light leading-[1.62] text-ink-muted md:text-[15px]">
                     {item.body}
                   </p>
+                  {item.note && (
+                    <p className="mt-[8px] font-body text-[13px] font-light italic leading-[1.5] text-ink-muted">
+                      {item.note}
+                    </p>
+                  )}
                 </div>
               ))}
               <div className="border-t border-line" />
