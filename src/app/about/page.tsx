@@ -127,6 +127,11 @@ export default function AboutPage() {
             <div className="flex flex-1 flex-col">
               {[
                 {
+                  label: "B2B Data Platform Design",
+                  years: "2022 – 2023",
+                  body: "Dashboard and portal design for a B2B data annotation platform. Client confidential — NDA.",
+                },
+                {
                   label: "Brand & Packaging",
                   years: "2015 – 2022",
                   body: "At Fineday Design Studio I co-led seven years of brand and packaging work for South African food and lifestyle companies — including Yuppie Chef, Sarah Graham, Jimmy's Public and Shackleton.",
@@ -135,11 +140,6 @@ export default function AboutPage() {
                   label: "International Licensing",
                   years: "2015 – 2022",
                   body: "Surface pattern designs licensed to Studio E Fabrics and Nested Bean in the USA — used in commercial fabric collections and baby products.",
-                },
-                {
-                  label: "B2B Data Platform Design",
-                  years: "2022 – 2023",
-                  body: "Dashboard and portal design for a B2B data annotation platform. Client confidential — NDA.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-t border-line py-[20px] md:py-[24px]">
