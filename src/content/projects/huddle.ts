@@ -151,10 +151,10 @@ export const huddle: Project = {
       eyebrow: "KEY FEATURES",
       title: "What Huddle does",
       items: [
-        { title: "Shared household setup", body: "Create a household and invite your roommates. Everyone shares one financial space where expenses and balances live together." },
-        { title: "Automatic expense splitting", body: "Add an expense and Huddle works out each person’s share and updates balances in real time. No calculators, no spreadsheets." },
-        { title: "Budget tracking", body: "A monthly budget card shows total budget, current spend, what’s left and your progress through the month — so there are no end-of-month surprises." },
-        { title: "Expense history", body: "A simple, scannable feed of every expense: what was bought, who paid, when, and how it changes each balance. Transparency that heads off disputes." },
+        { icon: "/images/huddle/icon-household-setup.png", title: "Shared household setup", body: "Create a household and invite your roommates. Everyone shares one financial space where expenses and balances live together." },
+        { icon: "/images/huddle/icon-expense-splitting.png", title: "Automatic expense splitting", body: "Add an expense and Huddle works out each person’s share and updates balances in real time. No calculators, no spreadsheets." },
+        { icon: "/images/huddle/icon-budget-tracking.png", title: "Budget tracking", body: "A monthly budget card shows total budget, current spend, what’s left and your progress through the month — so there are no end-of-month surprises." },
+        { icon: "/images/huddle/icon-expense-history.png", title: "Expense history", body: "A simple, scannable feed of every expense: what was bought, who paid, when, and how it changes each balance. Transparency that heads off disputes." },
       ],
     },
     {
