@@ -123,17 +123,17 @@ export default function AboutPage() {
               {[
                 {
                   label: "B2B Data Platform Design",
-                  years: "2022 – 2023",
+                  years: "2021 – 2023",
                   body: "Dashboard and portal design for a B2B data annotation platform. Client confidential - NDA.",
                 },
                 {
                   label: "Brand & Packaging",
-                  years: "2015 – 2022",
+                  years: "2015 – 2021",
                   body: "At Fineday Design Studio I co-led seven years of brand and packaging work for South African food and lifestyle companies - including Yuppie Chef, Sarah Graham, Jimmy's Public and Shackleton.",
                 },
                 {
                   label: "International Licensing",
-                  years: "2015 – 2022",
+                  years: "2007 – 2015",
                   body: "Surface pattern designs licensed to Studio E Fabrics and Nested Bean in the USA - used in commercial fabric collections and baby products.",
                 },
               ].map((item, i) => (
