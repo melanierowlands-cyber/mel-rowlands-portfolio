@@ -16,22 +16,35 @@ export default function Home() {
       <main>
         {/* Hero */}
         <Container>
-          <section className="flex flex-col pb-[16px] pt-[32px] md:flex-row md:items-center md:gap-[48px] md:pt-[44px] lg:gap-[64px]">
-            {/* Left column – text */}
-            <div className="flex flex-col items-start md:flex-1">
+          <section className="flex flex-col pb-[16px] pt-[32px] lg:flex-row lg:items-center lg:gap-[64px] lg:pt-[44px]">
+            {/* Text column */}
+            <div className="flex flex-col items-start lg:flex-1">
               <Tag className="!text-[13px] tracking-[0.06em]">
                 ✦&nbsp;&nbsp;&nbsp;CAPE TOWN&nbsp;&nbsp;·&nbsp;&nbsp;AVAILABLE FOR
                 PRODUCT DESIGN ROLES
               </Tag>
-              <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[32px] md:mt-[28px] md:text-[38px] lg:text-[44px]">
+              <h1 className="mt-[20px] w-full font-heading text-[26px] font-semibold leading-[1.06] tracking-[-0.02em] text-ink sm:text-[32px] md:text-[38px] lg:text-[44px]">
                 Hi, I&apos;m Mel. I design products and platforms for teams
                 that need to move fast.
               </h1>
-              <p className="mt-[16px] font-body text-[15px] leading-[1.5] text-ink-muted md:mt-[20px] md:text-[17px]">
+              <p className="mt-[16px] font-body text-[15px] leading-[1.5] text-ink-muted md:text-[17px]">
                 Product Designer&nbsp;&nbsp;•&nbsp;&nbsp;Founder&nbsp;&nbsp;•&nbsp;&nbsp;AI-Augmented
                 Workflow
               </p>
-              <div className="mb-[8px] mt-[28px] flex flex-wrap gap-[12px] md:mt-[36px] md:gap-[16px]">
+
+              {/* Illustration – below headline on mobile/tablet, hidden on desktop */}
+              <div className="mt-[28px] w-full lg:hidden">
+                <Image
+                  src="/images/home/homepage-illustration.png"
+                  alt="Mel at her desk with wireframes and a MacBook"
+                  width={1668}
+                  height={943}
+                  className="w-full"
+                  priority
+                />
+              </div>
+
+              <div className="mb-[8px] mt-[28px] flex flex-wrap gap-[12px] md:gap-[16px]">
                 <Button href="/#work" variant="primary">
                   View Work
                 </Button>
@@ -41,8 +54,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right column – illustration */}
-            <div className="mt-[32px] w-[320px] shrink-0 sm:w-[400px] md:mt-0 md:w-[460px] lg:w-[560px]">
+            {/* Illustration – right column on desktop only */}
+            <div className="hidden w-[560px] shrink-0 lg:block">
               <Image
                 src="/images/home/homepage-illustration.png"
                 alt="Mel at her desk with wireframes and a MacBook"
