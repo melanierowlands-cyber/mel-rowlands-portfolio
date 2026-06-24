@@ -21,6 +21,7 @@ export const ingenio: Project = {
     logoOn: "left",
     logoCorner: "br",
     photoRightPos: "center top",
+    photoRightQuality: 90,
   },
   logoLetter: "i",
   logoLabel: "INGENIO EDUCATION",

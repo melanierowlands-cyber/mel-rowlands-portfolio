@@ -155,6 +155,7 @@ export type Project = {
     logoCorner?: "br" | "bl" | "tl" | "tr"; // corner (default "br")
     photoRightFrame?: "ipad"; // render right photo inside a CSS device frame at an angle
     photoRightBg?: string; // background colour behind the frame
+    photoRightQuality?: number; // Next.js image quality override (default 75)
   };
   /* Case-study hero */
   logoLetter: string;
