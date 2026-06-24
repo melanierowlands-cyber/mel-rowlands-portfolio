@@ -42,7 +42,7 @@ export default function Home() {
             </div>
 
             {/* Right column – illustration */}
-            <div className="mt-[32px] w-[280px] shrink-0 sm:w-[340px] md:mt-0 md:w-[380px] lg:w-[460px]">
+            <div className="mt-[32px] w-[320px] shrink-0 sm:w-[400px] md:mt-0 md:w-[460px] lg:w-[560px]">
               <Image
                 src="/images/home/homepage-illustration.png"
                 alt="Mel at her desk with wireframes and a MacBook"
