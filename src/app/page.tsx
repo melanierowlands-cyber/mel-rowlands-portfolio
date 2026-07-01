@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
+import ChromaKeyVideo from "@/components/ChromaKeyVideo";
 import Button from "@/components/Button";
 import Tag from "@/components/Tag";
 import SectionHeader from "@/components/SectionHeader";
@@ -33,16 +34,12 @@ export default function Home() {
 
               {/* Illustration – below headline on mobile/tablet, hidden on desktop */}
               <div className="mt-[28px] w-full lg:hidden">
-                <video
+                <ChromaKeyVideo
                   src="/portfolio_homepage_clip.mp4"
                   poster="/images/home/homepage-illustration.png"
                   width={1668}
                   height={943}
                   className="w-full"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
                   aria-label="Mel at her desk with wireframes and a MacBook"
                 />
               </div>
@@ -59,16 +56,12 @@ export default function Home() {
 
             {/* Illustration – right column on desktop only */}
             <div className="hidden w-[560px] shrink-0 lg:block">
-              <video
+              <ChromaKeyVideo
                 src="/portfolio_homepage_clip.mp4"
                 poster="/images/home/homepage-illustration.png"
                 width={1668}
                 height={943}
                 className="w-full"
-                autoPlay
-                muted
-                loop
-                playsInline
                 aria-label="Mel at her desk with wireframes and a MacBook"
               />
             </div>
