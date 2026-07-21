@@ -29,6 +29,7 @@ export type ShowcaseImage = {
   caption?: string;
   width: number;
   height: number;
+  objectPosition?: string; // only used in cropped grid tiles (tileAspect set)
 };
 
 /* ---------- section union (mirrors Figma section order) ---------- */
@@ -91,7 +92,15 @@ export type Section =
       };
     }
   | { type: "features"; eyebrow: string; title: string; items: FeatureItem[] }
-  | { type: "showcase"; eyebrow: string; title?: string; intro?: string; images: ShowcaseImage[]; columns?: 2 }
+  | {
+      type: "showcase";
+      eyebrow: string;
+      title?: string;
+      intro?: string;
+      images: ShowcaseImage[];
+      columns?: 2 | 3;
+      tileAspect?: string; // e.g. "4/3" - opts into a uniform cropped-tile grid instead of native aspect ratios
+    }
   | {
       type: "results";
       eyebrow: string;

@@ -29,6 +29,7 @@ export const fineday: Project = {
     "Seven years co-running a brand and packaging design studio for food and lifestyle brands - two of which went on to be licensed internationally.",
   strip: [
     { src: "/images/fineday/sarah-graham-nourish.jpg", alt: "Sarah Graham's Nourish packaging" },
+    { src: "/images/fineday/studio-e-fabrics-1.jpg", alt: "Studio E Fabrics 'Welcome To Our Neighborwood' fabric collection" },
     { src: "/images/fineday/surface-pattern-thumbnail.png", alt: "Surface pattern design licensed to Studio E Fabrics and Nested Bean" },
   ],
   sections: [
@@ -95,7 +96,8 @@ export const fineday: Project = {
     {
       type: "showcase",
       eyebrow: "",
-      columns: 2,
+      columns: 3,
+      tileAspect: "4/3",
       images: [
         {
           src: "/images/fineday/sarah-graham-nourish-cacao.jpg",
@@ -119,13 +121,6 @@ export const fineday: Project = {
           height: 588,
         },
         {
-          src: "/images/fineday/yuppiechef-packaging-dieline.png",
-          alt: "Humble + Mash wine glass packaging production dieline",
-          caption: "Humble + Mash - the production-ready packaging dieline.",
-          width: 2200,
-          height: 1357,
-        },
-        {
           src: "/images/fineday/jimmy-public-gin.jpg",
           alt: "Jimmy Public Classic Gin bottle",
           caption: "Jimmy Public - Classic Gin.",
@@ -138,6 +133,19 @@ export const fineday: Project = {
           caption: "Shackleton - Vodka & Iced Tea range.",
           width: 1060,
           height: 1084,
+        },
+      ],
+    },
+    {
+      type: "showcase",
+      eyebrow: "",
+      images: [
+        {
+          src: "/images/fineday/yuppiechef-packaging-dieline.png",
+          alt: "Humble + Mash wine glass packaging production dieline",
+          caption: "Humble + Mash - the production-ready packaging dieline.",
+          width: 2200,
+          height: 1357,
         },
         {
           src: "/images/fineday/shackleton-vodka-iced-tea-labels.png",
@@ -183,6 +191,14 @@ export const fineday: Project = {
           width: 2000,
           height: 2000,
         },
+      ],
+    },
+    {
+      type: "showcase",
+      eyebrow: "",
+      columns: 3,
+      tileAspect: "3/4",
+      images: [
         {
           src: "/images/fineday/nested-bean-zen-sack-rainbow.jpg",
           alt: "Nested Bean Zen Sack wearable blanket, rainbow print",
@@ -203,6 +219,7 @@ export const fineday: Project = {
           caption: "The Mounting Bloc - 'Rainbow Ponies' baselayer (South Africa).",
           width: 901,
           height: 897,
+          objectPosition: "top",
         },
       ],
     },

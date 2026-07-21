@@ -44,6 +44,28 @@ function Img({ img, className = "" }: { img: ShowcaseImage; className?: string }
 
 const card = "rounded-[16px] border border-line bg-surface";
 
+function GridImg({ img, aspect }: { img: ShowcaseImage; aspect: string }) {
+  return (
+    <div
+      className="relative w-full overflow-hidden rounded-[14px] border border-line bg-surface shadow-[0px_4px_20px_rgba(0,0,0,0.08)]"
+      style={{ aspectRatio: aspect }}
+    >
+      {img.src ? (
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill
+          sizes="(max-width: 640px) 50vw, 33vw"
+          className="object-cover"
+          style={{ objectPosition: img.objectPosition ?? "center" }}
+        />
+      ) : (
+        <ImagePlaceholder label={img.alt} width={4} height={3} className="absolute inset-0 h-full w-full" />
+      )}
+    </div>
+  );
+}
+
 /* ---------- section renderers ---------- */
 
 function ProjectIntro({ text, pullQuote }: { text: string; pullQuote?: string }) {
@@ -501,12 +523,16 @@ function Features({ s }: { s: Extract<Section, { type: "features" }> }) {
 function Showcase({ s }: { s: Extract<Section, { type: "showcase" }> }) {
   const portrait = s.images.every((i) => i.height > i.width);
   const twoCol = s.columns === 2;
-  const gridClass = twoCol
+  const threeCol = s.columns === 3;
+  const gridMode = (twoCol || threeCol) && !!s.tileAspect;
+  const gridClass = threeCol
+    ? "grid grid-cols-2 gap-[14px] sm:grid-cols-3 md:gap-[18px]"
+    : twoCol
     ? "grid grid-cols-1 gap-[20px] sm:grid-cols-2 md:gap-[28px]"
     : portrait
     ? "flex flex-wrap justify-center gap-[16px] md:gap-[24px]"
     : "flex flex-col gap-[24px] md:gap-[32px]";
-  const figClass = twoCol
+  const figClass = twoCol || threeCol
     ? "w-full"
     : portrait
     ? "w-full sm:w-[240px] md:w-[280px]"
@@ -526,7 +552,7 @@ function Showcase({ s }: { s: Extract<Section, { type: "showcase" }> }) {
         <div className={gridClass}>
           {s.images.map((img, i) => (
             <figure key={i} className={figClass}>
-              <Img img={img} />
+              {gridMode ? <GridImg img={img} aspect={s.tileAspect!} /> : <Img img={img} />}
               {img.caption && (
                 <figcaption className="mt-[10px] font-body text-[13px] leading-[1.5] text-ink-muted md:mt-[12px] md:text-[14px]">
                   {img.caption}
