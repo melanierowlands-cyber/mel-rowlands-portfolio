@@ -21,6 +21,7 @@
   --color-proj-ingenio: #b85c38;
   --color-proj-wildlife: #41503c;
   --color-proj-huddle: #5e777a;
+  --color-proj-fineday: #8a4a52;
 
   /* Footer */
   --color-footer-bg: #4b4744;
@@ -43,6 +44,10 @@
 [data-theme="huddle"] {
   --color-theme: #d98245;
   --color-mark: var(--color-proj-huddle);
+}
+[data-theme="fineday"] {
+  --color-theme: var(--color-proj-fineday);
+  --color-mark: var(--color-proj-fineday);
 }
 
 * {

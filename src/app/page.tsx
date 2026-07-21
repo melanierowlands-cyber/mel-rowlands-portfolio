@@ -72,7 +72,7 @@ export default function Home() {
         <section id="work" className="scroll-mt-[70px] pb-[48px] pt-[32px] md:pb-[56px] md:pt-[36px]">
           <Container>
             <SectionHeader
-              eyebrow="SELECTED WORK · 03"
+              eyebrow="SELECTED WORK · 04"
               heading="Things I've designed & built"
               className="mb-[28px] md:mb-[40px]"
               headingClassName="text-[22px] leading-[1.05] tracking-[-0.02em] md:text-[26px]"

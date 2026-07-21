@@ -1,8 +1,9 @@
 import { ingenio } from "@/content/projects/ingenio";
 import { wildlife } from "@/content/projects/wildlife-ops";
 import { huddle } from "@/content/projects/huddle";
+import { fineday } from "@/content/projects/fineday";
 
-export type ThemeKey = "ingenio" | "wildlife" | "huddle";
+export type ThemeKey = "ingenio" | "wildlife" | "huddle" | "fineday";
 
 /* ---------- shared content atoms ---------- */
 export type Persona = {
@@ -167,7 +168,7 @@ export type Project = {
   sections: Section[];
 };
 
-export const projects: Project[] = [ingenio, wildlife, huddle].sort(
+export const projects: Project[] = [ingenio, wildlife, huddle, fineday].sort(
   (a, b) => a.order - b.order
 );
 
