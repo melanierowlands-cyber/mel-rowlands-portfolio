@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Section, ShowcaseImage } from "@/lib/projects";
 import ImagePlaceholder from "./ImagePlaceholder";
+import ImageCarousel from "./ImageCarousel";
 
 /* ---------- shared helpers ---------- */
 
@@ -566,6 +567,25 @@ function Showcase({ s }: { s: Extract<Section, { type: "showcase" }> }) {
   );
 }
 
+function Carousel({ s }: { s: Extract<Section, { type: "carousel" }> }) {
+  return (
+    <Wrap>
+      <div className="flex flex-col gap-[28px] md:gap-[32px]">
+        {(s.eyebrow || s.title || s.intro) && (
+          <div className="flex flex-col gap-[14px]">
+            {s.eyebrow && <Eyebrow>{s.eyebrow}</Eyebrow>}
+            {s.title && <Title>{s.title}</Title>}
+            {s.intro && (
+              <p className="max-w-[640px] font-body text-[14px] leading-[1.6] text-ink-muted md:text-[15px]">{s.intro}</p>
+            )}
+          </div>
+        )}
+        <ImageCarousel images={s.images} />
+      </div>
+    </Wrap>
+  );
+}
+
 function Results({ s }: { s: Extract<Section, { type: "results" }> }) {
   const max = 8;
   return (
@@ -793,6 +813,8 @@ export default function CaseSection({ section }: { section: Section }) {
       return <Features s={section} />;
     case "showcase":
       return <Showcase s={section} />;
+    case "carousel":
+      return <Carousel s={section} />;
     case "results":
       return <Results s={section} />;
     case "iterations":

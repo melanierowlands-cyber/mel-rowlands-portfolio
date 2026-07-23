@@ -102,6 +102,13 @@ export type Section =
       tileAspect?: string; // e.g. "4/3" - opts into a uniform cropped-tile grid instead of native aspect ratios
     }
   | {
+      type: "carousel";
+      eyebrow: string;
+      title?: string;
+      intro?: string;
+      images: ShowcaseImage[]; // navigated one at a time via arrows either side
+    }
+  | {
       type: "results";
       eyebrow: string;
       title: string;
