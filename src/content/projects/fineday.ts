@@ -16,6 +16,7 @@ export const fineday: Project = {
     textColor: "#ffffff",
     stripe: "#23695e",
     photoLeft: "/images/fineday/sarah-graham-nourish-boxes.jpg",
+    photoLeftPos: "left center",
     photoRight: "/images/fineday/yuppiechef-packaging-box.png",
   },
   logoLetter: "f",
