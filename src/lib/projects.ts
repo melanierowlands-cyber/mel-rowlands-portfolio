@@ -166,8 +166,8 @@ export type Project = {
     photoRight: string;
     photoLeftPos?: string; // CSS object-position for left photo (default "center")
     photoRightPos?: string; // CSS object-position for right photo (default "center")
-    logo: string; // white/transparent mark overlaid on a photo
-    logoWidth: number; // displayed width in px (card coordinate space)
+    logo?: string; // white/transparent mark overlaid on a photo
+    logoWidth?: number; // displayed width in px (card coordinate space)
     logoOn?: "left" | "right"; // which photo the logo sits on (default "right")
     logoCorner?: "br" | "bl" | "tl" | "tr"; // corner (default "br")
     photoRightFrame?: "ipad"; // render right photo inside a CSS device frame at an angle

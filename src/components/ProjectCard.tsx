@@ -10,6 +10,7 @@ const CORNER: Record<string, string> = {
 };
 
 function CardLogo({ card }: { card: Project["card"] }) {
+  if (!card.logo) return null;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
