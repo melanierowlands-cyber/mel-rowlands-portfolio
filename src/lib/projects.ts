@@ -180,7 +180,7 @@ export type Project = {
   headline: string;
   intro: string;
   /* Full-bleed image strip under the hero */
-  strip: { src: string; alt: string }[];
+  strip: { src: string; alt: string; objectPosition?: string }[];
   sections: Section[];
 };
 

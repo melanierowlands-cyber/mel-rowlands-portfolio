@@ -63,7 +63,15 @@ export default async function CaseStudyPage({
           <div className="flex h-[120px] w-full md:h-[160px]">
             {project.strip.map((img, i) => (
               <div key={i} className="relative h-full flex-1">
-                <Image src={img.src} alt={img.alt} fill sizes="50vw" className="object-cover" priority={i === 0} />
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="50vw"
+                  className="object-cover"
+                  style={{ objectPosition: img.objectPosition ?? "center" }}
+                  priority={i === 0}
+                />
               </div>
             ))}
           </div>

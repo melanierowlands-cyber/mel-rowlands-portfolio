@@ -29,9 +29,9 @@ export const fineday: Project = {
     "Seven years co-running a brand and packaging design studio for food and lifestyle brands - two of which went on to be licensed internationally.",
   strip: [
     { src: "/images/fineday/sarah-graham-nourish.jpg", alt: "Sarah Graham's Nourish packaging" },
-    { src: "/images/fineday/yuppiechef-packaging-box.png", alt: "Yuppiechef humble + mash packaging box" },
-    { src: "/images/fineday/jimmy-public-gin.jpg", alt: "Jimmy Public Classic Gin bottle" },
-    { src: "/images/fineday/surface-pattern-thumbnail.png", alt: "Surface pattern design licensed to Studio E Fabrics and Nested Bean" },
+    { src: "/images/fineday/yuppiechef-packaging-box.png", alt: "Yuppiechef humble + mash packaging box", objectPosition: "center 80%" },
+    { src: "/images/fineday/jimmy-public-gin.jpg", alt: "Jimmy Public Classic Gin bottle", objectPosition: "center 35%" },
+    { src: "/images/fineday/sarah-graham-nourish-boxes.jpg", alt: "Sarah Graham Nourish Power Ball boxes, both flavours" },
   ],
   sections: [
     {
