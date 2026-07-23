@@ -30,7 +30,7 @@ export const fineday: Project = {
   strip: [
     { src: "/images/fineday/sarah-graham-nourish.jpg", alt: "Sarah Graham's Nourish packaging" },
     { src: "/images/fineday/yuppiechef-packaging-box.png", alt: "Yuppiechef humble + mash packaging box", objectPosition: "center 80%" },
-    { src: "/images/fineday/jimmy-public-gin.jpg", alt: "Jimmy Public Classic Gin bottle", objectPosition: "center 35%" },
+    { src: "/images/fineday/jimmy-public-gin.jpg", alt: "Jimmy Public Classic Gin bottle", objectPosition: "center 48%" },
     { src: "/images/fineday/sarah-graham-nourish-boxes.jpg", alt: "Sarah Graham Nourish Power Ball boxes, both flavours" },
   ],
   sections: [
