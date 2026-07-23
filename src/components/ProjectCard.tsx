@@ -63,11 +63,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 >
                   View live prototype →
                 </a>
-              ) : (
-                <span className="inline-flex shrink-0 items-center gap-[6px] underline decoration-from-font underline-offset-2 opacity-55">
-                  View live prototype →
-                </span>
-              )}
+              ) : null}
             </div>
           </div>
         </div>

@@ -26,14 +26,7 @@ export default function CaseHeaderBar({
           >
             View Live Prototype ↗
           </a>
-        ) : (
-          <span
-            className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-ink-muted opacity-40 md:text-[13px]"
-            title="Live prototype URL pending"
-          >
-            View Live Prototype ↗
-          </span>
-        )}
+        ) : null}
 
         <span className="font-body text-[12px] font-medium uppercase tracking-[0.08em] text-theme md:text-[13px]">
           PROJECT {projectNumber}

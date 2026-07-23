@@ -43,9 +43,11 @@ export default async function CaseStudyPage({
               <div className="flex h-[28px] w-[28px] items-center justify-center rounded-[7px] bg-mark font-heading text-[18px] font-medium text-on-accent md:h-[30px] md:w-[30px] md:text-[20px]">
                 {project.logoLetter}
               </div>
-              <span className="font-body text-[14px] font-semibold uppercase tracking-[0.06em] text-accent md:text-[16px]">
-                {project.logoLabel}
-              </span>
+              {project.logoLabel ? (
+                <span className="font-body text-[14px] font-semibold uppercase tracking-[0.06em] text-accent md:text-[16px]">
+                  {project.logoLabel}
+                </span>
+              ) : null}
             </div>
             <h1 className="font-heading text-[28px] font-bold leading-[1.0] tracking-[-0.02em] text-ink sm:text-[36px] md:text-[44px]">
               {project.headline}

@@ -23,13 +23,14 @@ export const fineday: Project = {
     logoCorner: "br",
   },
   logoLetter: "f",
-  logoLabel: "FINEDAY DESIGN STUDIO",
+  logoLabel: "",
   headline: "Good packaging has to survive contact with reality. Fineday built the systems that held up.",
   intro:
     "Seven years co-running a brand and packaging design studio for food and lifestyle brands - two of which went on to be licensed internationally.",
   strip: [
     { src: "/images/fineday/sarah-graham-nourish.jpg", alt: "Sarah Graham's Nourish packaging" },
-    { src: "/images/fineday/studio-e-fabrics-1.jpg", alt: "Studio E Fabrics 'Welcome To Our Neighborwood' fabric collection" },
+    { src: "/images/fineday/yuppiechef-packaging-box.png", alt: "Yuppiechef humble + mash packaging box" },
+    { src: "/images/fineday/shackleton-vodka-iced-tea-cans.jpg", alt: "Shackleton vodka and iced tea cans" },
     { src: "/images/fineday/surface-pattern-thumbnail.png", alt: "Surface pattern design licensed to Studio E Fabrics and Nested Bean" },
   ],
   sections: [
@@ -77,22 +78,7 @@ export const fineday: Project = {
         },
       ],
     },
-    {
-      type: "showcase",
-      eyebrow: "THE SOLUTION",
-      title: "Brand and packaging systems, shelf-ready",
-      intro:
-        "Delivered full brand identity and packaging systems for clients including Yuppie Chef, Sarah Graham, Jimmy Public, and Shackleton Craft Beer - taking each from early concept through to production-ready packaging.",
-      images: [
-        {
-          src: "/images/fineday/sarah-graham-nourish.jpg",
-          alt: "Sarah Graham's Nourish packaging",
-          caption: "Packaging for Sarah Graham's Nourish range - from concept through to production-ready, shelf-ready packaging.",
-          width: 1200,
-          height: 801,
-        },
-      ],
-    },
+
     {
       type: "showcase",
       eyebrow: "",
@@ -163,6 +149,13 @@ export const fineday: Project = {
       intro:
         "Work reached retail shelves both locally and abroad. Two collaborations were licensed internationally: surface pattern designs were picked up by Studio E Fabrics and Nested Bean (USA), carrying the brand and craft work into new commercial products well outside food and drink. A third pattern was licensed locally to South African activewear label The Mounting Bloc, putting the same craft to work closer to home.",
       images: [
+        {
+          src: "/images/fineday/nested-bean-product-website.png",
+          alt: "Nested Bean product website featuring the collaborative pattern design",
+          caption: "Nested Bean product-site showcase featuring the collaborative pattern design in a real retail product context.",
+          width: 1472,
+          height: 986,
+        },
         {
           src: "/images/fineday/surface-pattern-thumbnail.png",
           alt: "Surface pattern design licensed to Studio E Fabrics and Nested Bean",
